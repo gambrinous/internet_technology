@@ -39,16 +39,16 @@ class UniCourse(models.Model):
     school = models.CharField(max_length=128)
     year = models.IntegerField(default=2000)
     professor = models.CharField(max_length=128)
-    rating = models.FloatField(default=0)
+    rating = models.FloatField(default=0.0)
 
     def __int__(self):
         return self.id
 
 
-class Rate(models.Model):
+class Rating(models.Model):
     student = models.ManyToManyField(Student)
     course = models.ManyToManyField(Course)
-    rate = models.IntegerField(default=0)
+    rate = models.FloatField(default=0.0)
     comment = models.CharField(max_length=1024)
     date = models.DateField(auto_now=True)
 
