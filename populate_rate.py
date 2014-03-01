@@ -33,9 +33,10 @@ def populate():
 
     for i in range(len(universities)):
         u = add_university(name=universities[i][0], domain=universities[i][1], address=universities[i][2], city=universities[i][3], country=universities[i][4], postcode=universities[i][5])
-        #add_student(name='nikos', surname='nikos', email='nikos@'+universities[i][1], password='1234', university=u)
-        for s in range(len(students)):
-            add_student(name=students[s][0], surname=students[s][1], email=students[s][0]+'.'+students[s][1]+'@'+universities[i][1], password='1234', university=u)
+        for j in range(len(students)):
+            s = add_student(name=students[j][0], surname=students[j][1], email=students[j][0]+'.'+students[j][1]+'@'+universities[i][1], password='1234', university=u)
+        for k in courses:
+            c = add_course(titlte = k)
 
 
 def add_university(name, domain, address, city, country, postcode):
@@ -46,9 +47,14 @@ def add_student(name, surname, email, password, university):
     s = Student.objects.get_or_create(firstName=name, lastName=surname, email=email, password=password, id_uni=university)[0]
     return s
 
+def add_course(title):
+    c = Course.objects.get_or_create(title=title)[0]
+    return c
+
+
 # Start execution here!
 if __name__ == '__main__':
     print "Starting Rate population script..."
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'RateMyCourse.settings')
-    from rate.models import University, Student
+    from rate.models import University, Student, Course
     populate()
