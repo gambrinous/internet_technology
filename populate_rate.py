@@ -6,8 +6,12 @@ def populate():
 
     firstnames = ['Maggie', 'Charlie', 'Leif', 'James', 'Emily', 'Sarah', 'Emma', 'Jessica', 'Daniel', 'Courtney', 'Matthew', 'Ryan', 'Jacob', 'Olivia', 'Peter']
     surnames = ['McGeek', 'Cheaterson', 'Azzopardi', 'Zuckerberg', 'Robinson', 'Taylor', 'Jones', 'White', 'Wilson', 'Smith', 'Thompson', 'Lee', 'Nguyen', 'Walker', 'King']
-    nicknames = ['maggie','charlie','leif','james','emily','sarah','emma','jessica','daniel','courtney','matthew','ryan','jacob','olivia']
-    passwords = ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+    nicknames = ['maggie','charlie','leif','james','emily','sarah','emma','jessica','daniel','courtney','matthew','ryan','jacob','olivia', 'peter']
+    passwords = '1234'
+    domain = '@student.gla.ac.uk'
+
+    for i
+    user = add_user()
 
     # python_cat = add_cat('Python')
     python_cat = add_cat("Python", 128, 64)
