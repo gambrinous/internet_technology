@@ -4,6 +4,15 @@ import os
 
 def populate():
 
+    school = models.CharField(max_length=128)
+    year = models.IntegerField(default=2000)
+    professor = models.CharField(max_length=128)
+    rating = models.FloatField(default=0)
+
+    uni_course = [
+        ['School of Computing ']
+    ]
+
     courses = ['Internet Technology', 'Big Data', 'Professional Skills and Issues', 'Project Management', 'Information Retrieval']
 
     students = [
