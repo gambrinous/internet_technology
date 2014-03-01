@@ -39,6 +39,7 @@ def populate():
             c = add_course(titlte = k)
 
 
+
 def add_university(name, domain, address, city, country, postcode):
     u = University.objects.get_or_create(name=name, domain=domain, address=address, city=city, country=country, postcode=postcode)[0]
     return u
