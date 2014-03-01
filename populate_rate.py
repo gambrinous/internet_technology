@@ -10,85 +10,25 @@ def populate():
     passwords = '1234'
     domain = '@student.gla.ac.uk'
 
-    universities = ['University of Glasgow', 'University of London', 'University of Leeds']
-    domains = ['student.gla.ac.uk', 'student.lon.ac.uk', 'student.leeds.ac.uk']
-
     courses = ['Internet Technology', 'Big Data', 'Professional Skills and Issues']
 
-    for i in range (0,14):
-        user = add_user()
+    universities = [['University of Glasgow', 'student.gla.ac.uk', 'University Avenue', 'Glasgow', 'United Kingdom', 'G12 8QQ'],
+                    ['University of London', 'student.lon.ac.uk', 'Malet Street', 'London', 'United Kingdom', 'WC1E 7HU'],
+                    ['University of Leeds', 'student.leeds.ac.uk', 'Clarendon Place', 'Leeds', 'United Kingdom', 'LS2 9JT'],
+                    ['University of Sheffield', 'student.sheffield.ac.uk', 'Western Bank', 'Sheffield', 'United Kingdom', 'S10 2TN']
+    ]
 
+    for i in range(len(universities)):
+        for j in range(len(universities[i])):
+            add_university(name=universities[i][0], domain=universities[i][1], address=universities[i][2], city=universities[i][3], country=universities[i][4], postcode=universities[i][5])
 
-    # python_cat = add_cat('Python')
-    python_cat = add_cat("Python", 128, 64)
-
-    add_page(cat=python_cat,
-        title="Official Python Tutorial",
-        url="http://docs.python.org/2/tutorial/",
-		views=8)
-
-    add_page(cat=python_cat,
-        title="How to Think like a Computer Scientist",
-        url="http://www.greenteapress.com/thinkpython/",
-		views=7)
-
-    add_page(cat=python_cat,
-        title="Learn Python in 10 Minutes",
-        url="http://www.korokithakis.net/tutorials/python/",
-		views=6)
-
-    # django_cat = add_cat("Django")
-    django_cat = add_cat("Django", 64, 32)
-
-    add_page(cat=django_cat,
-        title="Official Django Tutorial",
-        url="https://docs.djangoproject.com/en/1.5/intro/tutorial01/",
-		views=5)
-
-    add_page(cat=django_cat,
-        title="Django Rocks",
-        url="http://www.djangorocks.com/",
-		views=4)
-
-    add_page(cat=django_cat,
-        title="How to Tango with Django",
-        url="http://www.tangowithdjango.com/",
-		views=3)
-
-    # frame_cat = add_cat("Other Frameworks")
-    frame_cat = add_cat("Other Frameworks", 32, 16)
-
-    add_page(cat=frame_cat,
-        title="Bottle",
-        url="http://bottlepy.org/docs/dev/",
-		views=2)
-
-    add_page(cat=frame_cat,
-        title="Flask",
-        url="http://flask.pocoo.org",
-		views=1)
-
-    # Print out what we have added to the user.
-    for c in Category.objects.all():
-        for p in Page.objects.filter(category=c):
-            print "- {0} - {1}".format(str(c), str(p))
-
-def add_user(email, name, surname, password):
-    u = User.objects.get_or_create(username=email, name=name, surname=surname, password=password)[0]
+def add_university(name, domain, address, city, country, postcode):
+    u = University.objects.get_or_create(name=name, domain=domain, address=address, city=city, country=country, postcode=postcode)[0]
     return u
 
-'''def add_page(cat, title, url, views):
-    p = Page.objects.get_or_create(category=cat, title=title, url=url, views=views)[0]
-    return p
-
-def add_cat(name, views, likes):
-    # c = Category.objects.get_or_create(name=name)[0]
-    c = Category.objects.get_or_create(name=name, views=views, likes=likes)[0]
-    return c
-'''
 # Start execution here!
 if __name__ == '__main__':
     print "Starting Rate population script..."
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'RateMyCourse.settings')
-    from rate.models import User#, Category, Page
+    from rate.models import University
     populate()
