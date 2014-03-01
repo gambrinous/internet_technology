@@ -13,6 +13,7 @@ def populate():
     for i in range (0,14):
         user = add_user()
 
+
     # python_cat = add_cat('Python')
     python_cat = add_cat("Python", 128, 64)
 
