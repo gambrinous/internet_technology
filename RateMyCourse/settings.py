@@ -8,7 +8,7 @@ PROJECT_PATH = os.path.join(SETTINGS_DIR, os.pardir)
 PROJECT_PATH = os.path.abspath(PROJECT_PATH)
 DATABASE_PATH = os.path.join(PROJECT_PATH, 'rate.db')
 TEMPLATE_PATH = os.path.join(PROJECT_PATH, 'templates')
-
+STATIC_PATH = os.path.join(PROJECT_PATH, 'static')
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
@@ -70,6 +70,8 @@ STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
+
+        STATIC_PATH,
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
