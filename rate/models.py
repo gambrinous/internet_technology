@@ -23,7 +23,7 @@ class Student(models.Model):
     id_uni = models.ForeignKey(University)
 
     def __unicode__(self):
-        return self.firstName + ' - ' + self.lastName
+        return self.firstName
 
 
 class Course(models.Model):
@@ -43,8 +43,6 @@ class UniCourse(models.Model):
 
     def __int__(self):
         return self.id
-    #def __unicode__(self):
-    #    return self.university.name + ' - ' + self.course.title
 
 
 class Rating(models.Model):
@@ -56,5 +54,3 @@ class Rating(models.Model):
 
     def __int__(self):
         return self.id
-    #def __unicode__(self):
-    #    return self.student.firstName +'.'+ self.student.lastName+' - ' + self.course.title

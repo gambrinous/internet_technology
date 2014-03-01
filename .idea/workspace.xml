@@ -29,7 +29,7 @@
       <file leaf-file-name="populate_rate.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/populate_rate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="27" selection-start="1679" selection-end="1679" vertical-scroll-proportion="0.34334764" vertical-offset="394" max-vertical-offset="1326">
+            <state line="41" column="12" selection-start="1567" selection-end="1567" vertical-scroll-proportion="0.74785405" vertical-offset="0" max-vertical-offset="1326">
               <folding />
             </state>
           </provider>
@@ -38,7 +38,7 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rate/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="0" selection-start="1643" selection-end="1643" vertical-scroll-proportion="0.0" vertical-offset="88" max-vertical-offset="1122">
+            <state line="25" column="29" selection-start="783" selection-end="783" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="1054">
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -581,7 +581,11 @@
       <created>1393709512953</created>
       <updated>1393709512953</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="populate scr&#10;&#10;many to many @ models">
+      <created>1393711012918</created>
+      <updated>1393711012918</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -623,7 +627,8 @@
     </option>
     <MESSAGE value="urls" />
     <MESSAGE value="populate scr" />
-    <option name="LAST_COMMIT_MESSAGE" value="populate scr" />
+    <MESSAGE value="populate scr&#10;&#10;many to many @ models" />
+    <option name="LAST_COMMIT_MESSAGE" value="populate scr&#10;&#10;many to many @ models" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -892,7 +897,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rate/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="0" selection-start="1643" selection-end="1643" vertical-scroll-proportion="0.0" vertical-offset="88" max-vertical-offset="1122">
+        <state line="25" column="29" selection-start="783" selection-end="783" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="1054">
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
@@ -901,7 +906,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/populate_rate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="27" selection-start="1679" selection-end="1679" vertical-scroll-proportion="0.34334764" vertical-offset="394" max-vertical-offset="1326">
+        <state line="41" column="12" selection-start="1567" selection-end="1567" vertical-scroll-proportion="0.74785405" vertical-offset="0" max-vertical-offset="1326">
           <folding />
         </state>
       </provider>
