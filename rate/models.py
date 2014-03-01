@@ -1,7 +1,7 @@
 from django.db import models
 
-class User(models.Model):
-    id_user = models.IntegerField(unique=True)
+class Student(models.Model):
+    id_student = models.IntegerField(unique=True)
     firstName = models.CharField(max_length=64)
     lastName = models.CharField(max_length=64)
     email = models.CharField(max_length=128)
@@ -9,7 +9,7 @@ class User(models.Model):
     id_uni = models.ForeignKey(University)
 
     def __unicode__(self):
-        return self.id_user
+        return self.id_student
 
 
 class University(models.Model):
@@ -22,12 +22,12 @@ class University(models.Model):
     postcode = models.CharField(max_legth=10)
 
     def __unicode__(self):
-        return self.id_uni
+        return self.name
 
 class Rate(models.Model):
-    id_user = models.ForeignKey(User)
+    id_student = models.ForeignKey(Student)
     id_uni = models.ForeignKey(University)
-    id_rate = (id_user + id_uni).IntegerField(unique=True)
+    id_rate = (id_student + id_uni).IntegerField(unique=True)
     timestamp = models.DateField
     ind_rate = models.FloatField(default=0)
 
@@ -36,4 +36,7 @@ class Rate(models.Model):
 
 class Course(models.Model):
     id_course = models.IntegerField(unique=True)
-    title = models.CharField(max_length=50)
+    title = models.CharField(max_length=128)
+
+    def __unicode__(self):
+        return self.title
