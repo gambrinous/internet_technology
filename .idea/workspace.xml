@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30c1a6ba-e96f-4220-ab20-1d5191afc829" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rate/models.py" afterPath="$PROJECT_DIR$/rate/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/populate_rate.py" afterPath="$PROJECT_DIR$/populate_rate.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -26,19 +27,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="populate_rate.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="populate_rate.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/populate_rate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="12" selection-start="1567" selection-end="1567" vertical-scroll-proportion="0.69313306" vertical-offset="51" max-vertical-offset="1326">
+            <state line="30" column="20" selection-start="843" selection-end="843" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1326">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rate/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="37" selection-start="1219" selection-end="1219" vertical-scroll-proportion="0.0" vertical-offset="88" max-vertical-offset="1020">
+            <state line="40" column="48" selection-start="1167" selection-end="1167" vertical-scroll-proportion="0.6169528" vertical-offset="71" max-vertical-offset="1003">
               <folding />
             </state>
           </provider>
@@ -63,8 +64,8 @@
         <option value="$PROJECT_DIR$/rate/urls.py" />
         <option value="$PROJECT_DIR$/templates/rate/contact.html" />
         <option value="$PROJECT_DIR$/templates/rate/index.html" />
-        <option value="$PROJECT_DIR$/rate/models.py" />
         <option value="$PROJECT_DIR$/populate_rate.py" />
+        <option value="$PROJECT_DIR$/rate/models.py" />
       </list>
     </option>
   </component>
@@ -544,7 +545,11 @@
       <created>1393705765068</created>
       <updated>1393705765068</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="populate scr">
+      <created>1393705787764</created>
+      <updated>1393705787764</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -840,16 +845,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rate/models.py">
+    <entry file="file://$PROJECT_DIR$/populate_rate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="37" selection-start="1219" selection-end="1219" vertical-scroll-proportion="0.0" vertical-offset="88" max-vertical-offset="1020">
+        <state line="30" column="20" selection-start="843" selection-end="843" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1326">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/populate_rate.py">
+    <entry file="file://$PROJECT_DIR$/rate/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="12" selection-start="1567" selection-end="1567" vertical-scroll-proportion="0.69313306" vertical-offset="51" max-vertical-offset="1326">
+        <state line="40" column="48" selection-start="1167" selection-end="1167" vertical-scroll-proportion="0.6169528" vertical-offset="71" max-vertical-offset="1003">
           <folding />
         </state>
       </provider>
