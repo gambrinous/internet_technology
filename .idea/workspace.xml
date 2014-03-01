@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30c1a6ba-e96f-4220-ab20-1d5191afc829" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rate/models.py" afterPath="$PROJECT_DIR$/rate/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/populate_rate.py" afterPath="$PROJECT_DIR$/populate_rate.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -30,7 +29,7 @@
       <file leaf-file-name="populate_rate.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/populate_rate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="0" selection-start="1887" selection-end="1887" vertical-scroll-proportion="0.7843348" vertical-offset="0" max-vertical-offset="1207">
+            <state line="43" column="26" selection-start="1722" selection-end="1722" vertical-scroll-proportion="0.7296137" vertical-offset="51" max-vertical-offset="1326">
               <folding />
             </state>
           </provider>
@@ -39,7 +38,7 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rate/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="0" selection-start="859" selection-end="859" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
+            <state line="48" column="0" selection-start="1299" selection-end="1521" vertical-scroll-proportion="0.0" vertical-offset="88" max-vertical-offset="1020">
               <folding />
             </state>
           </provider>
@@ -48,7 +47,7 @@
       <file leaf-file-name="populate_rango.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../tango_with_django_project/populate_rango.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="73" selection-start="1821" selection-end="1821" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1309">
+            <state line="59" column="12" selection-start="1658" selection-end="1658" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1309">
               <folding />
             </state>
           </provider>
@@ -542,7 +541,11 @@
       <created>1393700926279</created>
       <updated>1393700926279</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="populate scr">
+      <created>1393703892041</created>
+      <updated>1393703892041</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -831,23 +834,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rate/models.py">
+    <entry file="file://$PROJECT_DIR$/../tango_with_django_project/populate_rango.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="859" selection-end="859" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
+        <state line="59" column="12" selection-start="1658" selection-end="1658" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1309">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../tango_with_django_project/populate_rango.py">
+    <entry file="file://$PROJECT_DIR$/rate/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="73" selection-start="1821" selection-end="1821" vertical-scroll-proportion="0.0" vertical-offset="377" max-vertical-offset="1309">
+        <state line="48" column="0" selection-start="1299" selection-end="1521" vertical-scroll-proportion="0.0" vertical-offset="88" max-vertical-offset="1020">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/populate_rate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="0" selection-start="1887" selection-end="1887" vertical-scroll-proportion="0.7843348" vertical-offset="0" max-vertical-offset="1207">
+        <state line="43" column="26" selection-start="1722" selection-end="1722" vertical-scroll-proportion="0.7296137" vertical-offset="51" max-vertical-offset="1326">
           <folding />
         </state>
       </provider>

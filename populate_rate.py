@@ -6,6 +6,8 @@ def populate():
 
     uni_course = ['School of Computing Science', 2014, 'Dr Azzopardi', 4.3]
 
+    rateit = [4.3, "What an interesting course!", '2014-02-11']
+
     courses = ['Internet Technology', 'Big Data', 'Professional Skills and Issues', 'Project Management', 'Information Retrieval']
 
     students = [
@@ -34,12 +36,13 @@ def populate():
     ]
 
     for i in range(len(universities)):
-        u = add_university(name=universities[i][0], domain=universities[i][1], address=universities[i][2], city=universities[i][3], country=universities[i][4], postcode=universities[i][5])
-        for j in range(len(students)):
-            s = add_student(name=students[j][0], surname=students[j][1], email=students[j][0]+'.'+students[j][1]+'@'+universities[i][1], password='1234', university=u)
+        u = add_university(universities[i][0], universities[i][1], universities[i][2], universities[i][3], universities[i][4], universities[i][5])
         for k in courses:
-            c = add_course(title = k)
-            add_uniCourse(university=u, course=c, school=uni_course[0], year=uni_course[1], professor=uni_course[2], rating=uni_course[3])
+            c = add_course(k)
+            #uC = add_uniCourse(u, c, uni_course[0], uni_course[1], uni_course[2], uni_course[3])
+            for j in range(len(students)):
+                s = add_student(students[j][0], students[j][1], students[j][0]+'.'+students[j][1]+'@'+universities[i][1], '1234', u)
+                r = add_rate(s, c, rateit[0], rateit[1], rateit[2])
 
 
 def add_university(name, domain, address, city, country, postcode):
@@ -54,9 +57,13 @@ def add_course(title):
     c = Course.objects.get_or_create(title=title)[0]
     return c
 
-def add_uniCourse(university, course, school, year, professor, rating):
-    uC = UniCourse.objects.get_or_create(university=university, course=course, school=school, year=year, professor=professor, rating=rating)[0]
+def add_uniCourse(uni, course, school, year, professor, rating):
+    uC = UniCourse.objects.get_or_create(university=uni, course=course, school=school, year=year, professor=professor, rating=rating)[0]
     return uC
+
+def add_rate(student, course, rate, comment, date):
+    r = UniCourse.objects.get_or_create(student=student, course=course, rate=rate, comment=comment, date=date)[0]
+    return r
 
 # Start execution here!
 if __name__ == '__main__':
