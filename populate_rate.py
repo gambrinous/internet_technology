@@ -68,7 +68,11 @@ def populate():
         for p in Page.objects.filter(category=c):
             print "- {0} - {1}".format(str(c), str(p))
 
-def add_page(cat, title, url, views):
+def add_user(cat, title, url, views):
+    u = User.objects.get_or_create(username=nickname, name=name, surname=surname, email=email)[0]
+    return u
+
+'''def add_page(cat, title, url, views):
     p = Page.objects.get_or_create(category=cat, title=title, url=url, views=views)[0]
     return p
 
@@ -76,10 +80,10 @@ def add_cat(name, views, likes):
     # c = Category.objects.get_or_create(name=name)[0]
     c = Category.objects.get_or_create(name=name, views=views, likes=likes)[0]
     return c
-
+'''
 # Start execution here!
 if __name__ == '__main__':
     print "Starting Rate population script..."
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'RateMyCourse.settings')
-    from rate.models import Category, Page
+    from rate.models import User#, Category, Page
     populate()
