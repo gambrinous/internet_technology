@@ -17,3 +17,7 @@ def about(request):
     context = RequestContext(request)
     context_dict = {'boldmessage': "Here is the about page."}
     return render_to_response('rate/about.html', context_dict, context)
+
+def contact(request):
+    context = RequestContext(request)
+    return render_to_response('rate/contact.html', context)
