@@ -6,7 +6,7 @@ def populate():
 
     firstnames = ['Maggie', 'Charlie', 'Leif', 'James', 'Emily', 'Sarah', 'Emma', 'Jessica', 'Daniel', 'Courtney', 'Matthew', 'Ryan', 'Jacob', 'Olivia', 'Peter']
     surnames = ['McGeek', 'Cheaterson', 'Azzopardi', 'Zuckerberg', 'Robinson', 'Taylor', 'Jones', 'White', 'Wilson', 'Smith', 'Thompson', 'Lee', 'Nguyen', 'Walker', 'King']
-    nicknames = ['maggie','charlie','leif','james','emily','sarah','emma','jessica','daniel','courtney','matthew','ryan','jacob','olivia', 'peter']
+    email = ['maggie','charlie','leif','james','emily','sarah','emma','jessica','daniel','courtney','matthew','ryan','jacob','olivia', 'peter']
     passwords = '1234'
     domain = '@student.gla.ac.uk'
 
@@ -68,8 +68,8 @@ def populate():
         for p in Page.objects.filter(category=c):
             print "- {0} - {1}".format(str(c), str(p))
 
-def add_user(cat, title, url, views):
-    u = User.objects.get_or_create(username=nickname, name=name, surname=surname, email=email)[0]
+def add_user(email, name, surname, password):
+    u = User.objects.get_or_create(username=email, name=name, surname=surname, password=password)[0]
     return u
 
 '''def add_page(cat, title, url, views):
