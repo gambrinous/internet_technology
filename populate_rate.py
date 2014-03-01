@@ -10,8 +10,8 @@ def populate():
     passwords = '1234'
     domain = '@student.gla.ac.uk'
 
-    for i
-    user = add_user()
+    for i in range (0,14):
+        user = add_user()
 
     # python_cat = add_cat('Python')
     python_cat = add_cat("Python", 128, 64)
