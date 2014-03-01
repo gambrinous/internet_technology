@@ -4,7 +4,7 @@ import os
 
 def populate():
 
-    courses = ['Internet Technology', 'Big Data', 'Professional Skills and Issues']
+    courses = ['Internet Technology', 'Big Data', 'Professional Skills and Issues', 'Project Management', 'Information Retrieval']
 
     students = [
         ['Maggie', 'McGeek'],
@@ -36,7 +36,7 @@ def populate():
         for j in range(len(students)):
             s = add_student(name=students[j][0], surname=students[j][1], email=students[j][0]+'.'+students[j][1]+'@'+universities[i][1], password='1234', university=u)
         for k in courses:
-            c = add_course(titlte = k)
+            c = add_course(title = k)
 
 
 
