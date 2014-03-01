@@ -39,7 +39,7 @@ def populate():
         u = add_university(universities[i][0], universities[i][1], universities[i][2], universities[i][3], universities[i][4], universities[i][5])
         for k in courses:
             c = add_course(k)
-            #uC = add_uniCourse(u, c, uni_course[0], uni_course[1], uni_course[2], uni_course[3])
+            uC = add_uniCourse(u, c, uni_course[0], uni_course[1], uni_course[2], uni_course[3])
             for j in range(len(students)):
                 s = add_student(students[j][0], students[j][1], students[j][0]+'.'+students[j][1]+'@'+universities[i][1], '1234', u)
                 r = add_rate(s, c, rateit[0], rateit[1], rateit[2])
