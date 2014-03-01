@@ -23,7 +23,7 @@ class Student(models.Model):
     id_uni = models.ForeignKey(University)
 
     def __unicode__(self):
-        return self.firstName+ ' - ' + self.lastName
+        return self.firstName + ' - ' + self.lastName
 
 
 class Course(models.Model):
@@ -34,22 +34,27 @@ class Course(models.Model):
 
 
 class UniCourse(models.Model):
-    university = models.ForeignKey(University)
-    course = models.ForeignKey(Course)
+    university = models.ManyToManyField(University)
+    course = models.ManyToManyField(Course)
     school = models.CharField(max_length=128)
     year = models.IntegerField(default=2000)
     professor = models.CharField(max_length=128)
     rating = models.FloatField(default=0.0)
 
-    def __unicode__(self):
-        return self.university.name + ' - ' + self.course.title
+    def __int__(self):
+        return self.id
+    #def __unicode__(self):
+    #    return self.university.name + ' - ' + self.course.title
+
 
 class Rating(models.Model):
-    student = models.ForeignKey(Student)
-    course = models.ForeignKey(Course)
+    student = models.ManyToManyField(Student)
+    course = models.ManyToManyField(Course)
     rate = models.FloatField(default=0.0)
     comment = models.CharField(max_length=1024)
     date = models.DateField(auto_now=True)
 
-    def __unicode__(self):
-        return self.student.firstName +'.'+ self.student.lastName+' - ' + self.course.title
+    def __int__(self):
+        return self.id
+    #def __unicode__(self):
+    #    return self.student.firstName +'.'+ self.student.lastName+' - ' + self.course.title

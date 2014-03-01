@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="30c1a6ba-e96f-4220-ab20-1d5191afc829" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rate/models.py" afterPath="$PROJECT_DIR$/rate/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/populate_rate.py" afterPath="$PROJECT_DIR$/populate_rate.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RateMyCourse.iws" />
@@ -27,20 +26,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="populate_rate.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="populate_rate.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/populate_rate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="49" selection-start="1877" selection-end="1877" vertical-scroll-proportion="0.0" vertical-offset="394" max-vertical-offset="1326">
+            <state line="42" column="27" selection-start="1679" selection-end="1679" vertical-scroll-proportion="0.34334764" vertical-offset="394" max-vertical-offset="1326">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rate/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="91" selection-start="1692" selection-end="1692" vertical-scroll-proportion="0.8723176" vertical-offset="71" max-vertical-offset="1003">
-              <folding />
+            <state line="55" column="0" selection-start="1643" selection-end="1643" vertical-scroll-proportion="0.0" vertical-offset="88" max-vertical-offset="1122">
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -576,7 +577,11 @@
       <created>1393708377845</created>
       <updated>1393708377845</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="populate scr">
+      <created>1393709512953</created>
+      <updated>1393709512953</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -634,7 +639,9 @@
     <entry file="file://$PROJECT_DIR$/rate/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="38" column="0" selection-start="1044" selection-end="1225" vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="1054">
-          <folding />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -662,7 +669,9 @@
     <entry file="file://$PROJECT_DIR$/rate/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="0" selection-start="915" selection-end="915" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="1020">
-          <folding />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -683,7 +692,9 @@
     <entry file="file://$PROJECT_DIR$/rate/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="32" selection-start="124" selection-end="124" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1071">
-          <folding />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -879,16 +890,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/populate_rate.py">
+    <entry file="file://$PROJECT_DIR$/rate/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="49" selection-start="1877" selection-end="1877" vertical-scroll-proportion="0.0" vertical-offset="394" max-vertical-offset="1326">
-          <folding />
+        <state line="55" column="0" selection-start="1643" selection-end="1643" vertical-scroll-proportion="0.0" vertical-offset="88" max-vertical-offset="1122">
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rate/models.py">
+    <entry file="file://$PROJECT_DIR$/populate_rate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="91" selection-start="1692" selection-end="1692" vertical-scroll-proportion="0.8723176" vertical-offset="71" max-vertical-offset="1003">
+        <state line="42" column="27" selection-start="1679" selection-end="1679" vertical-scroll-proportion="0.34334764" vertical-offset="394" max-vertical-offset="1326">
           <folding />
         </state>
       </provider>
