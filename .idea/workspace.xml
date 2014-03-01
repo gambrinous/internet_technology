@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30c1a6ba-e96f-4220-ab20-1d5191afc829" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/rate/index.html" afterPath="$PROJECT_DIR$/templates/rate/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rate/models.py" afterPath="$PROJECT_DIR$/rate/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/populate_rate.py" afterPath="$PROJECT_DIR$/populate_rate.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -30,7 +30,7 @@
       <file leaf-file-name="populate_rate.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/populate_rate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="0" selection-start="1979" selection-end="1979" vertical-scroll-proportion="0.82081544" vertical-offset="0" max-vertical-offset="1292">
+            <state line="43" column="0" selection-start="1887" selection-end="1887" vertical-scroll-proportion="0.7843348" vertical-offset="0" max-vertical-offset="1207">
               <folding />
             </state>
           </provider>
@@ -39,7 +39,16 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rate/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="16" selection-start="962" selection-end="962" vertical-scroll-proportion="0.0" vertical-offset="88" max-vertical-offset="1020">
+            <state line="30" column="0" selection-start="859" selection-end="859" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="populate_rango.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../tango_with_django_project/populate_rango.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="63" column="73" selection-start="1821" selection-end="1821" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1309">
               <folding />
             </state>
           </provider>
@@ -63,8 +72,8 @@
         <option value="$PROJECT_DIR$/rate/views.py" />
         <option value="$PROJECT_DIR$/rate/urls.py" />
         <option value="$PROJECT_DIR$/templates/rate/contact.html" />
-        <option value="$PROJECT_DIR$/rate/models.py" />
         <option value="$PROJECT_DIR$/templates/rate/index.html" />
+        <option value="$PROJECT_DIR$/rate/models.py" />
         <option value="$PROJECT_DIR$/populate_rate.py" />
       </list>
     </option>
@@ -529,13 +538,18 @@
       <created>1393699302954</created>
       <updated>1393699302954</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="populate scr">
+      <created>1393700926279</created>
+      <updated>1393700926279</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -551,7 +565,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -790,12 +803,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../tango_with_django_project/rango/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="42" selection-start="104" selection-end="104" vertical-scroll-proportion="0.036480688" vertical-offset="0" max-vertical-offset="932" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../tango_with_django_project/populate_rango.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="12" selection-start="1839" selection-end="1839" vertical-scroll-proportion="0.76287556" vertical-offset="377" max-vertical-offset="1309" />
+        <state line="2" column="42" selection-start="104" selection-end="104" vertical-scroll-proportion="0.036480688" vertical-offset="0" max-vertical-offset="932">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RateMyCourse/settings.py">
@@ -812,16 +822,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/rate/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="932">
+          <folding>
+            <element signature="e#0#32#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/rate/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="16" selection-start="962" selection-end="962" vertical-scroll-proportion="0.0" vertical-offset="88" max-vertical-offset="1020">
+        <state line="30" column="0" selection-start="859" selection-end="859" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../tango_with_django_project/populate_rango.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="73" selection-start="1821" selection-end="1821" vertical-scroll-proportion="0.0" vertical-offset="377" max-vertical-offset="1309">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/populate_rate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="0" selection-start="1979" selection-end="1979" vertical-scroll-proportion="0.82081544" vertical-offset="0" max-vertical-offset="1292">
+        <state line="43" column="0" selection-start="1887" selection-end="1887" vertical-scroll-proportion="0.7843348" vertical-offset="0" max-vertical-offset="1207">
           <folding />
         </state>
       </provider>

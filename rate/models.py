@@ -34,7 +34,7 @@ class Course(models.Model):
 
 
 class UniCourse(models.Model):
-    universities = models.ManyToManyField(University)
+    university = models.ManyToManyField(University)
     course = models.ManyToManyField(Course)
     school = models.CharField(max_length=128)
     year = models.IntegerField(default=2000)
