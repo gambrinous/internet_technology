@@ -10,6 +10,11 @@ def populate():
     passwords = '1234'
     domain = '@student.gla.ac.uk'
 
+    universities = ['University of Glasgow', 'University of London', 'University of Leeds']
+    domains = ['student.gla.ac.uk', 'student.lon.ac.uk', 'student.leeds.ac.uk']
+
+    courses = ['Internet Technology', 'Big Data', 'Professional Skills and Issues']
+
     for i in range (0,14):
         user = add_user()
 
