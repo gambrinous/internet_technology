@@ -3,6 +3,11 @@ import os
 # this is a template for a population script..
 
 def populate():
+
+    user_names = ['Maggie', 'Charlie', 'Leif', 'James', 'Emily', 'Sarah', 'Emma', 'Jessica', 'Daniel', 'Courtney', 'Matthew', 'Ryan', 'Jacob', 'Olivia', '', '', '']
+    user_surnames = ['McGeek', 'Cheaterson', 'Azzopardi', 'Zuckerberg', '', '', '']
+
+
     # python_cat = add_cat('Python')
     python_cat = add_cat("Python", 128, 64)
 
