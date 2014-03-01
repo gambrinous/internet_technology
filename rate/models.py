@@ -1,4 +1,3 @@
-from django.contrib.localflavor.generic.forms import DateField
 from django.db import models
 
 
