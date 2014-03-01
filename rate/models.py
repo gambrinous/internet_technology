@@ -1,10 +1,11 @@
 from django.db import models
 
+
 class Student(models.Model):
     id_student = models.IntegerField(unique=True)
     firstName = models.CharField(max_length=64)
     lastName = models.CharField(max_length=64)
-    email = models.CharField(max_length=128)
+    email = models.EmailField(max_length=128)
     password = models.CharField(max_length=32)
     id_uni = models.ForeignKey(University)
 
@@ -24,6 +25,7 @@ class University(models.Model):
     def __unicode__(self):
         return self.name
 
+
 class Rate(models.Model):
     id_student = models.ForeignKey(Student)
     id_uni = models.ForeignKey(University)
@@ -34,9 +36,21 @@ class Rate(models.Model):
     def __unicode__(self):
         return self.id_rate
 
+
 class Course(models.Model):
     id_course = models.IntegerField(unique=True)
     title = models.CharField(max_length=128)
 
     def __unicode__(self):
         return self.title
+
+
+class Uni_Course(models.Model):
+    id_uni = models.ForeignKey(University)
+    id_course = models.ForeignKey(Course)
+    year = models.IntegerField
+    prof_name = models.CharField(max_length=128)
+    ave_rate = models.FloatField
+
+    def __unicode__(self):
+        return self.id
