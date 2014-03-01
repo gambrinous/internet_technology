@@ -1,7 +1,13 @@
 # Django settings for RateMyCourse project.
+import os
+SETTINGS_DIR = os.path.dirname(__file__)
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+PROJECT_PATH = os.path.join(SETTINGS_DIR, os.pardir)
+PROJECT_PATH = os.path.abspath(PROJECT_PATH)
+DATABASE_PATH = os.path.join(PROJECT_PATH, 'rate.db')
+TEMPLATE_PATH = os.path.join(PROJECT_PATH, 'templates')
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
@@ -11,13 +17,8 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '',                      # Or path to database file if using sqlite3.
-        # The following settings are not used with sqlite3:
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-        'PORT': '',                      # Set to empty string for default.
+        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': DATABASE_PATH,                      # Or path to database file if using sqlite3.
     }
 }
 
@@ -108,7 +109,8 @@ ROOT_URLCONF = 'RateMyCourse.urls'
 WSGI_APPLICATION = 'RateMyCourse.wsgi.application'
 
 import os
-TEMPLATE_DIRS = (os.path.join(os.path.dirname(__file__), '..', 'templates').replace('\\','/'),)
+TEMPLATE_DIRS = (TEMPLATE_PATH,)
+
 
 INSTALLED_APPS = (
     'django.contrib.auth',
