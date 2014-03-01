@@ -11,3 +11,14 @@ class University(models.Model):
 
     def __unicode__(self):
         return self.name
+
+
+class Student(models.Model):
+    firstName = models.CharField(max_length=64)
+    lastName = models.CharField(max_length=64)
+    email = models.EmailField(max_length=128)
+    password = models.CharField(max_length=32)
+    id_uni = models.ForeignKey(University)
+
+    def __unicode__(self):
+        return self.id
