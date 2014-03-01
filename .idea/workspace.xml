@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30c1a6ba-e96f-4220-ab20-1d5191afc829" name="Default" comment="urls">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/rate/index.html" afterPath="$PROJECT_DIR$/templates/rate/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RateMyCourse/settings.py" afterPath="$PROJECT_DIR$/RateMyCourse/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rate/views.py" afterPath="$PROJECT_DIR$/rate/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -31,7 +29,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/rate/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="15" selection-start="124" selection-end="124" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="187">
+            <state line="5" column="15" selection-start="124" selection-end="124" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="187">
               <folding />
             </state>
           </provider>
@@ -40,7 +38,7 @@
       <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RateMyCourse/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="15" selection-start="1843" selection-end="1843" vertical-scroll-proportion="-36.04" vertical-offset="0" max-vertical-offset="2805">
+            <state line="53" column="15" selection-start="1843" selection-end="1843" vertical-scroll-proportion="0.0" vertical-offset="901" max-vertical-offset="2805">
               <folding />
             </state>
           </provider>
@@ -49,7 +47,7 @@
       <file leaf-file-name="base.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/rate/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="37" selection-start="168" selection-end="168" vertical-scroll-proportion="0.22160149" vertical-offset="0" max-vertical-offset="2346">
+            <state line="15" column="58" selection-start="603" selection-end="603" vertical-scroll-proportion="0.24199288" vertical-offset="119" max-vertical-offset="2346">
               <folding />
             </state>
           </provider>
@@ -58,7 +56,7 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rate/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="30" selection-end="30" vertical-scroll-proportion="-1.36" vertical-offset="0" max-vertical-offset="867">
+            <state line="2" column="0" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1054">
               <folding />
             </state>
           </provider>
@@ -67,10 +65,8 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rate/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="14" selection-start="845" selection-end="845" vertical-scroll-proportion="-17.0" vertical-offset="0" max-vertical-offset="527">
-              <folding>
-                <element signature="e#26#62#0" expanded="true" />
-              </folding>
+            <state line="25" column="14" selection-start="845" selection-end="845" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="527">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -78,7 +74,7 @@
       <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rate/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="46" selection-start="233" selection-end="233" vertical-scroll-proportion="-4.08" vertical-offset="0" max-vertical-offset="221">
+            <state line="7" column="46" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="238">
               <folding />
             </state>
           </provider>
@@ -87,7 +83,7 @@
       <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RateMyCourse/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="29" selection-start="312" selection-end="312" vertical-scroll-proportion="-5.44" vertical-offset="0" max-vertical-offset="255">
+            <state line="10" column="29" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="289">
               <folding />
             </state>
           </provider>
@@ -96,7 +92,7 @@
       <file leaf-file-name="contact.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/rate/contact.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="27" selection-start="115" selection-end="115" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="272">
+            <state line="8" column="27" selection-start="115" selection-end="115" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="272">
               <folding />
             </state>
           </provider>
@@ -105,7 +101,7 @@
       <file leaf-file-name="about.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/rate/about.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="7" selection-start="184" selection-end="184" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="289">
+            <state line="11" column="7" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="289">
               <folding />
             </state>
           </provider>
@@ -389,7 +385,27 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="RateMyCourse" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
@@ -415,27 +431,7 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="RateMyCourse" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
-      <option name="host" value="" />
-      <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
-      <option name="runTestServer" value="false" />
-      <option name="runNoReload" value="false" />
-      <option name="useCustomRunCommand" value="false" />
-      <option name="customRunCommand" value="" />
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -546,14 +542,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="960" height="1050" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3121019" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3707627" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3707627" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -588,6 +584,69 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/templates/rate/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="15" selection-start="124" selection-end="124" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="187">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RateMyCourse/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="15" selection-start="1843" selection-end="1843" vertical-scroll-proportion="0.0" vertical-offset="901" max-vertical-offset="2805">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/rate/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="37" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="2346">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rate/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1054">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rate/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="14" selection-start="845" selection-end="845" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="527">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rate/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="46" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="238">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RateMyCourse/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="29" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="289">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/rate/contact.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="27" selection-start="115" selection-end="115" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="272">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/rate/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="7" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="289">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/populate_rate.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="43" column="14" selection-start="2242" selection-end="2242" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833">
@@ -647,9 +706,7 @@
     <entry file="file://$PROJECT_DIR$/rate/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="68" selection-start="763" selection-end="763" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="408">
-          <folding>
-            <element signature="e#26#62#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -684,9 +741,7 @@
     <entry file="file://$PROJECT_DIR$/rate/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="25" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
-          <folding>
-            <element signature="e#26#62#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -713,65 +768,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/RateMyCourse/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="29" selection-start="312" selection-end="312" vertical-scroll-proportion="-5.44" vertical-offset="0" max-vertical-offset="255">
+        <state line="10" column="29" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="289">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rate/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="46" selection-start="233" selection-end="233" vertical-scroll-proportion="-4.08" vertical-offset="0" max-vertical-offset="221">
+        <state line="7" column="46" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="238">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rate/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="14" selection-start="845" selection-end="845" vertical-scroll-proportion="-17.0" vertical-offset="0" max-vertical-offset="527">
-          <folding>
-            <element signature="e#26#62#0" expanded="true" />
-          </folding>
+        <state line="25" column="14" selection-start="845" selection-end="845" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="527">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rate/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="30" selection-end="30" vertical-scroll-proportion="-1.36" vertical-offset="0" max-vertical-offset="867">
+        <state line="2" column="0" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1054">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RateMyCourse/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="15" selection-start="1843" selection-end="1843" vertical-scroll-proportion="-36.04" vertical-offset="0" max-vertical-offset="2805">
+        <state line="53" column="15" selection-start="1843" selection-end="1843" vertical-scroll-proportion="0.0" vertical-offset="901" max-vertical-offset="2805">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/rate/contact.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="27" selection-start="115" selection-end="115" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="272">
+        <state line="8" column="27" selection-start="115" selection-end="115" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="272">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/rate/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="15" selection-start="124" selection-end="124" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="187">
+        <state line="5" column="15" selection-start="124" selection-end="124" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="187">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/rate/about.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="7" selection-start="184" selection-end="184" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="289">
+        <state line="11" column="7" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="289">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/rate/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="37" selection-start="168" selection-end="168" vertical-scroll-proportion="0.22160149" vertical-offset="0" max-vertical-offset="2346">
+        <state line="15" column="58" selection-start="603" selection-end="603" vertical-scroll-proportion="0.24199288" vertical-offset="119" max-vertical-offset="2346">
           <folding />
         </state>
       </provider>
