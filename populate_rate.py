@@ -4,9 +4,10 @@ import os
 
 def populate():
 
-    user_names = ['Maggie', 'Charlie', 'Leif', 'James', 'Emily', 'Sarah', 'Emma', 'Jessica', 'Daniel', 'Courtney', 'Matthew', 'Ryan', 'Jacob', 'Olivia', 'Peter']
-    user_surnames = ['McGeek', 'Cheaterson', 'Azzopardi', 'Zuckerberg', 'Robinson', 'Taylor', 'Jones', 'White', 'Wilson', 'Smith', 'Thompson', 'Lee', 'Nguyen', 'Walker', 'King']
-    user_nicknames = ['','','','','','','','','','','','','','','']
+    firstnames = ['Maggie', 'Charlie', 'Leif', 'James', 'Emily', 'Sarah', 'Emma', 'Jessica', 'Daniel', 'Courtney', 'Matthew', 'Ryan', 'Jacob', 'Olivia', 'Peter']
+    surnames = ['McGeek', 'Cheaterson', 'Azzopardi', 'Zuckerberg', 'Robinson', 'Taylor', 'Jones', 'White', 'Wilson', 'Smith', 'Thompson', 'Lee', 'Nguyen', 'Walker', 'King']
+    nicknames = ['maggie','charlie','leif','james','emily','sarah','emma','jessica','daniel','courtney','matthew','ryan','jacob','olivia']
+    passwords = ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
 
     # python_cat = add_cat('Python')
     python_cat = add_cat("Python", 128, 64)
