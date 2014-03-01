@@ -4,13 +4,8 @@ import os
 
 def populate():
 
-    school = models.CharField(max_length=128)
-    year = models.IntegerField(default=2000)
-    professor = models.CharField(max_length=128)
-    rating = models.FloatField(default=0)
-
     uni_course = [
-        ['School of Computing ']
+        ['School of Computing Science', 2014, 'Dr Azzopardi', 4.3]
     ]
 
     courses = ['Internet Technology', 'Big Data', 'Professional Skills and Issues', 'Project Management', 'Information Retrieval']
@@ -44,8 +39,11 @@ def populate():
         u = add_university(name=universities[i][0], domain=universities[i][1], address=universities[i][2], city=universities[i][3], country=universities[i][4], postcode=universities[i][5])
         for j in range(len(students)):
             s = add_student(name=students[j][0], surname=students[j][1], email=students[j][0]+'.'+students[j][1]+'@'+universities[i][1], password='1234', university=u)
-        for k in courses:
-            c = add_course(title = k)
+            for k in courses:
+                c = add_course(title = k)
+                for l in range(len(uni_course)):
+                    add_uniCourse(university=u, course=c, school=uni_course[l][0], year=uni_course[l][1], professor=uni_course[l][2], rating=uni_course[l][3])
+
 
 
 
@@ -61,10 +59,13 @@ def add_course(title):
     c = Course.objects.get_or_create(title=title)[0]
     return c
 
+def add_uniCourse(university, course, school, year, professor, rating):
+    uC = UniCourse.objects.get_or_create(university=university, course=course, school=school, year=year, professor=professor, rating=rating)[0]
+    return uC
 
 # Start execution here!
 if __name__ == '__main__':
     print "Starting Rate population script..."
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'RateMyCourse.settings')
-    from rate.models import University, Student, Course
+    from rate.models import University, Student, Course, UniCourse
     populate()
