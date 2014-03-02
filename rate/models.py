@@ -34,7 +34,7 @@ class Course(models.Model):
 
 
 class UniCourse(models.Model):
-    university = models.ManyToManyField(University)
+    uni = models.ManyToManyField(University)
     course = models.ManyToManyField(Course)
     school = models.CharField(max_length=128)
     year = models.IntegerField(default=2000)
@@ -47,7 +47,7 @@ class UniCourse(models.Model):
 
 class Rating(models.Model):
     student = models.ManyToManyField(Student)
-    course = models.ManyToManyField(Course)
+    UniCourse.course = models.ManyToManyField(Course)
     rate = models.FloatField(default=0.0)
     comment = models.CharField(max_length=1024)
     date = models.DateField(auto_now=True)
