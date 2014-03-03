@@ -23,7 +23,7 @@ class Student(models.Model):
     id_uni = models.ForeignKey(University)
 
     def __unicode__(self):
-        return self.firstName
+        return self.firstName+ ' - ' + self.lastName
 
 
 class Course(models.Model):
