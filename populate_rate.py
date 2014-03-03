@@ -75,4 +75,4 @@ if __name__ == '__main__':
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'RateMyCourse.settings')
     from rate.models import University, Student, Course, UniCourse, Rating
     populate()
-    print "Done!"
+    print "Well Done!"
