@@ -43,6 +43,7 @@ def populate():
         ['University of Sheffield', 'student.sheffield.ac.uk', 'Western Bank', 'Sheffield', 'United Kingdom', 'S10 2TN']
     ]
 
+    l = 0
     for i in range(len(universities)):
         u = add_university(universities[i][0], universities[i][1], universities[i][2], universities[i][3], universities[i][4], universities[i][5])
         for k in range(len(courses)):
@@ -50,7 +51,8 @@ def populate():
             uC = add_uniCourse(u, c, uni_course[k][0], uni_course[k][1], uni_course[k][2], uni_course[k][3])
             for j in range(len(students)):
                 s = add_student(students[j][0], students[j][1], students[j][0]+'.'+students[j][1]+'@'+universities[i][1], '1234', u)
-                r = add_rate(s, c, (j%5)+1, rateit[1], rateit[2])
+                r = add_rate(s, c,  (l % 5) + 1, rateit[1], rateit[2])
+                l += 1
 
 
 def add_university(name, domain, address, city, country, postcode):

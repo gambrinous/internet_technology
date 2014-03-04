@@ -1,6 +1,35 @@
 {% extends 'rate/base.html' %}
- {% block hector %}
-
-    <h1>E!!!!!!!!</h1>
-
- {% endblock %}
+{% block hector %}
+    {% if topfive %}
+        <h3>Top 5</h3>
+        <ul>
+            {% for rate in topfive %}
+            <li>{{ rate.course }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <strong>There are no top 5</strong>
+    {% endif %}
+    <br/>
+    {% if worstfive %}
+        <h3>Worst 5</h3>
+        <ul>
+            {% for rate in worstfive %}
+            <li>{{ rate.course }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <strong>There are no worst 5</strong>
+    {% endif %}
+    <br/>
+    {% if latestfive %}
+        <h3>Latest</h3>
+        <ul>
+            {% for rate in latestfive %}
+            <li>{{ rate.course }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <strong>There are no latest</strong>
+    {% endif %}
+{% endblock %}
