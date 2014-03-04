@@ -4,7 +4,13 @@ import os
 
 def populate():
 
-    uni_course = ['School of Computing Science', 2014, 'Dr Azzopardi', 4.3]
+    uni_course = [
+        ['School of Computing Science', 2014, 'Dr Azzopardi', 0.0],
+        ['School of Computing Science', 2014, 'Dr Evil', 0.0],
+        ['School of Computing Science', 2014, 'Dr No', 0.0],
+        ['School of Computing Science', 2014, 'Dr Maybe', 0.0],
+        ['School of Computing Science', 2014, 'Dr Doctor', 0.0]
+        ]
 
     rateit = [4.3, 'What an interesting course!', '2014-02-11']
 
@@ -25,7 +31,9 @@ def populate():
         ['Ryan', 'Walker'],
         ['Jacob', 'King'],
         ['Olivia', 'Lee'],
-        ['Peter', 'Nguyen']
+        ['Peter', 'Nguyen'],
+        ['Stan', 'Lazaridis'],
+        ['Harry', 'Kewell']
     ]
 
     universities = [
@@ -37,12 +45,12 @@ def populate():
 
     for i in range(len(universities)):
         u = add_university(universities[i][0], universities[i][1], universities[i][2], universities[i][3], universities[i][4], universities[i][5])
-        for k in courses:
-            c = add_course(k)
-            uC = add_uniCourse(u, c, uni_course[0], uni_course[1], uni_course[2], uni_course[3])
+        for k in range(len(courses)):
+            c = add_course(courses[k])
+            uC = add_uniCourse(u, c, uni_course[k][0], uni_course[k][1], uni_course[k][2], uni_course[k][3])
             for j in range(len(students)):
                 s = add_student(students[j][0], students[j][1], students[j][0]+'.'+students[j][1]+'@'+universities[i][1], '1234', u)
-                r = add_rate(s, c, rateit[0], rateit[1], rateit[2])
+                r = add_rate(s, c, (j%5)+1, rateit[1], rateit[2])
 
 
 def add_university(name, domain, address, city, country, postcode):
