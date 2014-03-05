@@ -41,10 +41,18 @@ class UniCourse(models.Model):
     professor = models.CharField(max_length=128)
     total_rating = models.IntegerField(default=0)
     times_rated = models.IntegerField(default=0)
-    average_rating = models.FloatField(default=0.0)
+    stored_average_rating = models.FloatField(default=0.0)
+
+    def _get_average_rating(self):
+        if self.times_rated == 0:
+            return 0.0
+        else:
+            return round(float(self.total_rating)/float(self.times_rated),1)
+
+    average_rating2 = property(_get_average_rating)
 
     def __unicode__(self):
-        return unicode(self.university) + ' ' + unicode(self.course)
+        return self.university + ' ' + self.course
 
 
 class Rating(models.Model):
@@ -52,7 +60,7 @@ class Rating(models.Model):
     course = models.ManyToManyField(Course)
     rate = models.FloatField(default=0)
     comment = models.CharField(max_length=1024)
-    date = models.DateTimeField(auto_now=True)
+    date = models.DateField(auto_now=True)
 
     def __unicode__(self):
         return unicode(self.student) + ' ' + unicode(self.course)
