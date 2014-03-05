@@ -42,12 +42,12 @@ class UniCourse(models.Model):
     rating = models.FloatField(default=0.0)
 
     def __unicode__(self):
-        return str(self.university) + ' - ' + self.school + ' - ' + str(self.course)
+        return self.school
 
 
 class Rating(models.Model):
     student = models.ManyToManyField(Student)
-    UniCourse.course = models.ManyToManyField(Course)
+    course = models.ManyToManyField(Course)
     rate = models.FloatField(default=0.0)
     comment = models.CharField(max_length=1024)
     date = models.DateField(auto_now=True)

@@ -69,7 +69,7 @@ def add_course(title):
 
 def add_uniCourse(uni, course, school, year, professor, rating):
     uC = UniCourse.objects.get_or_create(school=school, year=year, professor=professor, rating=rating)[0]
-    uC.university.add(uni)
+    uC.uni.add(uni)
     uC.course.add(course)
     return uC
 
