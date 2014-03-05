@@ -43,7 +43,7 @@ class Rate(models.Model):
     course = models.ForeignKey(Course)
     rate = models.FloatField(default=0)
     comment = models.CharField(max_length=1024)
-    date = models.DateField(auto_now=True)
+    date = models.DateTimeField(auto_now=True)
 
     def __unicode__(self):
         return unicode(self.student) + ' / ' + unicode(self.course)

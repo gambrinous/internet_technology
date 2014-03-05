@@ -11,8 +11,8 @@ from rate.forms import Student
 
 def index(request):
     context = RequestContext(request)
-    top_five_list = UniCourse.objects.order_by('-rating')[:5]
-    worst_five_list = UniCourse.objects.order_by('rating')[:5]
+    top_five_list = Course.objects.order_by('-rating')[:5]
+    worst_five_list = Course.objects.order_by('rating')[:5]
     latest_list = Rate.objects.order_by('-date')[:5]
     context_dict = {'topfive': top_five_list, 'worstfive': worst_five_list, 'latestfive': latest_list}
     return render_to_response('rate/index.html', context_dict, context)
