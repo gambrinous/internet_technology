@@ -4,7 +4,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Bootstrap, from Twitter</title>
+    <title>RtC - {% block title %}Rate This Course{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -20,6 +20,11 @@
   </head>
 
   <body>
+
+  <div>
+            {% block body_block %}{% endblock %}
+  </div>
+
 
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
@@ -76,13 +81,10 @@
       </div><!--/row-->
 	  <hr>
       <footer>
-        <p>&copy; Company 2013</p>
+        <p>&copy; Colossus 4.0 Team 2014</p>
       </footer>
     </div><!--/.fluid-container-->
 
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
     <script src="{% static 'js/jquery-2.1.0.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
 
