@@ -128,7 +128,7 @@ def add_unicourse(uni, course, school, year, professor, rating):
     return uC
 
 def add_rate(student, course, rate, comment, date):
-    r = Rating.objects.get_or_create(rate=rate, comment=comment, date=date)[0]
+    r = Rate.objects.get_or_create(rate=rate, comment=comment, date=date)[0]
     r.course.add(course)
     r.student.add(student)
     return r
@@ -137,6 +137,6 @@ def add_rate(student, course, rate, comment, date):
 if __name__ == '__main__':
     print "Starting Rate population script..."
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'RateMyCourse.settings')
-    from rate.models import University, Student, Course, UniCourse, Rating
+    from rate.models import University, Student, Course, UniCourse, Rate
     populate()
     print "Well Done!"
