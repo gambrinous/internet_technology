@@ -128,3 +128,6 @@ def underConstruction(request):
     context = RequestContext(request)
     context_dict = {'boldmessage': "Under Construction"}
     return render_to_response('rate/underConstruction.html', context_dict, context)
+def test(request):
+    context = RequestContext(request)
+    return render_to_response('rate/test.html', context)
