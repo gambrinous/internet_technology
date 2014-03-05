@@ -10,5 +10,4 @@ urlpatterns = patterns('',
     url(r'^underConstruction/$', views.underConstruction, name='underConstruction'),
     url(r'^register/$', views.register, name='register'),
     url(r'^test/$', views.test, name='test'),
-
 )

@@ -1,23 +1,42 @@
 
-{% extends 'rango/base.html' %}
+{% extends 'rate/base.html' %}
 
     {% block title %}Register{% endblock %}
 	{% block body_block %}
         {% if registered %}
-        <strong>You are already registered!</strong>
-        <a href="/rate/">Return to the homepage.</a><br />
+            <h4>Thank you for registering!</h4>
+            <a href="/rate/">Return to the homepage.</a><br />
         {% else %}
-        <h4>New to Rate this Course?</h4>
-        <h5>Register here!</h5>
-        <form id="user_form" method="post" action="/rate/register/"
+            <h4>New to Rate this Course?</h4>
+            <h5>Register here!</h5>
+            <form id="user_form" method="post" action="/rate/register/" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ user_form.as_p }}
+                <input type="submit" name="submit" value="Register" />
+            </form>
+        {% endif %}
+	{% endblock %}
+
+
+
+{% if registered %}
+        Rango says: <strong>thank you for registering!</strong>
+        <a href="/rango/">Return to the homepage.</a><br />
+        {% else %}
+        Rango says: <strong>register here!</strong><br />
+
+        <form id="user_form" method="post" action="/rango/register/"
                 enctype="multipart/form-data">
 
             {% csrf_token %}
 
+            <!-- Display each form. The as_p method wraps each element in a paragraph
+                 (<p>) element. This ensures each element appears on a new line,
+                 making everything look neater. -->
             {{ user_form.as_p }}
             {{ profile_form.as_p }}
 
+            <!-- Provide a button to click to submit the form. -->
             <input type="submit" name="submit" value="Register" />
         </form>
         {% endif %}
-	{% endblock %}

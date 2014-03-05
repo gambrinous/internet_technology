@@ -52,7 +52,7 @@ def populate():
     for j in range(0, 4, 1):
         u = University.objects.get(name="University of Glasgow")
         s = add_student(students[j][0], students[j][1], students[j][0]+'.'+students[j][1]+'@'+universities[0][1],
-                        '1234', u)
+                        '1234')
     #LONDON
     for j in range(4, 9, 1):
         u = University.objects.get(name="University of London")
@@ -78,7 +78,7 @@ def populate():
 
     #ratings per uni
     for i in range(len(rateit)):
-        st = Student.objects.get(id=rateit[i][0])
+        st = User.objects.get(id=rateit[i][0])
         c = Course.objects.get(id=rateit[i][1])
         add_rate(st, c, rateit[i][2], rateit[i][3], rateit[i][4])
 
@@ -88,7 +88,9 @@ def add_university(name, domain, address, city, country, postcode):
     return u
 
 def add_student(name, surname, email, password, university):
-    s = Student.objects.get_or_create(firstName=name, lastName=surname, email=email, password=password, id_uni=university)[0]
+    s = User.objects.get_or_create(first_name=name, last_name=surname, email=email)[0]
+    s.set_password(password)
+    s.save()
     return s
 
 def add_course(title):
@@ -111,6 +113,7 @@ def add_rate(student, course, rate, comment, date):
 if __name__ == '__main__':
     print "Starting Rate population script..."
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'RateMyCourse.settings')
-    from rate.models import University, Student, Course, UniCourse, Rate
+    from rate.models import University, Course, UniCourse, Rate
+    from django.contrib.auth.models import User
     populate()
     print "Well Done!"

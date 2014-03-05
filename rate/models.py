@@ -1,5 +1,4 @@
 from django.db import models
-from django.contrib import admin
 from django.contrib.auth.models import User
 
 
@@ -15,17 +14,6 @@ class University(models.Model):
         return self.name
 
 
-class Student(models.Model):
-    firstName = models.CharField(max_length=64)
-    lastName = models.CharField(max_length=64)
-    email = models.EmailField(max_length=128)
-    password = models.CharField(max_length=32)
-    id_uni = models.ForeignKey(University)
-
-    def __unicode__(self):
-        return self.firstName + ' ' + self.lastName
-
-
 class Course(models.Model):
     title = models.CharField(max_length=128)
     university = models.ForeignKey(University)
@@ -39,7 +27,7 @@ class Course(models.Model):
 
 
 class Rate(models.Model):
-    student = models.ForeignKey(Student)
+    student = models.ForeignKey(User)
     course = models.ForeignKey(Course)
     rate = models.FloatField(default=0)
     comment = models.CharField(max_length=1024)
