@@ -42,7 +42,7 @@ class UniCourse(models.Model):
     rating = models.FloatField(default=0)
 
     def __unicode__(self):
-        return self.school
+        return unicode(self.university) + ' ' + unicode(self.course)
 
 
 class Rating(models.Model):
@@ -52,5 +52,5 @@ class Rating(models.Model):
     comment = models.CharField(max_length=1024)
     date = models.DateField(auto_now=True)
 
-    def __int__(self):
-        return self.id
+    def __unicode__(self):
+        return unicode(self.student) + ' ' + unicode(self.course)
