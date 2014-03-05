@@ -29,8 +29,8 @@ class Student(models.Model):
 class Course(models.Model):
     title = models.CharField(max_length=128)
     university = models.ForeignKey(University)
-    school = models.CharField(max_length=128)
     year = models.IntegerField(default=2000)
+    level = models.IntegerField(default=1)
     professor = models.CharField(max_length=128)
     rating = models.FloatField(default=0)
 
