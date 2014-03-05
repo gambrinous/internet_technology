@@ -6,7 +6,7 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 from datetime import datetime
-from rate.models import Rate
+from rate.models import Rate, Course
 from rate.forms import Student
 
 def index(request):
@@ -128,6 +128,7 @@ def underConstruction(request):
     context = RequestContext(request)
     context_dict = {'boldmessage': "Under Construction"}
     return render_to_response('rate/underConstruction.html', context_dict, context)
+
 def test(request):
     context = RequestContext(request)
     return render_to_response('rate/test.html', context)

@@ -21,18 +21,28 @@
 
   <body>
 <!-- The blocks of ofther pages must be added later in a center div box-->
+<!-- header -->
 	<div class= "container-fluid">
-        {% block body_block %}
-        {% endblock%}
+
 		<headers>
 			<div class="page-header" >
 			header here
-			</div ><!--head-->
+			</div >
 		</headers>
 		
-		
-  </div>
-<!--/.fluid-container-->
+	</div>
+
+<!-- main body -->
+    <div>
+        {% block body_block %}{% endblock %}
+    </div>
+
+
+<!-- footer -->
+    <footer>
+        <p>&copy; Colossus 4.0 Team 2014</p>
+    </footer>
+
 
     <script src="{% static 'js/jquery-2.1.0.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
