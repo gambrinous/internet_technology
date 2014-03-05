@@ -6,22 +6,22 @@ def populate():
 
     #For each university this is the tables to pair with the courses
     #glasgow
-    uni_course1 = [['Internet Technology','School of Computing Science', 2014, 'Dr Azzopardi', 4.6],
-                  ['Economics 101','School of Economics', 2010, 'Dr Aniston', 3.5]]
+    uni_course1 = [['Internet Technology','School of Computing Science', 2014, 'Dr Azzopardi', 92, 20, 4.6],
+                  ['Economics 101','School of Economics', 2010, 'Dr Aniston', 70, 20, 3.5]]
 
     #london
-    uni_course2 = [['History 1','School of History', 2011, 'Dr Jolie', 4.3],
-                  ['Geology 101','School of Geology', 2011, 'Dr Johanson', 3.0]]
+    uni_course2 = [['History 1','School of History', 2011, 'Dr Jolie', 86, 20, 4.3],
+                  ['Geology 101','School of Geology', 2011, 'Dr Johanson', 60, 20, 3.0]]
 
     #leeds
-    uni_course3 = [['Project Management','School of Computing Science', 2010, 'Dr Knightley', 3.7],
-                  ['Mathematics 1','School of Mathematics', 2012, 'Dr Stone', 3.4]]
+    uni_course3 = [['Project Management','School of Computing Science', 2010, 'Dr Knightley', 74, 20, 3.7],
+                  ['Mathematics 1','School of Mathematics', 2012, 'Dr Stone', 68, 20, 3.4]]
 
     #sheffield
-    uni_course4 = [['Professional Skills and Issues','School of Computing Science', 2008, 'Dr Cruz', 4.4],
-                  ['Internet Technology','School of Computing Science', 2008, 'Dr App', 4.8],
-                  ['Mathematics 1','School of Mathematics', 2008, 'Dr Swift', 3.3],
-                  ['Project Management','School of Computing Science', 2010, 'Dr Andrew', 2.3]]
+    uni_course4 = [['Professional Skills and Issues','School of Computing Science', 2008, 'Dr Cruz', 88, 20, 4.4],
+                  ['Internet Technology','School of Computing Science', 2008, 'Dr App', 96, 20, 4.8],
+                  ['Mathematics 1','School of Mathematics', 2008, 'Dr Swift', 66, 20, 3.3],
+                  ['Project Management','School of Computing Science', 2010, 'Dr Andrew', 46, 20, 2.3]]
 
     #stu_id, course_id, rate, comment, date
     rateit = [[11, 5, 4, 'What an interesting course!', '2014-02-11'], [11, 3, 2, 'Not very good', '2013-01-23'],
@@ -80,7 +80,7 @@ def populate():
     for j in range(0, 2, 1):
         u = University.objects.get(name="University of Glasgow")
         c = Course.objects.get(title=uni_course1[j][0])
-        add_unicourse(u, c, uni_course1[j][1], uni_course1[j][2], uni_course1[j][3], uni_course1[j][4])
+        add_unicourse(u, c, uni_course1[j][1], uni_course1[j][2], uni_course1[j][3], uni_course1[j][4], uni_course1[j][5], uni_course1[j][6])
 
     #LONDON
     for j in range(0, 2, 1):

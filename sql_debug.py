@@ -17,6 +17,35 @@ def run():
 
     c = conn.cursor()
 
+    print 'rate course'
+    for row in c.execute('SELECT * FROM rate_course'):# WHERE id=68'):
+        print row
+
+    print 'rate unic uni'
+    for row in c.execute('select * from rate_uniCourse_university'):
+        print row
+
+    print 'rate_unicourse_course'
+    for row in c.execute('select * from rate_uniCourse_course'):
+        print row
+
+    print 'rate_unicourse'
+    for row in c.execute('select * from rate_uniCourse'):
+        print row
+
+
+    print 'rate rating course'
+    for row in c.execute('SELECT * FROM rate_rating_course'):#' WHERE id=68'):
+        print row
+
+    print 'rate rating student'
+    for row in c.execute('SELECT * FROM rate_rating_student'):#' WHERE id=68'):
+        print row
+
+    print 'rate rating'
+    for row in c.execute('SELECT * FROM rate_rating'):#' WHERE id=69'):
+        print row
+
     '''
     print 'rate uni'
     for row in c.execute('SELECT * FROM rate_university'):
@@ -27,10 +56,10 @@ def run():
 
     print 'rate student'
     for row in c.execute('SELECT * FROM rate_student where id_uni_id=4'): # WHERE id=68'):
-        print row'''
+        print row
 
     for row in c.execute('select * from rate_rating_course where course_id=1'):#' where student_id=68'):
-        print row
+        print row'''
 
 '''
     print 'rate course'
