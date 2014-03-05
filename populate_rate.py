@@ -5,20 +5,14 @@ import os
 def populate():
 
     #For each university this is the tables to pair with the courses
-    #glasgow
-    uni_course1 = [['Internet Technology','School of Computing Science', 2014, 'Dr Azzopardi', 4.6],
-                  ['Economics 101','School of Economics', 2010, 'Dr Aniston', 3.5]]
 
-    #london
-    uni_course2 = [['History 1','School of History', 2011, 'Dr Jolie', 4.3],
-                  ['Geology 101','School of Geology', 2011, 'Dr Johanson', 3.0]]
-
-    #leeds
-    uni_course3 = [['Project Management','School of Computing Science', 2010, 'Dr Knightley', 3.7],
-                  ['Mathematics 1','School of Mathematics', 2012, 'Dr Stone', 3.4]]
-
-    #sheffield
-    uni_course4 = [['Professional Skills and Issues','School of Computing Science', 2008, 'Dr Cruz', 4.4],
+    uni_course = [['Internet Technology','School of Computing Science', 2014, 'Dr Azzopardi', 4.6],  #glasgow
+                  ['Economics 101','School of Economics', 2010, 'Dr Aniston', 3.5],
+                  ['History 1','School of History', 2011, 'Dr Jolie', 4.3],                         #london
+                  ['Geology 101','School of Geology', 2011, 'Dr Johanson', 3.0],
+                  ['Project Management','School of Computing Science', 2010, 'Dr Knightley', 3.7],  #leeds
+                  ['Mathematics 1','School of Mathematics', 2012, 'Dr Stone', 3.4],
+                  ['Professional Skills and Issues','School of Computing Science', 2008, 'Dr Cruz', 4.4], #sheffield
                   ['Internet Technology','School of Computing Science', 2008, 'Dr App', 4.8],
                   ['Mathematics 1','School of Mathematics', 2008, 'Dr Swift', 3.3],
                   ['Project Management','School of Computing Science', 2010, 'Dr Andrew', 2.3]]
@@ -76,33 +70,13 @@ def populate():
                         '1234', u)
 
     #Cources in each university
-    #GLASGOW
-    for j in range(0, 2, 1):
+    for j in range(len(uni_course)):
         u = University.objects.get(name="University of Glasgow")
-        c = Course.objects.get(title=uni_course1[j][0])
-        add_unicourse(u, c, uni_course1[j][1], uni_course1[j][2], uni_course1[j][3], uni_course1[j][4])
+        c = Course.objects.get(title=uni_course[j][0])
+        add_unicourse(u, c, uni_course[j][1], uni_course[j][2], uni_course[j][3], uni_course[j][4])
 
-    #LONDON
-    for j in range(0, 2, 1):
-        u = University.objects.get(name="University of London")
-        c = Course.objects.get(title=uni_course2[j][0])
-        add_unicourse(u, c, uni_course2[j][1], uni_course2[j][2], uni_course2[j][3], uni_course2[j][4])
-
-    #LEEDS
-    for j in range(0, 2, 1):
-        u = University.objects.get(name="University of Leeds")
-        c = Course.objects.get(title=uni_course3[j][0])
-        add_unicourse(u, c, uni_course3[j][1], uni_course3[j][2], uni_course3[j][3], uni_course3[j][4])
-
-    #SHEFFIELD
-    for j in range(0, 3, 1):
-        u = University.objects.get(name="University of Sheffield")
-        c = Course.objects.get(title=uni_course4[j][0])
-        add_unicourse(u, c, uni_course4[j][1], uni_course4[j][2], uni_course4[j][3], uni_course4[j][4])
-        #r = add_rate(s, c, rateit[0], rateit[1], rateit[2])
 
     #ratings per uni
-    #LEEDS
     for i in range(len(rateit)):
         st = Student.objects.get(id=rateit[i][0])
         c = Course.objects.get(id=rateit[i][1])
