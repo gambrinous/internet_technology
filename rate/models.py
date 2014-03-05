@@ -28,39 +28,22 @@ class Student(models.Model):
 
 class Course(models.Model):
     title = models.CharField(max_length=128)
+    university = models.ForeignKey(University)
+    year = models.IntegerField(default=2000)
+    level = models.IntegerField(default=1)
+    professor = models.CharField(max_length=128)
+    rating = models.FloatField(default=0)
 
     def __unicode__(self):
         return self.title
 
 
-class UniCourse(models.Model):
-    university = models.ManyToManyField(University)
-    course = models.ManyToManyField(Course)
-    school = models.CharField(max_length=128)
-    year = models.IntegerField(default=2000)
-    professor = models.CharField(max_length=128)
-    total_rating = models.IntegerField(default=0)
-    times_rated = models.IntegerField(default=0)
-    stored_average_rating = models.FloatField(default=0.0)
-
-    def _get_average_rating(self):
-        if self.times_rated == 0:
-            return 0.0
-        else:
-            return round(float(self.total_rating)/float(self.times_rated),1)
-
-    average_rating2 = property(_get_average_rating)
-
-    def __unicode__(self):
-        return self.university + ' ' + self.course
-
-
-class Rating(models.Model):
-    student = models.ManyToManyField(Student)
-    course = models.ManyToManyField(Course)
+class Rate(models.Model):
+    student = models.ForeignKey(Student)
+    course = models.ForeignKey(Course)
     rate = models.FloatField(default=0)
     comment = models.CharField(max_length=1024)
-    date = models.DateField(auto_now=True)
+    date = models.DateTimeField(auto_now=True)
 
     def __unicode__(self):
-        return unicode(self.student) + ' ' + unicode(self.course)
+        return unicode(self.student) + ' / ' + unicode(self.course)
