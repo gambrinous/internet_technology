@@ -4,7 +4,7 @@
         <h3>Top 5</h3>
         <ul>
             {% for rate in topfive %}
-            <li>{{ rate.course }}</li>
+            <li>{{ rate.course.all }}</li>
             {% endfor %}
         </ul>
     {% else %}
@@ -15,7 +15,7 @@
         <h3>Worst 5</h3>
         <ul>
             {% for rate in worstfive %}
-            <li>{{ rate.course }}</li>
+            <li>{{ rate.course.all }}</li>
             {% endfor %}
         </ul>
     {% else %}
