@@ -20,7 +20,9 @@ class Course(models.Model):
     year = models.IntegerField(default=2000)
     level = models.IntegerField(default=1)
     professor = models.CharField(max_length=128)
-    rating = models.FloatField(default=0)
+    total_rating = models.IntegerField(default=0)
+    times_rated = models.IntegerField(default=0)
+    stored_average_rating = models.FloatField(default=0.0)
 
     def __unicode__(self):
         return self.title
@@ -31,7 +33,7 @@ class Rate(models.Model):
     course = models.ForeignKey(Course)
     rate = models.FloatField(default=0)
     comment = models.CharField(max_length=1024)
-    date = models.DateTimeField(auto_now=True)
+    date = models.DateField(auto_now=True)
 
     def __unicode__(self):
         return unicode(self.student) + ' / ' + unicode(self.course)
