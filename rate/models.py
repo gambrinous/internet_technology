@@ -31,7 +31,7 @@ class Course(models.Model):
 class Rate(models.Model):
     student = models.ForeignKey(User)
     course = models.ForeignKey(Course)
-    rate = models.FloatField(default=0)
+    rate = models.FloatField(default=0.0)
     comment = models.CharField(max_length=1024)
     date = models.DateField(auto_now=True)
 

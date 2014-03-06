@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="30c1a6ba-e96f-4220-ab20-1d5191afc829" name="Default" comment="index">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rate/admin.py" afterPath="$PROJECT_DIR$/rate/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/rate/base.html" afterPath="$PROJECT_DIR$/templates/rate/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rate/forms.py" afterPath="$PROJECT_DIR$/rate/forms.py" />
+    <list default="true" id="30c1a6ba-e96f-4220-ab20-1d5191afc829" name="Default" comment="populate scr&#10;&#10;many to many @ models">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/RateMyCourse.iml" afterPath="$PROJECT_DIR$/.idea/RateMyCourse.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/rate/index.html" afterPath="$PROJECT_DIR$/templates/rate/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rate/models.py" afterPath="$PROJECT_DIR$/rate/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/populate_rate.py" afterPath="$PROJECT_DIR$/populate_rate.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/rate/register.html" afterPath="$PROJECT_DIR$/templates/rate/register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rate/urls.py" afterPath="$PROJECT_DIR$/rate/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rate/views.py" afterPath="$PROJECT_DIR$/rate/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -33,10 +29,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="populate_rate.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="populate_rate.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/populate_rate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="14" selection-start="3659" selection-end="3659" vertical-scroll-proportion="0.9667382" vertical-offset="204" max-vertical-offset="2108">
+            <state line="148" column="12" selection-start="7210" selection-end="7210" vertical-scroll-proportion="0.0" vertical-offset="2181" max-vertical-offset="2771">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/rate/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="47" selection-start="800" selection-end="800" vertical-scroll-proportion="-18.961538" vertical-offset="0" max-vertical-offset="714">
               <folding />
             </state>
           </provider>
@@ -45,69 +50,19 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rate/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="0" selection-start="3106" selection-end="3106" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="2125">
-              <folding>
-                <element signature="e#26#68#0" expanded="true" />
-              </folding>
+            <state line="13" column="61" selection-start="544" selection-end="544" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1989">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forms.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rate/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="25" selection-end="68" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-              <folding>
-                <marker date="1394048157826" expanded="true" signature="102:267" placeholder="..." />
-                <marker date="1394048157826" expanded="true" signature="180:267" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rate/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="432" selection-end="432" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
+            <state line="33" column="40" selection-start="1047" selection-end="1047" vertical-scroll-proportion="0.9303483" vertical-offset="0" max-vertical-offset="765">
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rate/admin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="35" selection-start="68" selection-end="68" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="register.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/rate/register.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="36" selection-start="513" selection-end="513" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="799">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rate/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="45" selection-start="494" selection-end="494" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/rate/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="10" selection-start="966" selection-end="966" vertical-scroll-proportion="-18.961538" vertical-offset="51" max-vertical-offset="986">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -123,30 +78,30 @@
     <option name="UPDATE_TYPE" value="REBASE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/templates/rate/contact.html" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/templates/rate/UnderConstruction.html" />
-        <option value="$PROJECT_DIR$/templates/rate/restricted.html" />
         <option value="$PROJECT_DIR$/templates/rate/about.html" />
-        <option value="$PROJECT_DIR$/templates/rate/index.html" />
         <option value="$PROJECT_DIR$/rate/urls.py" />
-        <option value="$PROJECT_DIR$/templates/rate/base.html" />
-        <option value="$PROJECT_DIR$/rate/models.py" />
-        <option value="$PROJECT_DIR$/templates/rate/register.html" />
-        <option value="$PROJECT_DIR$/rate/forms.py" />
+        <option value="$PROJECT_DIR$/templates/rate/contact.html" />
         <option value="$PROJECT_DIR$/rate/admin.py" />
-        <option value="$PROJECT_DIR$/rate/views.py" />
         <option value="$PROJECT_DIR$/populate_rate.py" />
+        <option value="$PROJECT_DIR$/rate/views.py" />
+        <option value="$PROJECT_DIR$/templates/rate/index.html" />
+        <option value="$PROJECT_DIR$/rate/models.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1066" />
+    <option name="y" value="-8" />
+    <option name="width" value="1296" />
+    <option name="height" value="786" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -174,6 +129,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -189,56 +145,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="RateMyCourse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RateMyCourse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RateMyCourse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RateMyCourse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RateMyCourse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RateMyCourse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RateMyCourse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="groupMembers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -272,14 +178,13 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
-    <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -290,6 +195,119 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="H:\workspace\ITECH\RateMyCourse\templates\rate" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree">
+    <UpdateInfo date="Moments ago" ActionInfo="_Update">
+      <UpdatedFiles>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated from server" />
+          <option name="myStatusName" value="Changed on server" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CHANGED_ON_SERVER" />
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Updated" />
+            <option name="myStatusName" value="Changed" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="UPDATED" />
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/populate_rate.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/rate/models.py</PATH>
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Created" />
+            <option name="myStatusName" value="Created" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="CREATED" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Deleted" />
+            <option name="myStatusName" value="Deleted" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="true" />
+            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Restored" />
+            <option name="myStatusName" value="Will be restored" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="RESTORED" />
+          </FILE-GROUP>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Modified" />
+          <option name="myStatusName" value="Modified" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MODIFIED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Skipped" />
+          <option name="myStatusName" value="Skipped" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SKIPPED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with conflicts" />
+          <option name="myStatusName" value="Will be merged with conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_CONFLICTS" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with tree conflicts" />
+          <option name="myStatusName" value="Merged with tree conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with property conflicts" />
+          <option name="myStatusName" value="Will be merged with property conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged" />
+          <option name="myStatusName" value="Will be merged" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Not in repository" />
+          <option name="myStatusName" value="Not in repository" />
+          <option name="mySupportsDeletion" value="true" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UNKNOWN" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally added" />
+          <option name="myStatusName" value="Locally added" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_ADDED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally removed" />
+          <option name="myStatusName" value="Locally removed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_REMOVED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Switched" />
+          <option name="myStatusName" value="Switched" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SWITCHED" />
+        </FILE-GROUP>
+      </UpdatedFiles>
+    </UpdateInfo>
   </component>
   <component name="RunManager" selected="Django server.RateMyCourse">
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
@@ -465,6 +483,12 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
+      <method />
+    </configuration>
     <configuration default="false" name="RateMyCourse" type="Python.DjangoServer" factoryName="Django server">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -568,65 +592,54 @@
       <created>1393711012918</created>
       <updated>1393711012918</updated>
     </task>
-    <task id="LOCAL-00014" summary="populate scr&#10;&#10;many to many @ models">
-      <created>1393711653320</created>
-      <updated>1393711653320</updated>
-    </task>
-    <task id="LOCAL-00015" summary="with the populate THIS script we can pre-fill the db">
-      <created>1393866579507</created>
-      <updated>1393866579507</updated>
-    </task>
-    <task id="LOCAL-00016" summary="exclude .xml files :@@@">
-      <created>1393866735324</created>
-      <updated>1393866735324</updated>
-    </task>
-    <task id="LOCAL-00017" summary="test">
-      <created>1393866766157</created>
-      <updated>1393866766157</updated>
-    </task>
-    <task id="LOCAL-00018" summary="models">
-      <created>1393867368613</created>
-      <updated>1393867368613</updated>
-    </task>
-    <task id="LOCAL-00019" summary="up">
-      <created>1394036331436</created>
-      <updated>1394036331436</updated>
-    </task>
-    <task id="LOCAL-00020" summary="index">
-      <created>1394036607562</created>
-      <updated>1394036607562</updated>
-    </task>
-    <task id="LOCAL-00021" summary="base">
-      <created>1394041327761</created>
-      <updated>1394041327761</updated>
-    </task>
-    <option name="localTasksCounter" value="22" />
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1936" height="1066" extended-state="0" />
+    <frame x="-8" y="-8" width="1296" height="786" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290938" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.253125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27633712" sideWeight="0.6709062" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32881" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32750398" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3290938" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32750398" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27633712" sideWeight="0.6709062" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-    </layout>
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -643,176 +656,15 @@
     <MESSAGE value="urls" />
     <MESSAGE value="populate scr" />
     <MESSAGE value="populate scr&#10;&#10;many to many @ models" />
-    <MESSAGE value="with the populate THIS script we can pre-fill the db" />
-    <MESSAGE value="exclude .xml files :@@@" />
-    <MESSAGE value="test" />
-    <MESSAGE value="models" />
-    <MESSAGE value="up" />
-    <MESSAGE value="index" />
-    <MESSAGE value="base" />
-    <option name="LAST_COMMIT_MESSAGE" value="base" />
+    <option name="LAST_COMMIT_MESSAGE" value="populate scr&#10;&#10;many to many @ models" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="13" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0" vertical-offset="748" max-vertical-offset="867">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rate/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="26" selection-start="909" selection-end="909" vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="1020">
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/populate_rate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="57" selection-start="1955" selection-end="1955" vertical-scroll-proportion="0.0" vertical-offset="394" max-vertical-offset="1326">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rate/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="29" selection-start="783" selection-end="783" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="1054">
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/populate_rate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="116" selection-start="960" selection-end="960" vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="1326">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rate/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="29" selection-start="783" selection-end="783" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="1054">
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/populate_rate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="55" selection-start="333" selection-end="333" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rate/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="0" selection-start="1044" selection-end="1225" vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="1054">
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/rate/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="11" selection-start="120" selection-end="120" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="187" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/populate_rate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="0" selection-start="1626" selection-end="1626" vertical-scroll-proportion="0.0" vertical-offset="173" max-vertical-offset="1122">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RateMyCourse/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="17" selection-start="4669" selection-end="4669" vertical-scroll-proportion="0.0" vertical-offset="1839" max-vertical-offset="2771">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rate/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="915" selection-end="915" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="1020">
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/populate_rate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="870" selection-end="870" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="1683">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RateMyCourse/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="0" selection-start="4338" selection-end="4338" vertical-scroll-proportion="0.0" vertical-offset="2193" max-vertical-offset="2771">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rate/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="32" selection-start="124" selection-end="124" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1071">
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RateMyCourse/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="0" selection-start="3749" selection-end="3749" vertical-scroll-proportion="0.0" vertical-offset="1906" max-vertical-offset="2788">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rate/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="1" selection-start="187" selection-end="187" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="221" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rate/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="68" selection-start="763" selection-end="763" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="408" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/rate/about.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="7" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="289" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../tango_with_django_project/templates/rango/about.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="19" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="357" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/rate/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="29" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="323" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../tango_with_django_project/rango/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="61" selection-start="4704" selection-end="4761" vertical-scroll-proportion="0.0" vertical-offset="1479" max-vertical-offset="6426" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RateMyCourse/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2788">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2788" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RateMyCourse/urls.py">
@@ -827,9 +679,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/RateMyCourse/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2754">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2754" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RateMyCourse/urls.py">
@@ -837,19 +687,9 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../tango_with_django_project/rango/urls.py">
+    <entry file="file://$PROJECT_DIR$/templates/rate/about.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="51" selection-start="150" selection-end="193" vertical-scroll-proportion="0.07530454" vertical-offset="0" max-vertical-offset="903" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../tango_with_django_project/tango_with_django_project/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="19" selection-start="877" selection-end="877" vertical-scroll-proportion="0.0" vertical-offset="2263" max-vertical-offset="3145" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../tango_with_django_project/templates/rango/about.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="320" selection-end="320" vertical-scroll-proportion="0.25431532" vertical-offset="0" max-vertical-offset="869" />
+        <state line="11" column="7" selection-start="184" selection-end="184" vertical-scroll-proportion="0.21518987" vertical-offset="0" max-vertical-offset="869" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/rate/contact.html">
@@ -857,14 +697,9 @@
         <state line="8" column="27" selection-start="115" selection-end="115" vertical-scroll-proportion="0.15650173" vertical-offset="0" max-vertical-offset="869" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../tango_with_django_project/rango/views.py">
+    <entry file="file://$PROJECT_DIR$/rate/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="343" column="48" selection-start="14401" selection-end="14401" vertical-scroll-proportion="3.221484" vertical-offset="2803" max-vertical-offset="6307" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../tango_with_django_project/rango/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="36" selection-start="487" selection-end="487" vertical-scroll-proportion="0.2505669" vertical-offset="0" max-vertical-offset="882" />
+        <state line="8" column="1" selection-start="243" selection-end="243" vertical-scroll-proportion="0.12991266" vertical-offset="0" max-vertical-offset="916" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RateMyCourse/urls.py">
@@ -872,125 +707,48 @@
         <state line="8" column="39" selection-start="242" selection-end="242" vertical-scroll-proportion="0.14847161" vertical-offset="0" max-vertical-offset="916" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../tango_with_django_project/rango/models.py">
+    <entry file="file://$PROJECT_DIR$/templates/rate/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="42" selection-start="104" selection-end="104" vertical-scroll-proportion="0.036480688" vertical-offset="0" max-vertical-offset="932" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.6270996" vertical-offset="1453" max-vertical-offset="2346" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../tango_with_django_project/populate_rango.py">
+    <entry file="file://$PROJECT_DIR$/rate/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="12" selection-start="1658" selection-end="1658" vertical-scroll-proportion="0.74785405" vertical-offset="306" max-vertical-offset="1309" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="13" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/rate/UnderConstruction.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="16" selection-start="380" selection-end="380" vertical-scroll-proportion="0.18763797" vertical-offset="0" max-vertical-offset="906">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/rate/restricted.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="4" selection-start="36" selection-end="100" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="952">
-          <folding />
-        </state>
+        <state line="7" column="30" selection-start="252" selection-end="252" vertical-scroll-proportion="0.1276824" vertical-offset="0" max-vertical-offset="932" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RateMyCourse/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="15" selection-start="2400" selection-end="2400" vertical-scroll-proportion="1.8735819" vertical-offset="0" max-vertical-offset="2805">
+        <state line="68" column="15" selection-start="2400" selection-end="2400" vertical-scroll-proportion="0.5439914" vertical-offset="649" max-vertical-offset="2805" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/populate_rate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="148" column="12" selection-start="7210" selection-end="7210" vertical-scroll-proportion="0.0" vertical-offset="2181" max-vertical-offset="2771">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rate/tests.py">
+    <entry file="file://$PROJECT_DIR$/rate/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="617">
+        <state line="13" column="61" selection-start="544" selection-end="544" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1989">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/rate/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="24" selection-start="370" selection-end="370" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="714">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/rate/about.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="54" selection-start="437" selection-end="437" vertical-scroll-proportion="0.22516556" vertical-offset="0" max-vertical-offset="906">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/rate/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="36" selection-start="513" selection-end="513" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="799">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rate/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="45" selection-start="494" selection-end="494" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/rate/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="10" selection-start="966" selection-end="966" vertical-scroll-proportion="-18.961538" vertical-offset="51" max-vertical-offset="986">
+        <state line="29" column="47" selection-start="800" selection-end="800" vertical-scroll-proportion="-18.961538" vertical-offset="0" max-vertical-offset="714">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rate/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="432" selection-end="432" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
+        <state line="33" column="40" selection-start="1047" selection-end="1047" vertical-scroll-proportion="0.9303483" vertical-offset="0" max-vertical-offset="765">
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rate/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="35" selection-start="68" selection-end="68" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rate/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="25" selection-end="68" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-          <folding>
-            <marker date="1394048157826" expanded="true" signature="102:267" placeholder="..." />
-            <marker date="1394048157826" expanded="true" signature="180:267" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rate/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="0" selection-start="3106" selection-end="3106" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="2125">
-          <folding>
-            <element signature="e#26#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/populate_rate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="14" selection-start="3659" selection-end="3659" vertical-scroll-proportion="0.9667382" vertical-offset="204" max-vertical-offset="2108">
-          <folding />
         </state>
       </provider>
     </entry>

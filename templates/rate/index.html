@@ -5,7 +5,7 @@
         <h3>Top 5</h3>
         <ul>
             {% for rate in topfive %}
-            <li>{{ rate.course.all }}</li>
+            <li>{{ rate.title }}, {{ rate.stored_average_rating }}</li>
             {% endfor %}
         </ul>
     {% else %}
@@ -16,7 +16,7 @@
         <h3>Worst 5</h3>
         <ul>
             {% for rate in worstfive %}
-            <li>{{ rate.course.all }}</li>
+            <li>{{ rate.title }}, {{ rate.stored_average_rating }}</li>
             {% endfor %}
         </ul>
     {% else %}
@@ -27,7 +27,7 @@
         <h3>Latest</h3>
         <ul>
             {% for rate in latestfive %}
-            <li>{{ rate.course }}</li>
+            <li>{{ rate.course }}, {{ rate.rate }}</li>
             {% endfor %}
         </ul>
     {% else %}
