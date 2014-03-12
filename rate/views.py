@@ -9,6 +9,7 @@ from datetime import datetime
 from rate.models import Rate, Course, University
 from rate.forms import UserForm
 
+
 def index(request):
     context = RequestContext(request)
     top_five_list = Course.objects.order_by('-stored_average_rating')[:5]
@@ -17,7 +18,8 @@ def index(request):
     university_list = University.objects.order_by('name')
     course_list = Course.objects.values('title').distinct()
     year_list = Course.objects.values('year').distinct()
-    context_dict = {'topfive': top_five_list, 'worstfive': worst_five_list, 'latestfive': latest_list, 'universitylist': university_list, 'courselist': course_list, 'yearlist': year_list}
+    context_dict = {'topfive': top_five_list, 'worstfive': worst_five_list, 'latestfive': latest_list,
+                    'universitylist': university_list, 'courselist': course_list, 'yearlist': year_list}
     return render_to_response('rate/index.html', context_dict, context)
 
 
@@ -55,10 +57,12 @@ def user_login(request):
     else:
         return render_to_response('rate/login.html', {}, context)
 
+
 @login_required
 def user_logout(request):
     logout(request)
     return HttpResponseRedirect('/rate/')
+
 
 def register(request):
 
@@ -107,17 +111,25 @@ def register(request):
     else:
         return HttpResponse("You are already registered and signed in.")
 
+
 def restricted(request):
     if request.user.is_authenticated():
         return HttpResponse("You cannot access this page!")
     else:
         return render_to_response('rate/restricted.html')
 
+
 def underConstruction(request):
     context = RequestContext(request)
     context_dict = {'boldmessage': "Under Construction"}
     return render_to_response('rate/underConstruction.html', context_dict, context)
 
+
 def test(request):
     context = RequestContext(request)
     return render_to_response('rate/test.html', context)
+
+
+def course(request):
+    context = RequestContext(request)
+    return render_to_response('rate/course.html', context)
