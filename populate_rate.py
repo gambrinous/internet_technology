@@ -25,7 +25,7 @@ def populate():
 
     #stu_id, course_id, rate, comment, date
     rateit = [[11, 5, 4, 'What an interesting course!', '2014-02-11'], [11, 3, 2, 'Not very good', '2013-01-23'],
-             [8, 6, 4, 'it is okay', '2011-03-12'], [12, 1, 2, 'not good at all', '2008-11-10'],
+             [8, 6, 4, 'it is okay', '2011-03-12'], [12, 1, 5, 'not good at all', '2008-11-10'],
              [12, 3, 3, 'not very objective', '2008-12-05'], [2, 2, 4, 'very fluent', '2010-04-02']]
 
     #all of the courses
@@ -125,7 +125,7 @@ def add_student(name, surname, email, password):#, university):
 def add_course(title, uni, year, professor, total_rating, times_rated):#, rating):
     c = Course.objects.get_or_create(title=title, university=uni, year=year, professor=professor, total_rating=total_rating, times_rated=times_rated) [0]#, average_rating=rating)[0]
     #c.university = University.objects.get(name=uni)
-    c.stored_average_rating = (round(float(total_rating)/float(times_rated),2))
+    c.stored_average_rating = ((float(total_rating)/float(times_rated)))
     c.save()
     return c
 '''
@@ -140,7 +140,20 @@ def add_unicourse(title, uni, course, school, year, professor, total_rating, tim
 '''
 def add_rate(student, course, rate, comment, date):
     r = Rate.objects.get_or_create(student=student, course=course, rate=rate, comment=comment, date=date)[0]
-    '''uc._get_total_rating(course)
+    tr = Course.objects.get(id=course.id)
+    tr.times_rated += 1
+    tr.total_rating += rate
+    tr.stored_average_rating = ((float(tr.total_rating)/float(tr.times_rated)))
+    tr.save()
+    '''
+    tr = Course.objects.get(id="1")
+    times_rated = tr.times_rated
+    new_times = times_rated + 1
+    total_score = tr.total_rating
+    new_score = total_score + 5
+    stored_average_rating = tr.stored_average_rating
+    new_rating = (round(float(new_score)/float(new_times)))
+    uc._get_total_rating(course)
     uc.total_rating += rate
     uc.times_rated += 1
     uc.save()
