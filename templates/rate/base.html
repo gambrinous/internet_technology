@@ -31,7 +31,20 @@
     </div>
     <footer>
         <div class="container">
-            <a href="/rate/register/">Register Here</a>
+         <div>
+            <ul>
+			<li>  <a href="/rate/">Index</a>
+            <li><a href="/rate/about/">About</a></li>
+            <li><a href="/rate/contact/">Contact Us</a></li>
+            <li><a href="/rate/restricted/">restricted page</a></li>
+            {% if user.is_authenticated %}
+                <li><a href="/rate/logout/">Logout</a></li>
+            {% else %}
+                <li><a href="/rate/register/">Register Here</a></li>
+                <li><a href="/rate/login/">Login</a></li>
+            {% endif %}
+            </ul>
+        </div>
             <p>&copy; Colossus 4.0 Team 2014</p>
         </div>
     </footer>
