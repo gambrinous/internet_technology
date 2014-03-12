@@ -1,88 +1,81 @@
 {% extends 'rate/base.html' %}
-	{% block body_block %}
-        <div class="hero-unit">
-            <div class="btn-group">
-            <a href="#" class="btn btn-primary" >Choose University</a>
-            <a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle"><span class="caret"></span></a>
-            {%  if universitylist %}
-                <ul class="dropdown-menu">
+{% block body_block %}
+    <div class="hero-unit">
+        <div class="btn-group">
+            <select>
+                <option selected value="">Choose University</option>
+                {% if universitylist %}
                     {% for item in universitylist %}
-                        <li><a href="#" style="color: rgb(85, 85, 85);">{{ item.name }}</a></li>
+                        <option value="{{ item.id }}">{{ item.name }}</option>
                     {% endfor %}
-                </ul>
-            {% endif %}
-            </div>
-            <div class="btn-group">
-            <a href="#" class="btn btn-primary" >Choose Course</a>
-            <a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle"><span class="caret"></span></a>
-            {%  if courselist %}
-                <ul class="dropdown-menu">
+                {% endif %}
+            </select>
+        </div>
+        <div class="btn-group">
+            <select>
+                <option selected value="">Choose Course</option>
+                {% if courselist %}
                     {% for item in courselist %}
-                        <li><a href="#" style="color: rgb(85, 85, 85);">{{ item.title }}</a></li>
+                        <option value="{{ item.id }}">{{ item.title }}</option>
                     {% endfor %}
-                </ul>
-            {% endif %}
-            </div>
-            <div class="btn-group">
-                <a href="#" class="btn btn-primary" >Choose Level</a>
-                <a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle"><span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#" style="color: rgb(85, 85, 85);">Level 1</a></li>
-                    <li><a href="#" style="color: rgb(85, 85, 85);">Level 2</a></li>
-                    <li><a href="#" style="color: rgb(85, 85, 85);">Level 3</a></li>
-                    <li><a href="#" style="color: rgb(85, 85, 85);">Level 4</a></li>
-                    <li><a href="#" style="color: rgb(85, 85, 85);">Level M</a></li>
-                </ul>
-            </div>
-            <div class="btn-group">
-            <a href="#" class="btn btn-primary" >Choose Year</a>
-            <a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle"><span class="caret"></span></a>
-            {%  if yearlist %}
-                <ul class="dropdown-menu">
+                {% endif %}
+            </select>
+        </div>
+        <div class="btn-group">
+            <select>
+                <option selected value="">Choose Level</option>
+                <option value="1">Level 1</option>
+                <option value="2">Level 2</option>
+                <option value="3">Level 3</option>
+                <option value="4">Level 4</option>
+                <option value="5">Level M</option>
+            </select>
+        </div>
+        <div class="btn-group">
+            {% if yearlist %}
                     {% for item in yearlist %}
                         <li><a href="#" style="color: rgb(85, 85, 85);">{{ item.year }}</a></li>
                     {% endfor %}
+            {% endif %}
+        </div>
+        <a class="btn btn-primary" href="#" style="float: right">Find</a>
+    </div>
+    <div class="row-fluid">
+        {% if topfive %}
+            <div class="span4" style="text-align: center">
+                <h3>Top 5</h3>
+                <ul>
+                    {% for rate in topfive %}
+                        <li>{{ rate.title }}, {{ rate.stored_average_rating }}</li>
+                    {% endfor %}
                 </ul>
-            {% endif %}
             </div>
-            <a class="btn btn-primary" href="#" style="float: right">Find</a>
-        </div>
-        <div class="row-fluid" >
-            {% if topfive %}
-                <div class="span4" style="text-align: center">
-                    <h3>Top 5</h3>
-                    <ul>
-                        {% for rate in topfive %}
+        {% else %}
+            <strong>There are no top 5</strong>
+        {% endif %}
+        {% if worstfive %}
+            <div class="span4" style="text-align: center">
+                <h3>Worst 5</h3>
+                <ul>
+                    {% for rate in worstfive %}
                         <li>{{ rate.title }}, {{ rate.stored_average_rating }}</li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            {% else %}
-                <strong>There are no top 5</strong>
-            {% endif %}
-            {% if worstfive %}
-                <div class="span4" style="text-align: center">
-                    <h3>Worst 5</h3>
-                    <ul>
-                        {% for rate in worstfive %}
-                        <li>{{ rate.title }}, {{ rate.stored_average_rating }}</li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            {% else %}
-                <strong>There are no worst 5</strong>
-            {% endif %}
-            {% if latestfive %}
-                <div class="span4" style="text-align: center">
-                    <h3>Latest</h3>
-                    <ul>
-                        {% for rate in latestfive %}
+                    {% endfor %}
+                </ul>
+            </div>
+        {% else %}
+            <strong>There are no worst 5</strong>
+        {% endif %}
+        {% if latestfive %}
+            <div class="span4" style="text-align: center">
+                <h3>Latest</h3>
+                <ul>
+                    {% for rate in latestfive %}
                         <li>{{ rate.course }}, {{ rate.rate }}</li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            {% else %}
-                <strong>There are no latest</strong>
-            {% endif %}
-        </div>
-    {% endblock %}
+                    {% endfor %}
+                </ul>
+            </div>
+        {% else %}
+            <strong>There are no latest</strong>
+        {% endif %}
+    </div>
+{% endblock %}

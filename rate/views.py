@@ -38,10 +38,8 @@ def user_login(request):
     context = RequestContext(request)
 
     if request.method == 'POST':
-
         username = request.POST['username']
         password = request.POST['password']
-
         user = authenticate(username=username, password=password)
 
         if user is not None:
@@ -53,7 +51,6 @@ def user_login(request):
         else:
             print "Invalid login details: {0}, {1}".format(username, password)
             return HttpResponse("Invalid login details supplied.")
-
     else:
         return render_to_response('rate/login.html', {}, context)
 
@@ -65,7 +62,6 @@ def user_logout(request):
 
 
 def register(request):
-
     if not request.user.is_authenticated():
 
         # Like before, get the request's context.
