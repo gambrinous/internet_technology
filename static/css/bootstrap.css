@@ -326,6 +326,8 @@ a:focus {
 
 .span4 {
   width: 300px;
+  border:dotted;
+  background-color: #dff0d8;
 }
 
 .span3 {
@@ -617,6 +619,7 @@ a:focus {
 .container {
   margin-right: auto;
   margin-left: auto;
+  margin-top: 10px;
   *zoom: 1;
 }
 

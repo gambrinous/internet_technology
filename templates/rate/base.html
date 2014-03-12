@@ -4,7 +4,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>RtC - {% block title %}Rate This Course{% endblock %}</title>
+    <title>RmC - {% block title %}Rate My Course{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -16,37 +16,26 @@
     <link href="../../static/css/bootstrap.css" rel="stylesheet">
 	<!-- The link before
  <link href="../static/css/bootstrap.css" rel="stylesheet">    -->
-
   </head>
 
   <body>
-<!-- The blocks of ofther pages must be added later in a center div box-->
-<!-- header -->
 	<div class= "container-fluid">
-
 		<headers>
 			<div class="page-header" >
 			header here
 			</div >
 		</headers>
-		
 	</div>
-
-<!-- main body -->
     <div>
         {% block body_block %}{% endblock %}
     </div>
-
-
-<!-- footer -->
     <footer>
-        <a href="/rate/register/">Register Here</a>
-        <p>&copy; Colossus 4.0 Team 2014</p>
+        <div class="container">
+            <a href="/rate/register/">Register Here</a>
+            <p>&copy; Colossus 4.0 Team 2014</p>
+        </div>
     </footer>
-
-
     <script src="{% static 'js/jquery-2.1.0.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
-
   </body>
 </html>

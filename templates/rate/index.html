@@ -1,36 +1,41 @@
 {% extends 'rate/base.html' %}
-{'''}
 	{% block body_block %}
-    {% if topfive %}
-        <h3>Top 5</h3>
-        <ul>
-            {% for rate in topfive %}
-            <li>{{ rate.title }}, {{ rate.stored_average_rating }}</li>
-            {% endfor %}
-        </ul>
-    {% else %}
-        <strong>There are no top 5</strong>
-    {% endif %}
-    <br/>
-    {% if worstfive %}
-        <h3>Worst 5</h3>
-        <ul>
-            {% for rate in worstfive %}
-            <li>{{ rate.title }}, {{ rate.stored_average_rating }}</li>
-            {% endfor %}
-        </ul>
-    {% else %}
-        <strong>There are no worst 5</strong>
-    {% endif %}
-    <br/>
-    {% if latestfive %}
-        <h3>Latest</h3>
-        <ul>
-            {% for rate in latestfive %}
-            <li>{{ rate.course }}, {{ rate.rate }}</li>
-            {% endfor %}
-        </ul>
-    {% else %}
-        <strong>There are no latest</strong>
-    {% endif %}
+    <div class="row-fluid" >
+        {% if topfive %}
+            <div class="span4" style="text-align: left">
+                <h3>Top 5</h3>
+                <ul>
+                    {% for rate in topfive %}
+                    <li>{{ rate.title }}, {{ rate.stored_average_rating }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% else %}
+            <strong>There are no top 5</strong>
+        {% endif %}
+        {% if worstfive %}
+            <div class="span4" style="text-align: center">
+                <h3>Worst 5</h3>
+                <ul>
+                    {% for rate in worstfive %}
+                    <li>{{ rate.title }}, {{ rate.stored_average_rating }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% else %}
+            <strong>There are no worst 5</strong>
+        {% endif %}
+        {% if latestfive %}
+            <div class="span4" style="text-align: center">
+                <h3>Latest</h3>
+                <ul>
+                    {% for rate in latestfive %}
+                    <li>{{ rate.course }}, {{ rate.rate }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% else %}
+            <strong>There are no latest</strong>
+        {% endif %}
+    </div>
 {% endblock %}
