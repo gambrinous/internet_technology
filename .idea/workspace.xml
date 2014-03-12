@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30c1a6ba-e96f-4220-ab20-1d5191afc829" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/RateMyCourse.iml" afterPath="$PROJECT_DIR$/.idea/RateMyCourse.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/rate/login.html" afterPath="$PROJECT_DIR$/templates/rate/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rate/urls.py" afterPath="$PROJECT_DIR$/rate/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rate/views.py" afterPath="$PROJECT_DIR$/rate/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/groupMembers/Conn.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/groupMembers/Pantelis.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/groupMembers/Paris.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/rate/about.html" afterPath="$PROJECT_DIR$/templates/rate/about.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RateMyCourse.iws" />
@@ -47,10 +47,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rate/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="1" selection-start="607" selection-end="607" vertical-scroll-proportion="0.40108892" vertical-offset="0" max-vertical-offset="551">
+            <state line="14" column="1" selection-start="607" selection-end="607" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
               <folding />
             </state>
           </provider>
@@ -74,10 +74,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="about.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="about.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/rate/about.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="30" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="442">
+            <state line="20" column="16" selection-start="954" selection-end="954" vertical-scroll-proportion="0.64761907" vertical-offset="0" max-vertical-offset="525">
               <folding />
             </state>
           </provider>
@@ -109,7 +109,6 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/templates/rate/UnderConstruction.html" />
         <option value="$PROJECT_DIR$/templates/rate/restricted.html" />
-        <option value="$PROJECT_DIR$/templates/rate/about.html" />
         <option value="$PROJECT_DIR$/templates/rate/index.html" />
         <option value="$PROJECT_DIR$/rate/models.py" />
         <option value="$PROJECT_DIR$/rate/admin.py" />
@@ -121,6 +120,7 @@
         <option value="$PROJECT_DIR$/templates/rate/login.html" />
         <option value="$PROJECT_DIR$/rate/views.py" />
         <option value="$PROJECT_DIR$/rate/urls.py" />
+        <option value="$PROJECT_DIR$/templates/rate/about.html" />
       </list>
     </option>
   </component>
@@ -202,6 +202,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RateMyCourse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RateMyCourse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="groupMembers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RateMyCourse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RateMyCourse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="rate" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -226,6 +258,7 @@
       <recent name="H:\workspace\ITECH\RateMyCourse\templates\rate" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="H:\workspace\ITECH\RateMyCourse\static\groupMembers" />
       <recent name="H:\workspace\ITECH\RateMyCourse\templates\rate" />
       <recent name="H:\workspace\ITECH\RateMyCourse\templates" />
       <recent name="H:\workspace\ITECH\RateMyCourse" />
@@ -697,7 +730,11 @@
       <created>1394640939128</created>
       <updated>1394640939128</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="login logout">
+      <created>1394641934413</created>
+      <updated>1394641934413</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -750,7 +787,8 @@
     <MESSAGE value="ta 3eskhsa ola giati mporw kai giati prepei!&#10;&#10;loipon:&#10;o Student mas efuge paei.. &#10;to django framework exei apo mono tou User pou mporei na parei first_name, last_name, email, password &#10;prepei na xrhsimopoihsoume ton User wste na mporei na ginetai automata to authentication kai to security tou password &#10; (opws elege kai o leif prin mia vdomada)&#10; &#10; etsi loipon efuga kai apo to admin, models, views,forms to den xreiazotan&#10; &#10; peira3a to populate script to kommati pou eisagoume students (/users) wste na douleuei me ton neo tropo.. (--parh prosexe mh to svhseis :P --)&#10; &#10; sto base kai sto register peiraxthkan epishs" />
     <MESSAGE value="requirements.txt" />
     <MESSAGE value="playing" />
-    <option name="LAST_COMMIT_MESSAGE" value="playing" />
+    <MESSAGE value="login logout" />
+    <option name="LAST_COMMIT_MESSAGE" value="login logout" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1026,13 +1064,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/rate/about.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="30" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="442">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/rate/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="17" selection-start="247" selection-end="247" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="340">
@@ -1070,7 +1101,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rate/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="1" selection-start="607" selection-end="607" vertical-scroll-proportion="0.40108892" vertical-offset="0" max-vertical-offset="551">
+        <state line="14" column="1" selection-start="607" selection-end="607" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/rate/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="16" selection-start="954" selection-end="954" vertical-scroll-proportion="0.64761907" vertical-offset="0" max-vertical-offset="525">
           <folding />
         </state>
       </provider>
