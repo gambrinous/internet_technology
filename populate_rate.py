@@ -6,22 +6,22 @@ def populate():
 
     #For each university this is the tables to pair with the courses
     #glasgow
-    uni_course1 = [['Internet Technology','School of Computing Science', 2014, 'Dr Azzopardi', 98, 20],# 4.9],
-                  ['Economics 101','School of Economics', 2010, 'Dr Aniston', 70, 20]]#, 3.5]]
+    uni_course1 = [['Internet Technology','School of Computing Science', 2014, 'Dr Azzopardi', 98, 20],
+                  ['Economics 101','School of Economics', 2010, 'Dr Aniston', 70, 20]]
 
     #london
-    uni_course2 = [['History 1','School of History', 2011, 'Dr Jolie', 86, 20],# 4.3],
-                  ['Geology 101','School of Geology', 2011, 'Dr Johanson', 60, 20]]#, 3.0]]
+    uni_course2 = [['History 1','School of History', 2011, 'Dr Jolie', 86, 20],
+                  ['Geology 101','School of Geology', 2011, 'Dr Johanson', 60, 20]]
 
     #leeds
-    uni_course3 = [['Project Management','School of Computing Science', 2010, 'Dr Knightley', 74, 20],# 3.7],
-                  ['Mathematics 1','School of Mathematics', 2012, 'Dr Stone', 68, 20]]#, 3.4]]
+    uni_course3 = [['Project Management','School of Computing Science', 2010, 'Dr Knightley', 74, 20],
+                  ['Mathematics 1','School of Mathematics', 2012, 'Dr Stone', 68, 20]]
 
     #sheffield
-    uni_course4 = [['Professional Skills and Issues','School of Computing Science', 2008, 'Dr Cruz', 88, 20],# 4.4],
-                  ['Internet Technology','School of Computing Science', 2008, 'Dr App', 96, 20],# 4.8],
-                  ['Mathematics 1','School of Mathematics', 2008, 'Dr Swift', 66, 20],# 3.3],
-                  ['Project Management','School of Computing Science', 2010, 'Dr Andrew', 46, 20]]#, 2.3]]
+    uni_course4 = [['Professional Skills and Issues','School of Computing Science', 2008, 'Dr Cruz', 88, 20],
+                  ['Internet Technology','School of Computing Science', 2008, 'Dr App', 96, 20],
+                  ['Mathematics 1','School of Mathematics', 2008, 'Dr Swift', 66, 20],
+                  ['Project Management','School of Computing Science', 2010, 'Dr Andrew', 46, 20]]
 
     #stu_id, course_id, rate, comment, date
     rateit = [[11, 5, 4, 'What an interesting course!', '2014-02-11'], [11, 3, 2, 'Not very good', '2013-01-23'],
@@ -49,12 +49,6 @@ def populate():
     for i in range(len(universities)):
         u = add_university(universities[i][0], universities[i][1], universities[i][2], universities[i][3], universities[i][4], universities[i][5])
 
-    #import Courses
-    '''
-    for k in courses:
-        c = add_course(k)
-        '''
-
     #import students in each University
     #GLASGOW
     for j in range(0, 4, 1):
@@ -81,27 +75,22 @@ def populate():
     #GLASGOW
     for j in range(0, 2, 1):
         u = University.objects.get(name="University of Glasgow")
-        #c = Course.objects.get(title=uni_course1[j][0])
-        add_course(uni_course1[j][0], u, uni_course1[j][2], uni_course1[j][3], uni_course1[j][4], uni_course1[j][5])#, uni_course1[j][6])
+        add_course(uni_course1[j][0], u, uni_course1[j][2], uni_course1[j][3], uni_course1[j][4], uni_course1[j][5])
 
     #LONDON
     for j in range(0, 2, 1):
         u = University.objects.get(name="University of London")
-        #c = Course.objects.get(title=uni_course2[j][0])
-        add_course(uni_course2[j][0], u, uni_course2[j][2], uni_course2[j][3], uni_course2[j][4], uni_course2[j][5])#, uni_course2[j][6])
+        add_course(uni_course2[j][0], u, uni_course2[j][2], uni_course2[j][3], uni_course2[j][4], uni_course2[j][5])
 
     #LEEDS
     for j in range(0, 2, 1):
         u = University.objects.get(name="University of Leeds")
-        #c = Course.objects.get(title=uni_course3[j][0])
-        add_course(uni_course3[j][0], u, uni_course3[j][2], uni_course3[j][3], uni_course3[j][4], uni_course3[j][5])#, uni_course3[j][6])
+        add_course(uni_course3[j][0], u, uni_course3[j][2], uni_course3[j][3], uni_course3[j][4], uni_course3[j][5])
 
     #SHEFFIELD
     for j in range(0, 3, 1):
         u = University.objects.get(name="University of Sheffield")
-        #c = Course.objects.get(title=uni_course4[j][0])
-        add_course(uni_course4[j][0], u, uni_course4[j][2], uni_course4[j][3], uni_course4[j][4], uni_course4[j][5])#, uni_course4[j][6])
-        #r = add_rate(s, c, rateit[0], rateit[1], rateit[2])
+        add_course(uni_course4[j][0], u, uni_course4[j][2], uni_course4[j][3], uni_course4[j][4], uni_course4[j][5])
 
     #ratings per uni
     #LEEDS
@@ -115,50 +104,26 @@ def add_university(name, domain, address, city, country, postcode):
     u = University.objects.get_or_create(name=name, domain=domain, address=address, city=city, country=country, postcode=postcode)[0]
     return u
 
-def add_student(name, surname, email, password):#, university):
+def add_student(name, surname, email, password):
     s = User.objects.get_or_create(first_name=name, last_name=surname, email=email)[0]
     s.set_password(password)
     s.username = email
     s.save()
     return s
 
-def add_course(title, uni, year, professor, total_rating, times_rated):#, rating):
-    c = Course.objects.get_or_create(title=title, university=uni, year=year, professor=professor, total_rating=total_rating, times_rated=times_rated) [0]#, average_rating=rating)[0]
-    #c.university = University.objects.get(name=uni)
-    c.stored_average_rating = ((float(total_rating)/float(times_rated)))
+def add_course(title, uni, year, professor, total_rating, times_rated):
+    c = Course.objects.get_or_create(title=title, university=uni, year=year, professor=professor, total_rating=total_rating, times_rated=times_rated) [0]
+    c.stored_average_rating = round(float(total_rating)/float(times_rated), 2)
     c.save()
     return c
-'''
-def add_unicourse(title, uni, course, school, year, professor, total_rating, times_rated):#, rating):
-    uC = UniCourse.objects.get_or_create(school=school, year=year, professor=professor, total_rating=total_rating, times_rated=times_rated) [0]#, average_rating=rating)[0]
-    uC.university.add(uni)
-    uC.stored_average_rating = (round(float(total_rating)/float(times_rated),2))
 
-    uC.course.add(course)
-    return uC
-    uC.save()
-'''
 def add_rate(student, course, rate, comment, date):
     r = Rate.objects.get_or_create(student=student, course=course, rate=rate, comment=comment, date=date)[0]
     tr = Course.objects.get(id=course.id)
     tr.times_rated += 1
     tr.total_rating += rate
-    tr.stored_average_rating = ((float(tr.total_rating)/float(tr.times_rated)))
+    tr.stored_average_rating = round(float(tr.total_rating)/float(tr.times_rated), 2)
     tr.save()
-    '''
-    tr = Course.objects.get(id="1")
-    times_rated = tr.times_rated
-    new_times = times_rated + 1
-    total_score = tr.total_rating
-    new_score = total_score + 5
-    stored_average_rating = tr.stored_average_rating
-    new_rating = (round(float(new_score)/float(new_times)))
-    uc._get_total_rating(course)
-    uc.total_rating += rate
-    uc.times_rated += 1
-    uc.save()
-    r.course.add(course)
-    r.student.add(student)'''
     return r
 
 # Start execution here!
