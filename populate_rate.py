@@ -19,18 +19,14 @@ def populate():
 
     #sheffield
     uni_course4 = [['Professional Skills and Issues','School of Computing Science', 2008, 'Dr Cruz', 88, 20],
-                  ['Internet Technology','School of Computing Science', 2008, 'Dr App', 96, 20],
-                  ['Mathematics 1','School of Mathematics', 2008, 'Dr Swift', 66, 20],
-                  ['Project Management','School of Computing Science', 2010, 'Dr Andrew', 46, 20]]
+                  ['Web Development','School of Computing Science', 2008, 'Dr App', 76, 20],
+                  ['Mathematics 101','School of Mathematics', 2008, 'Dr Swift', 66, 20],
+                  ['Software Project Management','School of Computing Science', 2010, 'Dr Andrew', 46, 20]]
 
     #stu_id, course_id, rate, comment, date
     rateit = [[11, 5, 4, 'What an interesting course!', '2014-02-11'], [11, 3, 2, 'Not very good', '2013-01-23'],
              [8, 6, 4, 'it is okay', '2011-03-12'], [12, 1, 5, 'not good at all', '2008-11-10'],
              [12, 3, 3, 'not very objective', '2008-12-05'], [2, 2, 4, 'very fluent', '2010-04-02']]
-
-    #all of the courses
-    courses = ['Internet Technology', 'Economics 101', 'Professional Skills and Issues', 'Project Management',
-               'Mathematics 1', 'History 1', 'Geology 101']
 
     #the students of all univeristies
     students = [['Maggie', 'McGeek'], ['Charlie', 'Cheaterson'], ['Leif', 'Azzopardi'], ['Mark', 'Zuckerberg'],
@@ -59,17 +55,17 @@ def populate():
     for j in range(4, 9, 1):
         u = University.objects.get(name="University of London")
         s = add_student(students[j][0], students[j][1], students[j][0]+'.'+students[j][1]+'@'+universities[1][1],
-                        '1234')#, u)
+                        '1234')
     #LEEDS
     for j in range(9, 11, 1):
         u = University.objects.get(name="University of Leeds")
         s = add_student(students[j][0], students[j][1], students[j][0]+'.'+students[j][1]+'@'+universities[2][1],
-                        '1234')#, u)
+                        '1234')
     #SHEFFIELD
     for j in range(11, 15, 1):
         u = University.objects.get(name="University of Sheffield")
         s = add_student(students[j][0], students[j][1], students[j][0]+'.'+students[j][1]+'@'+universities[3][1],
-                        '1234')#, u)
+                        '1234')
 
     #Cources in each university
     #GLASGOW
@@ -88,7 +84,7 @@ def populate():
         add_course(uni_course3[j][0], u, uni_course3[j][2], uni_course3[j][3], uni_course3[j][4], uni_course3[j][5])
 
     #SHEFFIELD
-    for j in range(0, 3, 1):
+    for j in range(0, 4, 1):
         u = University.objects.get(name="University of Sheffield")
         add_course(uni_course4[j][0], u, uni_course4[j][2], uni_course4[j][3], uni_course4[j][4], uni_course4[j][5])
 
@@ -133,4 +129,4 @@ if __name__ == '__main__':
     from rate.models import University, Course, Rate
     from django.contrib.auth.models import User
     populate()
-    print "Well Done!"#
+    print "Well Done!"
