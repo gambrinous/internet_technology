@@ -13,19 +13,12 @@
         <td width="20">
         <td width="450" align="left" valign="top">
             <br>
+
             <p><h4>Sign in</h4></p>
 
-            If you are already registered insert your login details:</br>
-            <form id="login_form" method="post" action="/rate/login/">
-            {% csrf_token %}
-            Email: <input type="text" name="username" value="" size="50" />
-            <br />
-            Password: <input type="password" name="password" value="" size="50" />
-            <br />
-            <input type="submit" value="Sign in" />
-        </form>
-            <p><a href="/rate/underConstruction"><em>Forgot your password?</em></a></p>
-            </form>
+            If you are already registered login</br>
+            <a href="/rate/login/"><input type="submit" value="Sign in" /></a>
+
             <br>
         </td>
         <td width="80">
