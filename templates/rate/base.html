@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <title>RmC - {% block title %}Rate My Course{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,41 +14,41 @@
     <link href="../../static/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="../../static/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="../../static/css/bootstrap.css" rel="stylesheet">
-	<!-- The link before
+    <!-- The link before
  <link href="../static/css/bootstrap.css" rel="stylesheet">    -->
-  </head>
+</head>
 
-  <body>
-	<div class= "container-fluid">
-		<headers>
-			<div class="page-header" >
-			header here
-			</div >
-		</headers>
-	</div>
-    <div>
-        {% block body_block %}{% endblock %}
-    </div>
-    <footer>
-        <div class="container">
-         <div>
+<body>
+<div class="container-fluid">
+    <headers>
+        <div class="page-header">
+            header here
+        </div>
+    </headers>
+</div>
+<div>
+    {% block body_block %}{% endblock %}
+</div>
+<footer>
+    <div class="container">
+        <div>
             <ul>
-			<li>  <a href="/rate/">Index</a>
-            <li><a href="/rate/about/">About</a></li>
-            <li><a href="/rate/contact/">Contact Us</a></li>
-            <li><a href="/rate/restricted/">restricted page</a></li>
-            {% if user.is_authenticated %}
-                <li><a href="/rate/logout/">Logout</a></li>
-            {% else %}
-                <li><a href="/rate/register/">Register Here</a></li>
-                <li><a href="/rate/login/">Login</a></li>
-            {% endif %}
+                <li><a href="/rate/">Index</a>
+                <li><a href="/rate/about/">About</a></li>
+                <li><a href="/rate/contact/">Contact Us</a></li>
+                <li><a href="/rate/restricted/">restricted page</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="/rate/logout/">Logout</a></li>
+                {% else %}
+                    <li><a href="/rate/register/">Register Here</a></li>
+                    <li><a href="/rate/login/">Login</a></li>
+                {% endif %}
             </ul>
         </div>
-            <p>&copy; Colossus 4.0 Team 2014</p>
-        </div>
-    </footer>
-    <script src="{% static 'js/jquery-2.1.0.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-  </body>
+        <p>&copy; Colossus 4.0 Team 2014</p>
+    </div>
+</footer>
+<script src="{% static 'js/jquery-2.1.0.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
 </html>

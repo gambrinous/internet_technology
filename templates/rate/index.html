@@ -32,11 +32,14 @@
             </select>
         </div>
         <div class="btn-group">
-            {% if yearlist %}
+            <select>
+                <option selected value="">Choose Year</option>
+                {% if yearlist %}
                     {% for item in yearlist %}
-                        <li><a href="#" style="color: rgb(85, 85, 85);">{{ item.year }}</a></li>
+                        <option value="{{ item.id }}">{{ item.year }}</option>
                     {% endfor %}
-            {% endif %}
+                {% endif %}
+            </select>
         </div>
         <a class="btn btn-primary" href="#" style="float: right">Find</a>
     </div>
