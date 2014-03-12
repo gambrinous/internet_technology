@@ -6,7 +6,7 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 from datetime import datetime
-from rate.models import Rate, Course
+from rate.models import Rate, Course, University
 from rate.forms import UserForm
 
 def index(request):
@@ -14,7 +14,10 @@ def index(request):
     top_five_list = Course.objects.order_by('-stored_average_rating')[:5]
     worst_five_list = Course.objects.order_by('stored_average_rating')[:5]
     latest_list = Rate.objects.order_by('-date')[:5]
-    context_dict = {'topfive': top_five_list, 'worstfive': worst_five_list, 'latestfive': latest_list}
+    university_list = University.objects.order_by('name')
+    course_list = Course.objects.values('title').distinct()
+    year_list = Course.objects.values('year').distinct()
+    context_dict = {'topfive': top_five_list, 'worstfive': worst_five_list, 'latestfive': latest_list, 'universitylist': university_list, 'courselist': course_list, 'yearlist': year_list}
     return render_to_response('rate/index.html', context_dict, context)
 
 
