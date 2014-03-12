@@ -53,7 +53,7 @@ def user_login(request):
             return HttpResponse("Invalid login details supplied.")
 
     else:
-        return render_to_response('rango/login.html', {}, context)
+        return render_to_response('rate/login.html', {}, context)
 
 @login_required
 def user_logout(request):
@@ -108,8 +108,8 @@ def register(request):
         return HttpResponse("You are already registered and signed in.")
 
 def restricted(request):
-    if not request.user.is_authenticated():
-        return HttpResponse("Since you're logged in, you cannot see this page!")
+    if request.user.is_authenticated():
+        return HttpResponse("You cannot access this page!")
     else:
         return render_to_response('rate/restricted.html')
 
