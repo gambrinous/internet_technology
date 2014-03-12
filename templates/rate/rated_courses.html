@@ -4,32 +4,75 @@
 {% block body_block %}
 
     <div class="row-fluid">
-        <div class="row-fluid">
-            <h5>Filters</h5>
-
+        <div class="">
             <div class="span4" style="text-align: left">
-                <p>University</p>
+                <h3>Filters</h3>
 
-                <form action="">
+                <form name="" method="" action="">
+                    <br/>
+
+                    <p><strong>University</strong></p>
                     {% if universitylist %}
                         {% for item in universitylist %}
                             <input type="checkbox" name="university" value="{{ item.id }}">{{ item.name }}<br>
                         {% endfor %}
                     {% endif %}
+                    <br/>
 
+                    <p><strong>Level</strong></p>
+                    <input type="checkbox" name="level" value="1">Level 1<br>
+                    <input type="checkbox" name="level" value="2">Level 2<br>
+                    <input type="checkbox" name="level" value="3">Level 3<br>
+                    <input type="checkbox" name="level" value="4">Level 4<br>
+                    <input type="checkbox" name="level" value="5">Level M<br>
+                    <br/>
+
+                    <p><strong>Year</strong></p>
+                    {% if yearlist %}
+                        {% for item in yearlist %}
+                            <input type="checkbox" name="year" value="{{ item.id }}">{{ item.year }}<br>
+                        {% endfor %}
+                    {% endif %}
+
+                    <input type="submit" name="submit_button" value="Apply filters"/><br/>
+                    <input type="reset" name="reset_button" value="Clear filters"/>
                 </form>
             </div>
         </div>
-        <div class="span4" style="text-align: center">
-            {% if top %}
-                <ul>
+        <div class="" style="text-align: left">
+            <h2>Rated Courses</h2>
+            <a class="btn btn-primary" href="#">Top</a>
+            <a class="btn btn-primary" href="#">Worst</a>
+            <a class="btn btn-primary" href="#">Most Recent</a>
+
+            <table border="1" style="">
+                <tr>
+                    <td>#</td>
+                    <td>University</td>
+                    <td>Level</td>
+                    <td>Course</td>
+                    <td>Year</td>
+                    <td>Rate</td>
+                    <td>Comments</td>
+                    <td>Date</td>
+                </tr>
+                {% if top %}
                     {% for rate in top %}
-                        <li>{{ rate.title }}, {{ rate.stored_average_rating }}</li>
+                        <tr>
+                            <td></td>
+                            <td>{{ rate.university }}</td>
+                            <td>L{{ rate.level }}</td>
+                            <td>{{ rate.title }}</td>
+                            <td>{{ rate.year }}</td>
+                            <td>{{ rate.stored_average_rating }}/5</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
                     {% endfor %}
-                </ul>
-            {% else %}
-                <strong>There are no top yet.</strong>
-            {% endif %}
+                {% else %}
+                    <strong>There are no top yet.</strong>
+                {% endif %}
+            </table>
         </div>
     </div>
 

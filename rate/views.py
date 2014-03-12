@@ -112,7 +112,8 @@ def rated_courses(request):
     university_list = University.objects.order_by('name')
     course_list = Course.objects.values('title').distinct()
     year_list = Course.objects.values('year').distinct()
+    rates_list = Rate.objects.values('course', 'date')[:1]
     context_dict = {'top': top_list, 'worst': worst_list, 'latest': latest_list,
-                    'universitylist': university_list, 'courselist': course_list, 'yearlist': year_list}
+                    'universitylist': university_list, 'courselist': course_list, 'yearlist': year_list, 'rateslist': rates_list}
     return render_to_response('rate/rated_courses.html', context_dict, context)
 
