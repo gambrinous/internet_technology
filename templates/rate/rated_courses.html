@@ -1,3 +1,36 @@
 {% extends 'rate/base.html' %}
+
+{% block title %}???{% endblock %}
 {% block body_block %}
+
+    <div class="row-fluid">
+        <div class="row-fluid">
+            <h5>Filters</h5>
+
+            <div class="span4" style="text-align: left">
+                <p>University</p>
+
+                <form action="">
+                    {% if universitylist %}
+                        {% for item in universitylist %}
+                            <input type="checkbox" name="university" value="{{ item.id }}">{{ item.name }}<br>
+                        {% endfor %}
+                    {% endif %}
+
+                </form>
+            </div>
+        </div>
+        <div class="span4" style="text-align: center">
+            {% if top %}
+                <ul>
+                    {% for rate in top %}
+                        <li>{{ rate.title }}, {{ rate.stored_average_rating }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <strong>There are no top yet.</strong>
+            {% endif %}
+        </div>
+    </div>
+
 {% endblock %}

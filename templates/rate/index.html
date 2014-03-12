@@ -44,41 +44,41 @@
         <a class="btn btn-primary" href="#" style="float: right">Find</a>
     </div>
     <div class="row-fluid">
-        {% if topfive %}
-            <div class="span4" style="text-align: center">
-                <h3>Top 5</h3>
+        <div class="span4" style="text-align: center">
+            <h3>Top 5</h3>
+            {% if topfive %}
                 <ul>
                     {% for rate in topfive %}
                         <li>{{ rate.title }}, {{ rate.stored_average_rating }}</li>
                     {% endfor %}
                 </ul>
-            </div>
-        {% else %}
-            <strong>There are no top 5</strong>
-        {% endif %}
-        {% if worstfive %}
-            <div class="span4" style="text-align: center">
-                <h3>Worst 5</h3>
+            {% else %}
+                <strong>There are no top 5 yet.</strong>
+            {% endif %}
+        </div>
+        <div class="span4" style="text-align: center">
+            <h3>Worst 5</h3>
+            {% if worstfive %}
                 <ul>
                     {% for rate in worstfive %}
                         <li>{{ rate.title }}, {{ rate.stored_average_rating }}</li>
                     {% endfor %}
                 </ul>
-            </div>
-        {% else %}
-            <strong>There are no worst 5</strong>
-        {% endif %}
-        {% if latestfive %}
-            <div class="span4" style="text-align: center">
-                <h3>Latest</h3>
-                <ul>
+            {% else %}
+                <strong>There are no worst 5 yet.</strong>
+            {% endif %}
+        </div>
+        <div class="span4" style="text-align: center">
+            <h3>Latest</h3>
+            <ul>
+                {% if latestfive %}
                     {% for rate in latestfive %}
                         <li>{{ rate.course }}, {{ rate.rate }}</li>
                     {% endfor %}
-                </ul>
-            </div>
-        {% else %}
-            <strong>There are no latest</strong>
-        {% endif %}
+                {% else %}
+                    <strong>There are no latest yet.</strong>
+                {% endif %}
+            </ul>
+        </div>
     </div>
 {% endblock %}
