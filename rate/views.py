@@ -104,16 +104,25 @@ def course(request):
     context = RequestContext(request)
     return render_to_response('rate/course.html', context)
 
-def rated_courses(request):
+
+def rated_courses(request, type):
     context = RequestContext(request)
-    top_list = Course.objects.order_by('-stored_average_rating')[:10]
-    worst_list = Course.objects.order_by('stored_average_rating')[:10]
-    latest_list = Rate.objects.order_by('-date')[:10]
+
+    if type == "top":
+        list = Course.objects.order_by('-stored_average_rating')[:10]
+        title = "Top Rated Courses"
+    if type == "worst":
+        list = Course.objects.order_by('stored_average_rating')[:10]
+        title = "Worst Rated Courses"
+    if type == "latest":
+        list = Rate.objects.order_by('-date')[:10]
+        title = "Most Recent Rated Courses"
+
     university_list = University.objects.order_by('name')
     course_list = Course.objects.values('title').distinct()
     year_list = Course.objects.values('year').distinct()
     rates_list = Rate.objects.values('course', 'date')[:1]
-    context_dict = {'top': top_list, 'worst': worst_list, 'latest': latest_list,
+    context_dict = {'list': list, 'title': title,
                     'universitylist': university_list, 'courselist': course_list, 'yearlist': year_list, 'rateslist': rates_list}
     return render_to_response('rate/rated_courses.html', context_dict, context)
 

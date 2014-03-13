@@ -1,6 +1,6 @@
 {% extends 'rate/base.html' %}
 
-{% block title %}???{% endblock %}
+{% block title %}{{ title }}{% endblock %}
 {% block body_block %}
 
     <div class="row-fluid">
@@ -41,9 +41,9 @@
         </div>
         <div class="" style="text-align: left">
             <h2>Rated Courses</h2>
-            <a class="btn btn-primary" href="#">Top</a>
-            <a class="btn btn-primary" href="#">Worst</a>
-            <a class="btn btn-primary" href="#">Most Recent</a>
+            <a class="btn btn-primary" href="/rate/rated_courses/top">Top</a>
+            <a class="btn btn-primary" href="/rate/rated_courses/worst">Worst</a>
+            <a class="btn btn-primary" href="/rate/rated_courses/latest">Most Recent</a>
 
             <table border="1" style="">
                 <tr>
@@ -56,8 +56,8 @@
                     <td>Comments</td>
                     <td>Date</td>
                 </tr>
-                {% if top %}
-                    {% for rate in top %}
+                {% if list %}
+                    {% for rate in list %}
                         <tr>
                             <td></td>
                             <td>{{ rate.university }}</td>
