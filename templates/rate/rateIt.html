@@ -1,0 +1,43 @@
+{% extends 'rate/base.html' %}
+{% block title %}{{ course_title }}{% endblock %}
+{% block body_block %}
+    <div class="container-fluid" style="border: dotted">
+        <div class="container-fluid" style="float: left">
+            <h4>{{ course_title }}</h4>
+            <h5>{{ course.university.name }}</h5>
+            <h5>Year: {{ course.year }}</h5>
+            <h5>Professor: {{ course.professor }}</h5>
+            <h5>Level: {% if course.level == 5 %} MSc {% else %} L{{ course.level }}{% endif %}</h5>
+            <hr>
+            <h5>Give Feedback</h5>
+
+            <form method="post" action="">
+                <p>1. The course content has been appropriate and at the right level: *</p>
+                <input type="radio" name="q1" value="1"/> 1 - strongly disagree
+                <input type="radio" name="q1" value="2"/> 2
+                <input type="radio" name="q1" value="3"/> 3
+                <input type="radio" name="q1" value="4"/> 4
+                <input type="radio" name="q1" value="5"/> 5 - strongly agree
+                <p>2. The style of the delivery and interactions has been entertaining and engaging: *</p>
+                <input type="radio" name="q2" value="1"/> 1 - strongly disagree
+                <input type="radio" name="q2" value="2"/> 2
+                <input type="radio" name="q2" value="3"/> 3
+                <input type="radio" name="q2" value="4"/> 4
+                <input type="radio" name="q2" value="5"/> 5 - strongly agree
+                <p>3. The lab material is a useful and helpful resource: *</p>
+                <input type="radio" name="q3" value="1"/> 1 - strongly disagree
+                <input type="radio" name="q3" value="2"/> 2
+                <input type="radio" name="q3" value="3"/> 3
+                <input type="radio" name="q3" value="4"/> 4
+                <input type="radio" name="q3" value="5"/> 5 - strongly agree
+                <br/>
+                * are compulsory to submit the feedback
+                <h6>Write any comments for that {{ course_title }} course. (optional)</h6>
+                <textarea name="comments" cols="25" rows="5">
+                    Enter your comments here...
+                </textarea><br>
+                <input type="submit" value="Submit"/>
+            </form>
+        </div>
+    </div>
+{% endblock %}

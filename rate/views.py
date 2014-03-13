@@ -118,6 +118,9 @@ def course(request, course_title_url):
         context_dict['rate'] = rate
     except Course.DoesNotExist:
         pass
+
+    course.url = course.title.replace(' ', '_')
+
     return render_to_response('rate/course.html', context_dict, context)
 
 
@@ -146,3 +149,16 @@ def rated_courses(request, type):
 
     return render_to_response('rate/rated_courses.html', context_dict, context)
 
+def rateIt(request, course_title_url):
+    context = RequestContext(request)
+    course_title = course_title_url.replace('_', ' ')
+    context_dict = {'course_title': course_title}
+
+    try:
+        course = Course.objects.get(title=course_title)
+        rate = Rate.objects.filter(course=course)
+        context_dict['course'] = course
+        context_dict['rate'] = rate
+    except Course.DoesNotExist:
+        pass
+    return render_to_response('rate/rateIt.html', context_dict, context)
