@@ -1,23 +1,25 @@
 {% extends 'rate/base.html' %}
+{% block title %}{{ course_title }}{% endblock %}
 {% block body_block %}
-    <div class="container-fluid" style="border: dotted" xmlns="http://www.w3.org/1999/html">
-        <div style="float: left">
-            <h4>Internet Technology</h4>
-            <h5>University of Glasgow</h5>
-            <h5>Year: 2014</h5>
-            <h5>Professor: Leif</h5>
-            <h5>Level: M</h5>
+    <div class="container-fluid" style="border: dotted">
+        <div class="container-fluid" style="float: left">
+            <h4>{{ course_title }}</h4>
+            <h5>{{ course.university.name }}</h5>
+            <h5>Year: {{ course.year }}</h5>
+            <h5>Professor: {{ course.professor }}</h5>
+            <h5>Level: {{ course.level }}</h5>
         </div>
-        <div style="float: right">
-            <h2>4.9</h2>
+        <div class="container-fluid" style="float: right">
+            <h2>{{ course.stored_average_rating }}</h2>
             </br>
             <a class="btn btn-primary" href="#" style="float: right">RATE</a>
         </div>
     </div>
     <div class="container-fluid" style="border: dotted">
-        <h5>Comments</h5>
+        <h4>Comments</h4>
 
-        <div style="background-color: lightgray"><p>kalimera</p></div>
-        <div style="background-color: lightgray"><p>To mathima itan gtp</p></div>
+        {% for i in rate %}
+        <div class="navbar-text"><p>{{ i.comment }}</p></div>
+        {% endfor %}
     </div>
 {% endblock %}

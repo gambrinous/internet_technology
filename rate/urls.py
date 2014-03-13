@@ -12,6 +12,6 @@ urlpatterns = patterns('',
     url(r'^login/$', views.user_login, name='login'),
     url(r'^logout/$', views.user_logout, name='logout'),
     url(r'^rated_courses/$', views.rated_courses, name='rated_courses'),
-    url(r'^course/$', views.course, name='course'),
     url(r'^test/$', views.test, name='test'),
+    url(r'^course/(?P<course_title_url>\w+)/$', views.course, name='course'),
 )

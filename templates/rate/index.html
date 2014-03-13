@@ -49,7 +49,8 @@
             {% if topfive %}
                 <ul>
                     {% for rate in topfive %}
-                        <li>{{ rate.title }}, {{ rate.stored_average_rating }}</li>
+                        <li><a href="/rate/course/{{ rate.url }}">{{ rate.title }}</a>,
+                            {{ rate.stored_average_rating }}</li>
                     {% endfor %}
                 </ul>
             {% else %}
@@ -61,7 +62,8 @@
             {% if worstfive %}
                 <ul>
                     {% for rate in worstfive %}
-                        <li>{{ rate.title }}, {{ rate.stored_average_rating }}</li>
+                        <li><a href="/rate/course/{{ rate.url }}">{{ rate.title }}</a>,
+                            {{ rate.stored_average_rating }}</li>
                     {% endfor %}
                 </ul>
             {% else %}
