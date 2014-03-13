@@ -140,5 +140,9 @@ def rated_courses(request, type):
     context_dict = {'list': list, 'title': title,
                     'universitylist': university_list, 'courselist': course_list, 'yearlist': year_list,
                     'rateslist': rates_list}
+
+    for rate in list:
+        rate.url = rate.title.replace(' ', '_')
+
     return render_to_response('rate/rated_courses.html', context_dict, context)
 

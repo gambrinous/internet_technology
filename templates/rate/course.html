@@ -7,7 +7,7 @@
             <h5>{{ course.university.name }}</h5>
             <h5>Year: {{ course.year }}</h5>
             <h5>Professor: {{ course.professor }}</h5>
-            <h5>Level: {{ course.level }}</h5>
+            <h5>Level: {% if course.level == 5 %} MSc {% else %} L{{ course.level }}{% endif %}</h5>
         </div>
         <div class="container-fluid" style="float: right">
             <h2>{{ course.stored_average_rating }}</h2>

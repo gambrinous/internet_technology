@@ -47,25 +47,21 @@
 
             <table border="1" style="">
                 <tr>
-                    <td>#</td>
                     <td>University</td>
                     <td>Level</td>
                     <td>Course</td>
                     <td>Year</td>
                     <td>Rate</td>
-                    <td>Comments</td>
                     <td>Date</td>
                 </tr>
                 {% if list %}
                     {% for rate in list %}
                         <tr>
-                            <td></td>
                             <td>{{ rate.university }}</td>
-                            <td>L{{ rate.level }}</td>
-                            <td>{{ rate.title }}</td>
+                            <td>{% if rate.level == 5 %} MSc {% else %} L{{ rate.level }}{% endif %}</td>
+                            <td><a href="/rate/course/{{ rate.url }}">{{ rate.title }}</a></td>
                             <td>{{ rate.year }}</td>
                             <td>{{ rate.stored_average_rating }}/5</td>
-                            <td></td>
                             <td></td>
                         </tr>
                     {% endfor %}
