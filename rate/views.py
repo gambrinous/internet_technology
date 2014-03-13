@@ -20,32 +20,7 @@ def index(request):
     year_list = Course.objects.values('year').distinct()
     context_dict = {'topfive': top_five_list, 'worstfive': worst_five_list, 'latestfive': latest_list,
                     'universitylist': university_list, 'courselist': course_list, 'yearlist': year_list}
-
-    for rate in top_five_list:
-        rate.url = rate.title.replace(' ', '_')
-    for rate in worst_five_list:
-        rate.url = rate.title.replace(' ', '_')
-
     return render_to_response('rate/index.html', context_dict, context)
-
-
-def course(request, course_title_url):
-    context = RequestContext(request)
-    course_title = course_title_url.replace('_', ' ')
-    context_dict = {'course_title': course_title}
-
-    try:
-        course = Course.objects.get(title=course_title)
-        rate = Rate.objects.filter(course=course)
-        context_dict['course'] = course
-        context_dict['rate'] = rate
-    except Course.DoesNotExist:
-        pass
-    return render_to_response('rate/course.html', context_dict, context)
-
-
-def encode(char):
-    return char.replace(' ', '_')
 
 
 def about(request):
@@ -125,6 +100,10 @@ def test(request):
     return render_to_response('rate/test.html', context)
 
 
+def course(request):
+    context = RequestContext(request)
+    return render_to_response('rate/course.html', context)
+
 def rated_courses(request):
     context = RequestContext(request)
     top_list = Course.objects.order_by('-stored_average_rating')[:10]
@@ -135,7 +114,6 @@ def rated_courses(request):
     year_list = Course.objects.values('year').distinct()
     rates_list = Rate.objects.values('course', 'date')[:1]
     context_dict = {'top': top_list, 'worst': worst_list, 'latest': latest_list,
-                    'universitylist': university_list, 'courselist': course_list, 'yearlist': year_list,
-                    'rateslist': rates_list}
+                    'universitylist': university_list, 'courselist': course_list, 'yearlist': year_list, 'rateslist': rates_list}
     return render_to_response('rate/rated_courses.html', context_dict, context)
 
