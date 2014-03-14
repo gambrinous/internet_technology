@@ -78,7 +78,8 @@
             <ul>
                 {% if latestfive %}
                     {% for rate in latestfive %}
-                        <li>{{ rate.course }}, {{ rate.rate }}</li>
+                        <li><a href="/rate/course/{{ rate.url }}">{{ rate.title }}</a>,
+                            {{ rate.stored_average_rating }}</li>
                     {% endfor %}
                 {% else %}
                     <strong>There are no latest yet.</strong>

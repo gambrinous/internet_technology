@@ -28,7 +28,7 @@ def index(request):
     else:
         top_five_list = Course.objects.order_by('-stored_average_rating')[:5]
         worst_five_list = Course.objects.order_by('stored_average_rating')[:5]
-        latest_list = Rate.objects.order_by('-date')[:5]
+        latest_list = Course.objects.order_by('-date')[:5]
         university_list = University.objects.order_by('name')
         course_list = Course.objects.values('title').distinct()
         year_list = Course.objects.values('year').distinct()
@@ -139,13 +139,13 @@ def course(request, course_title_url):
 def rated_courses(request, type):
     context = RequestContext(request)
     if type == "top":
-        list = Course.objects.order_by('-stored_average_rating')[:10]
+        list = Course.objects.order_by('-stored_average_rating')[:20]
         title = "Top Rated Courses"
     if type == "worst":
-        list = Course.objects.order_by('stored_average_rating')[:10]
+        list = Course.objects.order_by('stored_average_rating')[:20]
         title = "Worst Rated Courses"
     if type == "latest":
-        list = Rate.objects.order_by('-date')[:10]
+        list = Course.objects.order_by('-date')[:20]
         title = "Most Recent Rated Courses"
 
     university_list = University.objects.order_by('name')

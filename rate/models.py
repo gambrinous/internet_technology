@@ -23,6 +23,7 @@ class Course(models.Model):
     total_rating = models.IntegerField(default=0)
     times_rated = models.IntegerField(default=0)
     stored_average_rating = models.FloatField(default=0.0)
+    date = models.DateTimeField(auto_now_add=True)
 
     def __unicode__(self):
         return self.title
