@@ -24,7 +24,7 @@ def index(request):
                 j.url = j.title.replace(' ','_')
             return HttpResponseRedirect('course/'+j.url)
         else:
-            return HttpResponse('There is no such course')
+            return HttpResponse('There is no such course. Please <a href="/rate/contact/">contact</a> the administrator to request it, or go back to <a href="/rate/">main page</a>.')
     else:
         top_five_list = Course.objects.order_by('-stored_average_rating')[:5]
         worst_five_list = Course.objects.order_by('stored_average_rating')[:5]
