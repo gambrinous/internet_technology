@@ -7,10 +7,8 @@
         <div class="">
             <div class="span4" style="text-align: left">
                 <h3>Filters</h3>
-
                 <form name="" method="" action="">
                     <br/>
-
                     <p><strong>University</strong></p>
                     {% if universitylist %}
                         {% for item in universitylist %}
@@ -18,7 +16,6 @@
                         {% endfor %}
                     {% endif %}
                     <br/>
-
                     <p><strong>Level</strong></p>
                     <input type="checkbox" name="level" value="1">Level 1<br>
                     <input type="checkbox" name="level" value="2">Level 2<br>
@@ -26,25 +23,22 @@
                     <input type="checkbox" name="level" value="4">Level 4<br>
                     <input type="checkbox" name="level" value="5">Level M<br>
                     <br/>
-
                     <p><strong>Year</strong></p>
                     {% if yearlist %}
                         {% for item in yearlist %}
                             <input type="checkbox" name="year" value="{{ item.id }}">{{ item.year }}<br>
                         {% endfor %}
                     {% endif %}
-
                     <input type="submit" name="submit_button" value="Apply filters"/><br/>
                     <input type="reset" name="reset_button" value="Clear filters"/>
                 </form>
             </div>
         </div>
         <div class="" style="text-align: left">
-            <h2>Rated Courses</h2>
+            <h2>{{ title }}</h2>
             <a class="btn btn-primary" href="/rate/rated_courses/top">Top</a>
             <a class="btn btn-primary" href="/rate/rated_courses/worst">Worst</a>
             <a class="btn btn-primary" href="/rate/rated_courses/latest">Most Recent</a>
-
             <table border="1" style="">
                 <tr>
                     <td>University</td>
@@ -62,7 +56,7 @@
                             <td><a href="/rate/course/{{ rate.url }}">{{ rate.title }}</a></td>
                             <td>{{ rate.year }}</td>
                             <td>{{ rate.stored_average_rating }}/5</td>
-                            <td></td>
+                            <td>{{ rate.date }}</td>
                         </tr>
                     {% endfor %}
                 {% else %}
