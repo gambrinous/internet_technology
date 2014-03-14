@@ -12,14 +12,14 @@
         <div class="container-fluid" style="float: right">
             <h2>{{ course.stored_average_rating }}</h2>
             </br>
-            <a class="btn btn-primary" href="/rate/course/{{ course.url }}/rateIt" style="float: right">RATE</a>
+                <a class="btn btn-primary" href="/rate/course/{{ course.url }}/rateIt" style="float: right">RATE</a>
         </div>
     </div>
     <div class="container-fluid" style="border: dotted">
         <h4>Comments</h4>
 
         {% for i in rate %}
-        <div class="navbar-text"><p>{{ i.comment }}</p></div>
+            <div class="navbar-text"><p>{{ i.comment }}</p></div>
         {% endfor %}
     </div>
 {% endblock %}
