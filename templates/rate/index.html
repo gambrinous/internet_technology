@@ -46,11 +46,11 @@
             <input class="btn btn-primary" style="float: right" type="submit" name="btnFind" value="Find"/>
         </form>
     </div>
-    <div class="row">
-        <div class="thumbnail" style="text-align: center">
+    <div class="row-fluid">
+        <div class="span4" style="text-align: center">
             <h3>Top 5</h3>
             {% if topfive %}
-                <ul class="control-list">
+                <ul>
                     {% for rate in topfive %}
                         <li><a href="/rate/course/{{ rate.url }}">{{ rate.title }}</a>,
                             {{ rate.stored_average_rating }}</li>
@@ -60,7 +60,7 @@
                 <strong>There are no top 5 yet.</strong>
             {% endif %}
         </div>
-        <div class="thumbnail" style="text-align: center">
+        <div class="span4" style="text-align: center">
             <h3>Worst 5</h3>
             {% if worstfive %}
                 <ul>
@@ -73,7 +73,7 @@
                 <strong>There are no worst 5 yet.</strong>
             {% endif %}
         </div>
-        <div class="thumbnail" style="text-align: center">
+        <div class="span4" style="text-align: center">
             <h3>Latest</h3>
             <ul>
                 {% if latestfive %}
