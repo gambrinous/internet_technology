@@ -12,21 +12,34 @@ from rate.forms import UserForm
 
 def index(request):
     context = RequestContext(request)
-    top_five_list = Course.objects.order_by('-stored_average_rating')[:5]
-    worst_five_list = Course.objects.order_by('stored_average_rating')[:5]
-    latest_list = Rate.objects.order_by('-date')[:5]
-    university_list = University.objects.order_by('name')
-    course_list = Course.objects.values('title').distinct()
-    year_list = Course.objects.values('year').distinct()
-    context_dict = {'topfive': top_five_list, 'worstfive': worst_five_list, 'latestfive': latest_list,
-                    'universitylist': university_list, 'courselist': course_list, 'yearlist': year_list}
+    if request.method == 'POST':
+        university_option = request.POST['university_options']
+        course_option = request.POST['course_options']
+        level_option = request.POST['level_options']
+        year_option = request.POST['year_options']
 
-    for rate in top_five_list:
-        rate.url = rate.title.replace(' ', '_')
-    for rate in worst_five_list:
-        rate.url = rate.title.replace(' ', '_')
+        the_course = Course.objects.filter(university=university_option).filter(title=course_option).filter(level=level_option).filter(year=year_option)
+        if the_course:
+            for j in the_course:
+                j.url = j.title.replace(' ','_')
+            return HttpResponseRedirect('course/'+j.url)
+        else:
+            return HttpResponse('There is no such course')
+    else:
+        top_five_list = Course.objects.order_by('-stored_average_rating')[:5]
+        worst_five_list = Course.objects.order_by('stored_average_rating')[:5]
+        latest_list = Rate.objects.order_by('-date')[:5]
+        university_list = University.objects.order_by('name')
+        course_list = Course.objects.values('title').distinct()
+        year_list = Course.objects.values('year').distinct()
+        context_dict = {'topfive': top_five_list, 'worstfive': worst_five_list, 'latestfive': latest_list,
+                        'universitylist': university_list, 'courselist': course_list, 'yearlist': year_list}
 
-    return render_to_response('rate/index.html', context_dict, context)
+        for rate in top_five_list:
+            rate.url = rate.title.replace(' ', '_')
+        for rate in worst_five_list:
+            rate.url = rate.title.replace(' ', '_')
+        return render_to_response('rate/index.html', context_dict, context)
 
 
 def about(request):
@@ -110,7 +123,6 @@ def course(request, course_title_url):
     context = RequestContext(request)
     course_title = course_title_url.replace('_', ' ')
     context_dict = {'course_title': course_title}
-
     try:
         course = Course.objects.get(title=course_title)
         rate = Rate.objects.filter(course=course)

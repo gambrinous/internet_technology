@@ -1,53 +1,56 @@
 {% extends 'rate/base.html' %}
 {% block body_block %}
     <div class="hero-unit">
-        <div class="btn-group">
-            <select>
-                <option selected value="" disabled>Choose University</option>
-                {% if universitylist %}
-                    {% for item in universitylist %}
-                        <option value="{{ item.id }}">{{ item.name }}</option>
-                    {% endfor %}
-                {% endif %}
-            </select>
-        </div>
-        <div class="btn-group">
-            <select>
-                <option selected value="" disabled>Choose Course</option>
-                {% if courselist %}
-                    {% for item in courselist %}
-                        <option value="{{ item.id }}">{{ item.title }}</option>
-                    {% endfor %}
-                {% endif %}
-            </select>
-        </div>
-        <div class="btn-group">
-            <select>
-                <option selected value="" disabled>Choose Level</option>
-                <option value="1">Level 1</option>
-                <option value="2">Level 2</option>
-                <option value="3">Level 3</option>
-                <option value="4">Level 4</option>
-                <option value="5">Level M</option>
-            </select>
-        </div>
-        <div class="btn-group">
-            <select>
-                <option selected value="" disabled>Choose Year</option>
-                {% if yearlist %}
-                    {% for item in yearlist %}
-                        <option value="{{ item.id }}">{{ item.year }}</option>
-                    {% endfor %}
-                {% endif %}
-            </select>
-        </div>
-        <a class="btn btn-primary" href="#" style="float: right">Find</a>
+        <form class="navbar-form" method="post">
+        {% csrf_token %}
+            <div class="btn-group">
+                <select name="university_options">
+                    <option selected value="" disabled>Choose University</option>
+                    {% if universitylist %}
+                        {% for item in universitylist %}
+                            <option value="{{ item.id }}">{{ item.name }}</option>
+                        {% endfor %}
+                    {% endif %}
+                </select>
+            </div>
+            <div class="btn-group">
+                <select name="course_options">
+                    <option selected value="" disabled>Choose Course</option>
+                    {% if courselist %}
+                        {% for item in courselist %}
+                            <option value="{{ item.title }}">{{ item.title }}</option>
+                        {% endfor %}
+                    {% endif %}
+                </select>
+            </div>
+            <div class="btn-group">
+                <select name="level_options">
+                    <option selected value="" disabled>Choose Level</option>
+                    <option value="1">Level 1</option>
+                    <option value="2">Level 2</option>
+                    <option value="3">Level 3</option>
+                    <option value="4">Level 4</option>
+                    <option value="5">Level M</option>
+                </select>
+            </div>
+            <div class="btn-group">
+                <select name="year_options">
+                    <option selected value="" disabled>Choose Year</option>
+                    {% if yearlist %}
+                        {% for item in yearlist %}
+                            <option value="{{ item.year }}">{{ item.year }}</option>
+                        {% endfor %}
+                    {% endif %}
+                </select>
+            </div>
+            <input class="btn btn-primary" style="float: right" type="submit" name="btnFind" value="Find"/>
+        </form>
     </div>
-    <div class="row-fluid">
-        <div class="span4" style="text-align: center">
+    <div class="row">
+        <div class="thumbnail" style="text-align: center">
             <h3>Top 5</h3>
             {% if topfive %}
-                <ul>
+                <ul class="control-list">
                     {% for rate in topfive %}
                         <li><a href="/rate/course/{{ rate.url }}">{{ rate.title }}</a>,
                             {{ rate.stored_average_rating }}</li>
@@ -57,7 +60,7 @@
                 <strong>There are no top 5 yet.</strong>
             {% endif %}
         </div>
-        <div class="span4" style="text-align: center">
+        <div class="thumbnail" style="text-align: center">
             <h3>Worst 5</h3>
             {% if worstfive %}
                 <ul>
@@ -70,7 +73,7 @@
                 <strong>There are no worst 5 yet.</strong>
             {% endif %}
         </div>
-        <div class="span4" style="text-align: center">
+        <div class="thumbnail" style="text-align: center">
             <h3>Latest</h3>
             <ul>
                 {% if latestfive %}
