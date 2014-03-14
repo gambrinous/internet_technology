@@ -39,6 +39,8 @@ def index(request):
             rate.url = rate.title.replace(' ', '_')
         for rate in worst_five_list:
             rate.url = rate.title.replace(' ', '_')
+        for rate in latest_list:
+            rate.url = rate.title.replace(' ', '_')
         return render_to_response('rate/index.html', context_dict, context)
 
 
