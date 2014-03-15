@@ -53,7 +53,7 @@
                 <ul class="list-group">
                     {% for rate in topfive %}
                         <a href="/rate/course/{{ rate.url }}">
-                            <li class="list-group-item">{{ rate.title }},
+                            <li class="list-group-item">{{ rate.title }},</br>{{ rate.university }} -
                                 {{ rate.stored_average_rating }}</li>
                         </a>
                     {% endfor %}
@@ -68,7 +68,7 @@
                 <ul class="list-group">
                     {% for rate in worstfive %}
                         <a href="/rate/course/{{ rate.url }}">
-                            <li class="list-group-item">{{ rate.title }},
+                            <li class="list-group-item">{{ rate.title }},</br>{{ rate.university }} -
                                 {{ rate.stored_average_rating }}</li>
                         </a>
                     {% endfor %}
@@ -83,7 +83,7 @@
                 {% if latestfive %}
                     {% for rate in latestfive %}
                         <a href="/rate/course/{{ rate.url }}">
-                            <li class="list-group-item">{{ rate.title }},
+                            <li class="list-group-item">{{ rate.title }},</br>{{ rate.university }} -
                                 {{ rate.stored_average_rating }}</li>
                         </a>
                     {% endfor %}
