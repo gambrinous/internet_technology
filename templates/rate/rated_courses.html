@@ -1,15 +1,21 @@
 {% extends 'rate/base.html' %}
 
 {% block title %}{{ title }}{% endblock %}
-{% block path %} <li><a href="/rate/">Home</a></li><li><a href="/rate/rated_courses/top">Rated Courses</a></li><li class="active">{{ title }}</li>{% endblock %}
+{% block path %}
+    <li><a href="/rate/">Home</a></li>
+    <li><a href="/rate/rated_courses/top">Rated Courses</a></li>
+    <li class="active">{{ title }}</li>{% endblock %}
 {% block body_block %}
 
     <div class="row-fluid">
         <div class="">
             <div class="span4" style="text-align: left">
                 <h3>Filters</h3>
+
                 <form method="post">
+                    {% csrf_token %}
                     <br/>
+
                     <p><strong>University</strong></p>
                     {% if universitylist %}
                         {% for item in universitylist %}
@@ -17,6 +23,7 @@
                         {% endfor %}
                     {% endif %}
                     <br/>
+
                     <p><strong>Level</strong></p>
                     <input type="checkbox" name="level" value="1">Level 1<br>
                     <input type="checkbox" name="level" value="2">Level 2<br>
@@ -24,6 +31,7 @@
                     <input type="checkbox" name="level" value="4">Level 4<br>
                     <input type="checkbox" name="level" value="5">Level M<br>
                     <br/>
+
                     <p><strong>Year</strong></p>
                     {% if yearlist %}
                         {% for item in yearlist %}
