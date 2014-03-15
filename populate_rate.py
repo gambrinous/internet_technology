@@ -122,6 +122,7 @@ def add_rate(student, course, rate, comment, date):
     tr.save()
     return r
 
+
 # Start execution here!
 if __name__ == '__main__':
     print "Starting Rate population script..."
@@ -129,4 +130,4 @@ if __name__ == '__main__':
     from rate.models import University, Course, Rate
     from django.contrib.auth.models import User
     populate()
-    print "Well Done!"
+    print "Well Done!!"
