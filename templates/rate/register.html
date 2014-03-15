@@ -1,7 +1,7 @@
 {% extends 'rate/base.html' %}
 
 {% block title %}Register{% endblock %}
-{% block path %} <a href="/rate/">Home</a> > Register{% endblock %}
+{% block path %} <li><a href="/rate/">Home</a></li><li class="active">Register</li>{% endblock %}
 {% block body_block %}
     {% if registered %}
         <h4>You have already an account.</h4>
