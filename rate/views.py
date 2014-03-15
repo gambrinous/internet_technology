@@ -143,27 +143,45 @@ def course(request, course_title_url):
 
 def rated_courses(request, type):
     context = RequestContext(request)
-    if type == "top":
-        list = Course.objects.order_by('-stored_average_rating')[:20]
-        title = "Top Rated Courses"
-    if type == "worst":
-        list = Course.objects.order_by('stored_average_rating')[:20]
-        title = "Worst Rated Courses"
-    if type == "latest":
-        list = Course.objects.order_by('-date')[:20]
-        title = "Most Recent Rated Courses"
+    if request.method == 'POST':
+        university_option = request.POST['university']
+        level_option = request.POST['level']
+        year_option = request.POST['year']
 
-    university_list = University.objects.order_by('name')
-    course_list = Course.objects.values('title').distinct()
-    year_list = Course.objects.values('year').distinct()
-    rates_list = Rate.objects.values('course', 'date')[:1]
-    context_dict = {'list': list, 'title': title,
+        if type == "top":
+            #list = Course.objects.order_by('-stored_average_rating')[:20]
+            title = "Top Rated Courses"
+        if type == "worst":
+            #list = Course.objects.order_by('stored_average_rating')[:20]
+            title = "Worst Rated Courses"
+        if type == "latest":
+            #list = Course.objects.order_by('-date')[:20]
+            title = "Most Recent Rated Courses"
+
+        context_dict = {'list': list, 'title': title}
+        render_to_response('rate/rated_courses.html', context_dict, context)
+    else:
+        if type == "top":
+            list = Course.objects.order_by('-stored_average_rating')[:20]
+            title = "Top Rated Courses"
+        if type == "worst":
+            list = Course.objects.order_by('stored_average_rating')[:20]
+            title = "Worst Rated Courses"
+        if type == "latest":
+            list = Course.objects.order_by('-date')[:20]
+            title = "Most Recent Rated Courses"
+
+        university_list = University.objects.order_by('name')
+        course_list = Course.objects.values('title').distinct()
+        year_list = Course.objects.values('year').distinct()
+        rates_list = Rate.objects.values('course', 'date')[:1]
+        context_dict = {'list': list, 'title': title,
                     'universitylist': university_list, 'courselist': course_list, 'yearlist': year_list,
                     'rateslist': rates_list}
-    for rate in list:
-        rate.url = rate.title.replace(' ', '_')
+        for rate in list:
+            rate.url = rate.title.replace(' ', '_')
 
-    return render_to_response('rate/rated_courses.html', context_dict, context)
+        return render_to_response('rate/rated_courses.html', context_dict, context)
 
 def rateIt(request, course_title_url):
     context = RequestContext(request)
