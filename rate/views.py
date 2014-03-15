@@ -130,6 +130,13 @@ def course(request, course_title_url):
         rate = Rate.objects.filter(course=course)
         context_dict['course'] = course
         context_dict['rate'] = rate
+
+        flag = "yes"
+        for u in rate:
+            if u.student.email == request.user.email:
+                flag = "no"
+
+        context_dict['rateIt'] = flag
     except Course.DoesNotExist:
         pass
 

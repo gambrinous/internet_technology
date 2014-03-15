@@ -12,7 +12,9 @@
         <div class="container-fluid" style="float: right">
             <h2>{{ course.stored_average_rating }}</h2>
             </br>
+            {% if rateIt != "no" %}
                 <a class="btn btn-primary" href="/rate/course/{{ course.url }}/rateIt" style="float: right">RATE</a>
+            {% endif %}
         </div>
     </div>
     <div class="container-fluid" style="border: dotted">
