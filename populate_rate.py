@@ -24,9 +24,16 @@ def populate():
                   ['Software Project Management','School of Computing Science', 2010, 'Dr Andrew', 46, 20]]
 
     #stu_id, course_id, rate, comment, date
-    rateit = [[11, 5, 4, 'What an interesting course!', '2014-02-11'], [11, 3, 2, 'Not very good', '2013-01-23'],
-             [8, 6, 4, 'it is okay', '2011-03-12'], [12, 1, 5, 'not good at all', '2008-11-10'],
-             [12, 3, 3, 'not very objective', '2008-12-05'], [2, 2, 4, 'very fluent', '2010-04-02']]
+    rateit = [[2, 1, 5, 'What an interesting course!', '2014-02-11T12:34:56'], [3, 2, 2, 'Not very good', '2013-01-23T01:23:45'],
+              [3, 1, 5, 'The best course ever!', '2014-02-21T22:34:56'], [4, 2, 2, 'Not good at all', '2011-01-13T21:23:45'],
+             [6, 3, 4, 'it is okay', '2011-03-12T23:34:45'], [8, 4, 1, 'not good at all', '2008-11-10T06:59:59'],
+             [7, 3, 4, 'The professor is awesome', '2012-04-12T23:34:45'], [9, 4, 1, 'Avoid it at all costs', '2009-01-20T16:59:59'],
+             [11, 5, 3, 'not very objective', '2008-12-05T11:21:32'], [12, 6, 4, 'very fluent', '2010-04-02T10:09:08'],
+             [12, 5, 3, 'not that helpful', '2009-01-05T21:21:32'], [11, 6, 4, 'very fluent', '2010-05-06T13:09:08'],
+             [16, 7, 3, 'do not select it', '2015-12-25T11:21:32'], [13, 8, 5, 'cool', '2013-07-05T15:39:48'],
+             [15, 7, 3, 'avoid it', '2015-01-25T11:21:32'], [14, 8, 5, 'Great', '2013-06-05T05:39:48'],
+             [14, 9, 5, 'very objective', '2012-10-04T01:21:32'], [15, 10, 1, 'not good', '2011-03-01T11:19:28'],
+             [15, 9, 5, 'Very good', '2011-10-05T01:21:32'], [13, 10, 1, 'Not good at all', '2011-08-01T21:19:28'],]
 
     #the students of all univeristies
     students = [['Maggie', 'McGeek'], ['Charlie', 'Cheaterson'], ['Leif', 'Azzopardi'], ['Mark', 'Zuckerberg'],
@@ -118,7 +125,8 @@ def add_rate(student, course, rate, comment, date):
     tr = Course.objects.get(id=course.id)
     tr.times_rated += 1
     tr.total_rating += rate
-    tr.stored_average_rating = round(float(tr.total_rating)/float(tr.times_rated), 2)
+    tr.stored_average_rating = ("%0.2f" % round(float(tr.total_rating)/float(tr.times_rated), 2))
+    tr.date=date
     tr.save()
     return r
 
