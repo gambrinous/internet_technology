@@ -3,8 +3,8 @@
     <div class="jumbotron">
         <form class="navbar-form" method="post">
             {% csrf_token %}
-            <div class="btn-group bootstrap-select">
-                <select class="selectpicker" name="university_options">
+            <div class="btn-group">
+                <select class="form-control" name="university_options">
                     <option selected value="" disabled>Choose University</option>
                     {% if universitylist %}
                         {% for item in universitylist %}
@@ -14,7 +14,7 @@
                 </select>
             </div>
             <div class="btn-group">
-                <select name="course_options">
+                <select class="form-control" name="course_options">
                     <option selected value="" disabled>Choose Course</option>
                     {% if courselist %}
                         {% for item in courselist %}
@@ -24,7 +24,7 @@
                 </select>
             </div>
             <div class="btn-group">
-                <select name="level_options">
+                <select class="form-control" name="level_options">
                     <option selected value="" disabled>Choose Level</option>
                     <option value="1">Level 1</option>
                     <option value="2">Level 2</option>
@@ -34,7 +34,7 @@
                 </select>
             </div>
             <div class="btn-group">
-                <select name="year_options">
+                <select class="form-control" name="year_options">
                     <option selected value="" disabled>Choose Year</option>
                     {% if yearlist %}
                         {% for item in yearlist %}
