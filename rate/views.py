@@ -180,8 +180,7 @@ def rateIt(request, course_title_url):
     else:
         if request.user.is_authenticated():
             course_title = course_title_url.replace('_', ' ')
-            context_dict = {'course_title': course_title}
-
+            context_dict = {'course_title': course_title, 'course_url': course_title_url}
             try:
                 course = Course.objects.get(title=course_title)
                 rate = Rate.objects.filter(course=course)

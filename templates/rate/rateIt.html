@@ -1,5 +1,6 @@
 {% extends 'rate/base.html' %}
 {% block title %}{{ course_title }}{% endblock %}
+{% block path %} <a href="/rate/">Home</a> > Course > <a href="/rate/course/{{course_url}}"> {{ course_title }} </a> > rate {% endblock %}
 {% block body_block %}
     <div class="container-fluid" style="border: dotted">
         <div class="container-fluid" style="float: left">
