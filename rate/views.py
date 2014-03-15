@@ -116,11 +116,6 @@ def underConstruction(request):
     return render_to_response('rate/underConstruction.html', context_dict, context)
 
 
-def test(request):
-    context = RequestContext(request)
-    return render_to_response('rate/test.html', context)
-
-
 def course(request, course_title_url):
     context = RequestContext(request)
     course_title = course_title_url.replace('_', ' ')
