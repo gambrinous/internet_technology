@@ -12,9 +12,12 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <!-- Optional theme -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
-    <link href="../../static/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="{% static '/css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+    <!--xtra css -->
+    <link rel="stylesheet" href="{% static 'xtracss/bootstrap-select.css' %}" >
+    <link rel="stylesheet" href="{% static 'xtracss/bootstrap-select.min.css' %}" >
 </head>
-<body style="min-height: 2000px;" style="padding-top: 70px;">
+<body>
 <div class="navbar navbar-default" role="navigation">
     <div class="container" style="background-image: url('/static/images/logo_bg.jpg');  background-size:contain; ">
         <div class="navbar-header" style="height: 200px">
@@ -98,6 +101,8 @@
 </div> -->
 <script src="{% static 'js/jquery-2.1.0.min.js' %}"></script>
 <script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'xtracss/bootstrap-select.js' %}"></script>
+<script src="{% static 'xtracss/bootstrap-select.min.js' %}"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"/>
 </body>
 </html>

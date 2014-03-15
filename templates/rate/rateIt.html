@@ -9,32 +9,18 @@
             <h5>Professor: {{ course.professor }}</h5>
             <h5>Level: {% if course.level == 5 %} MSc {% else %} L{{ course.level }}{% endif %}</h5>
             <hr>
-            <h5>Give Feedback</h5>
+            <h5>Rate this course</h5>
 
-            <form method="post" action="">
-                <p>1. The course content has been appropriate and at the right level: *</p>
-                <input type="radio" name="q1" value="1"/> 1 - strongly disagree
+            <form method="post">
+                {% csrf_token %}
+                <input type="radio" name="q1" value="1"/> 1
                 <input type="radio" name="q1" value="2"/> 2
                 <input type="radio" name="q1" value="3"/> 3
                 <input type="radio" name="q1" value="4"/> 4
-                <input type="radio" name="q1" value="5"/> 5 - strongly agree
-                <p>2. The style of the delivery and interactions has been entertaining and engaging: *</p>
-                <input type="radio" name="q2" value="1"/> 1 - strongly disagree
-                <input type="radio" name="q2" value="2"/> 2
-                <input type="radio" name="q2" value="3"/> 3
-                <input type="radio" name="q2" value="4"/> 4
-                <input type="radio" name="q2" value="5"/> 5 - strongly agree
-                <p>3. The lab material is a useful and helpful resource: *</p>
-                <input type="radio" name="q3" value="1"/> 1 - strongly disagree
-                <input type="radio" name="q3" value="2"/> 2
-                <input type="radio" name="q3" value="3"/> 3
-                <input type="radio" name="q3" value="4"/> 4
-                <input type="radio" name="q3" value="5"/> 5 - strongly agree
-                <br/>
-                * are compulsory to submit the feedback
-                <h6>Write any comments for that {{ course_title }} course. (optional)</h6>
-                <textarea name="comments" cols="25" rows="5">
-                    Enter your comments here...
+                <input type="radio" name="q1" value="5"/> 5
+
+                <h6>Write any comments for {{ course_title }} course. (optional)</h6>
+                <textarea name="comments" cols="50" rows="5" wrap="soft|hard">Enter your comments here...
                 </textarea><br>
                 <input type="submit" value="Submit"/>
             </form>
