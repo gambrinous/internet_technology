@@ -19,7 +19,8 @@
 </head>
 <body>
 <div class="navbar navbar-default" role="navigation">
-    <div class="container" style="background-image: url('/static/images/logo_bg.jpg');  background-size:contain; ">
+    <div class="container"
+         style="background-image: url('/static/images/logo_bg.jpg'); background-repeat: no-repeat; background-size: cover">
         <div class="navbar-header" style="height: 200px">
             <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
                 <span class="sr-only">Toggle navigation</span>
@@ -27,7 +28,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/rate/"><img src="/static/images/logo2.png"  style=" width: 240px; height: 150px" /></a>
+            <a class="navbar-brand" href="/rate/"><img src="/static/images/logo2.png"
+                                                       style=" width: 240px; height: 150px"/></a>
         </div>
         <div class="navbar-collapse collapse" style="height: 0px;">
             <div class="top-right">
@@ -40,10 +42,10 @@
                                     <b class="caret"></b>
                                 </a>
                             {% else %}
-                                <a class="dropdown-toggle" data-toggle="dropdown" data-hover="hover" data-delay="1000" data-close-others="false"href="">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="">
                                     Login/Register
                                     <b class="caret"></b>
-                                </br>
+                                    </br>
                                 </a>
 
                                 <ul class="dropdown-menu">
@@ -60,7 +62,7 @@
                     </ul>
                 </div>
                 <div class="bottom" style="height: 100px">
-                    <ul class="nav navbar-nav">
+                    <ul class="nav navbar-nav " style=" position: absolute;left: 50%;">
                         <li class="active">
                             <a href="#">Home</a>
                         </li>
@@ -77,9 +79,12 @@
                 </div>
             </div>
         </div>
-        <div class="left">
-            map pages
-        </div>
+        <ol style="background-color: inherit; margin-bottom: 0px;
+padding: 0;" class="breadcrumb">
+            {% block path %}
+                <li class="active">Home</li>
+            {% endblock %}
+        </ol>
     </div>
 </div>
 <div class="container">{% block body_block %}{% endblock %}</div>
