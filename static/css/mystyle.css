@@ -42,5 +42,11 @@ a.my_no_underline:hover
 
 .my_headers{
     width:100%;
+}
 
+.my_login_container
+{
+    width:40%;
+    height: 300px;
+    margin: 0 auto;
 }
