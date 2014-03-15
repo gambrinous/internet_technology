@@ -132,9 +132,10 @@ def course(request, course_title_url):
         context_dict['rate'] = rate
 
         flag = "yes"
-        for u in rate:
-            if u.student.email == request.user.email:
-                flag = "no"
+        if request.user.is_authenticated():
+            for u in rate:
+                if u.student.email == request.user.email:
+                    flag = "no"
 
         context_dict['rateIt'] = flag
     except Course.DoesNotExist:
