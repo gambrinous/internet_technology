@@ -1,0 +1,46 @@
+.mytitle_uni_rate
+{
+    width:100%;
+    background-color: rgb(100,200,200);
+}
+
+
+.mytitle_uni{
+    width:80%;
+    float:left;
+    text-align: left;
+    font-size: 16px;
+}
+
+.mytitle{
+    width:100%;
+    float:left;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.my_uni{
+    width:100%;
+    float:left;
+    text-align: left;
+
+}
+.myrate{
+    width: 20%;
+    float: left;
+    text-align: right;
+    font-size: 20px;
+}
+
+
+a.my_no_underline:hover
+{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.my_headers{
+    width:100%;
+
+}

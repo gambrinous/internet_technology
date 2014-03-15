@@ -48,14 +48,34 @@
     </div>
     <div class="container-fluid">
         <div class="col-sm-4" style="text-align: center">
-            <h3>Top 5</h3>
+            <div class="my_headers">
+                <h3>
+                   <a class="my_no_underline" href="/rate/rated_courses/top">Top 5</a>
+                </h3>
+            </div>
             {% if topfive %}
                 <ul class="list-group">
                     {% for rate in topfive %}
+
                         <a href="/rate/course/{{ rate.url }}">
-                            <li class="list-group-item">{{ rate.title }},</br>{{ rate.university }} -
-                                {{ rate.stored_average_rating }}</li>
+                            <div class="mytitle_uni_rate">
+                                <li class="list-group-item">
+                                    <div class="mytitle_uni">
+                                        <div class="mytitle">
+                                            {{ rate.title }}
+                                        </div>
+                                        <div class="my_uni">
+                                            {{ rate.university }}
+                                        </div>
+                                    </div>
+                                    <div class="myrate">
+                                        {{ rate.stored_average_rating }}
+                                    </div>
+
+                                </li>
+                            </div>
                         </a>
+
                     {% endfor %}
                 </ul>
             {% else %}
@@ -63,14 +83,33 @@
             {% endif %}
         </div>
         <div class="col-sm-4" style="text-align: center">
-            <h3>Worst 5</h3>
+            <div class="my_headers">
+                <h3>
+                   <a class="my_no_underline" href="/rate/rated_courses/worst">Worst 5</a>
+                </h3>
+            </div>
             {% if worstfive %}
                 <ul class="list-group">
                     {% for rate in worstfive %}
+
                         <a href="/rate/course/{{ rate.url }}">
-                            <li class="list-group-item">{{ rate.title }},</br>{{ rate.university }} -
-                                {{ rate.stored_average_rating }}</li>
+                            <div class="mytitle_uni_rate">
+                                <li class="list-group-item">
+                                    <div class="mytitle_uni">
+                                        <div class="mytitle">
+                                            {{ rate.title }}
+                                        </div>
+                                        <div class="my_uni">
+                                            {{ rate.university }}
+                                        </div>
+                                    </div>
+                                    <div class="myrate">
+                                        {{ rate.stored_average_rating }}
+                                    </div>
+                                </li>
+                            </div>
                         </a>
+
                     {% endfor %}
                 </ul>
             {% else %}
@@ -78,14 +117,33 @@
             {% endif %}
         </div>
         <div class="col-sm-4" style="text-align: center">
-            <h3>Most Recent</h3>
+            <div class="my_headers">
+                <h3>
+                   <a class="my_no_underline" href="/rate/rated_courses/latest">Most Recent</a>
+                </h3>
+            </div>
             <ul class="list-group">
                 {% if latestfive %}
                     {% for rate in latestfive %}
+
                         <a href="/rate/course/{{ rate.url }}">
-                            <li class="list-group-item">{{ rate.title }},</br>{{ rate.university }} -
-                                {{ rate.stored_average_rating }}</li>
+                            <div class="mytitle_uni_rate">
+                                <li class="list-group-item">
+                                    <div class="mytitle_uni">
+                                        <div class="mytitle">
+                                            {{ rate.title }}
+                                        </div>
+                                        <div class="my_uni">
+                                            {{ rate.university }}
+                                        </div>
+                                    </div>
+                                    <div class="myrate">
+                                        {{ rate.stored_average_rating }}
+                                    </div>
+                                </li>
+                            </div>
                         </a>
+
                     {% endfor %}
                 {% else %}
                     <strong>There are no latest yet.</strong>
