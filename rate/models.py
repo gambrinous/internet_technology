@@ -22,7 +22,7 @@ class Course(models.Model):
     professor = models.CharField(max_length=128)
     total_rating = models.IntegerField(default=0)
     times_rated = models.IntegerField(default=0)
-    stored_average_rating = models.FloatField(default=0.0)
+    stored_average_rating = models.CharField(max_length=4)
     date = models.DateTimeField(auto_now_add=True)
 
     def __unicode__(self):
@@ -32,9 +32,9 @@ class Course(models.Model):
 class Rate(models.Model):
     student = models.ForeignKey(User)
     course = models.ForeignKey(Course)
-    rate = models.FloatField(default=0.0)
+    rate = models.IntegerField(default=0)
     comment = models.CharField(max_length=1024)
-    date = models.DateField(auto_now=True)
+    date = models.DateTimeField(auto_now=True)
 
     def __unicode__(self):
         return unicode(self.student) + ' / ' + unicode(self.course)
