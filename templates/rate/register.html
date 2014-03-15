@@ -4,17 +4,29 @@
 {% block path %} <a href="/rate/">Home</a> > Register{% endblock %}
 {% block body_block %}
     {% if registered %}
-        <h4>Thank you for registering!</h4>
+        <h4>You have already an account.</h4>
         <a href="/rate/">Return to the homepage.</a><br/>
     {% else %}
-        <h4>New to Rate this Course?</h4>
-        <h5>Register here!</h5>
-        <form id="user_form" method="post" action="/rate/register/" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ user_form.as_p }}
-            <input type="submit" name="submit" value="Register"/>
-        </form>
+        <div class="col-md-5">
+            <div class="thumbnail">
+                <h1>New to Rate my Course?</h1>
+
+                <h2>Register here!</h2>
+
+                <form class="form-horizontal" id="user_form" method="post" action="/rate/register/"
+                      enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <label>Email address</label>
+                    <input class="form-control" type="text" name="email" /></br>
+                    <label>Password</label>
+                    <input class="form-control" type="password" name="password" /></br>
+                    <label>First Name</label>
+                    <input class="form-control" type="text" name="first_name" /></br>
+                    <label>Last Name</label>
+                    <input class="form-control" type="text" name="last_name" /></br>
+                    <input class="btn btn-default" type="submit" name="submit" value="Register" />
+                </form>
+            </div>
+        </div>
     {% endif %}
 {% endblock %}
-
-
