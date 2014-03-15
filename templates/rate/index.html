@@ -3,8 +3,8 @@
     <div class="jumbotron">
         <form class="navbar-form" method="post">
             {% csrf_token %}
-            <div class="btn-group">
-                <select class="input-group" name="university_options">
+            <div class="btn-group bootstrap-select">
+                <select class="selectpicker" name="university_options">
                     <option selected value="" disabled>Choose University</option>
                     {% if universitylist %}
                         {% for item in universitylist %}
