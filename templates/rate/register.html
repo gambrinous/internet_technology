@@ -1,31 +1,35 @@
 {% extends 'rate/base.html' %}
 
 {% block title %}Register{% endblock %}
-{% block path %} <li><a href="/rate/">Home</a></li><li class="active">Register</li>{% endblock %}
+{% block path %}
+    <li><a href="/rate/">Home</a></li>
+    <li class="active">Register</li>{% endblock %}
 {% block body_block %}
     {% if registered %}
         <h4>You have already an account.</h4>
         <a href="/rate/">Return to the homepage.</a><br/>
     {% else %}
-        <div class="col-md-5">
-            <div class="thumbnail">
-                <h1>New to Rate my Course?</h1>
+        <div class="my_login_container">
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h1>New to Rate my Course?</h1>
 
-                <h2>Register here!</h2>
+                    <h2>Register here!</h2>
 
-                <form class="form-horizontal" id="user_form" method="post" action="/rate/register/"
-                      enctype="multipart/form-data">
-                    {% csrf_token %}
-                    <label>Email address</label>
-                    <input class="form-control" type="text" name="email" /></br>
-                    <label>Password</label>
-                    <input class="form-control" type="password" name="password" /></br>
-                    <label>First Name</label>
-                    <input class="form-control" type="text" name="first_name" /></br>
-                    <label>Last Name</label>
-                    <input class="form-control" type="text" name="last_name" /></br>
-                    <input class="btn btn-default" type="submit" name="submit" value="Register" />
-                </form>
+                    <form class="form-horizontal" id="user_form" method="post" action="/rate/register/"
+                          enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <label>Email address</label>
+                        <input class="form-control" type="text" name="email"/></br>
+                        <label>Password</label>
+                        <input class="form-control" type="password" name="password"/></br>
+                        <label>First Name</label>
+                        <input class="form-control" type="text" name="first_name"/></br>
+                        <label>Last Name</label>
+                        <input class="form-control" type="text" name="last_name"/></br>
+                        <input class="btn btn-default" type="submit" name="submit" value="Register"/>
+                    </form>
+                </div>
             </div>
         </div>
     {% endif %}
