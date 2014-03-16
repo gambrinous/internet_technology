@@ -194,16 +194,17 @@ def rated_courses(request, type):
 def rateIt(request, course_title_url):
     context = RequestContext(request)
     course_title = course_title_url.replace('_', ' ')
-    date=datetime.now()
+    print course_title
+    date = datetime.now()
+    print date
     if request.method == 'POST':
         print('post')
-        print request.user
+        print request.user.id
         rate = (request.POST['q1'])
         comment = (request.POST['comments'])
-        #uid = User.objects.get(username=request.user)
-        r = Rate.objects.create()
-        r.student = request.user.id
-        r.course = course_title
+        r = Rate.objects.create()[0]
+        r.student_id = request.user.id
+        r.course.title = course_title
         print course_title
         r.rate = rate
         print rate
