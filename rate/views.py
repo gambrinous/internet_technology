@@ -110,7 +110,11 @@ def restricted(request):
 
 def sitemap(request):
     context = RequestContext(request)
-    return render_to_response('rate/sitemap.html', context)
+    list = Course.objects.order_by('title')
+    context_dict = {'list': list,}
+    for course in list:
+        course.url = course.title.replace(' ', '_')
+    return render_to_response('rate/sitemap.html', context_dict, context)
 
 
 def course(request, course_title_url):
