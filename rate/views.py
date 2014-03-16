@@ -5,8 +5,9 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 from rate.models import Rate, Course, University
+from datetime import datetime
+from django.contrib.auth.models import User
 from rate.forms import UserForm
-
 
 def index(request):
     context = RequestContext(request)
@@ -192,13 +193,38 @@ def rated_courses(request, type):
 
 def rateIt(request, course_title_url):
     context = RequestContext(request)
+    course_title = course_title_url.replace('_', ' ')
+    date=datetime.now()
     if request.method == 'POST':
-
-        # add to db
-
+        print('post')
+        print request.user
+        rate = (request.POST['q1'])
+        comment = (request.POST['comments'])
+        #uid = User.objects.get(username=request.user)
+        r = Rate.objects.create()
+        r.student = request.user.id
+        r.course = course_title
+        print course_title
+        r.rate = rate
+        print rate
+        r.comment = comment
+        print comment
+        r.date = date
+        print date
+        # (request.user, course_title, rate, comment, date)[0]
+        # Rate.
+        tr = Course.objects.get(id=course_title.id)
+        tr.times_rated += 1
+        tr.total_rating += rate
+        tr.stored_average_rating = ("%0.2f" % round(float(tr.total_rating)/float(tr.times_rated), 2))
+        tr.date = date
+        tr.save()
+        r.save()
         return HttpResponseRedirect('/rate/course/'+course_title_url)
     else:
         if request.user.is_authenticated():
+            print('auth')
+            # form = RateForm()
             course_title = course_title_url.replace('_', ' ')
             context_dict = {'course_title': course_title, 'course_url': course_title_url}
             try:
