@@ -1,11 +1,11 @@
 {% extends 'rate/base.html' %}
 {% load static %}
-{% block title %}My profile{% endblock %}
+{% block title %}My Profile{% endblock %}
 {% block path %}
     <li><a href="/rate/">Home</a></li>
     <li class="active">My profile</li>{% endblock %}
 {% block body_block %}
-    <h1 style="text-align: center"><strong>My profile</strong><br/></h1>
+    <h1 class="text-center"><strong>My profile</strong><br/></h1>
 
     <div class="">
         First Name: {{ user.first_name }}<br/>
