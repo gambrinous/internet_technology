@@ -105,7 +105,7 @@ def register(request):
                     else:
                         print user_form.errors,
                 else:
-                    return HttpResponse('This university is not in our database yet.')
+                    return HttpResponse('This university is not in our database yet. Please <a href="/rate/contact/">contact</a> the administrator to request it, or go back to <a href="/rate/">main page</a>.')
         else:
             user_form = UserForm()
         return render_to_response('rate/register.html', {'user_form': user_form, 'registered': registered}, context)
@@ -213,14 +213,10 @@ def rateIt(request, course_title_url):
     if request.method == 'POST':
         rate_f = int(request.POST['q1'])
         comment_f = (request.POST['comments'])
-        print '|akakakaka|'
-        print '|'+comment_f+'|'
         if comment_f == '':
             r = Rate.objects.get_or_create(student=request.user, course=Course.objects.get(title=course_title),rate=rate_f, date=datetime.now())
-            print 'here>>>>>>>>>'
         else:
             r = Rate.objects.get_or_create(student=request.user, course=Course.objects.get(title=course_title),rate=rate_f, comment=comment_f, date=datetime.now())
-
         tr = Course.objects.get(title=course_title)
         tr.times_rated += 1
         tr.total_rating += rate_f
