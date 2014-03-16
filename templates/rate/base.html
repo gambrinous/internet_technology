@@ -37,6 +37,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
                             {% if user.is_authenticated %}
+                                Welcome {{ user.username }}
                                 <a class="dropdown-toggle" href="/rate/logout/">
                                     Logout
                                     <b class="caret"></b>
