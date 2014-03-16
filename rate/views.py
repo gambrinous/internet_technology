@@ -131,16 +131,17 @@ def course(request, course_title_url):
 
         flag = "yes"
         if request.user.is_authenticated():
-            for u in rate:
-                if u.student.email == request.user.email:
+            for r in rate:
+                if r.student.email == request.user.email:
                     flag = "no"
 
+            domain = request.user.email.split("@",1)[1]
+            if course.university.domain != domain:
+                flag = "no"
         context_dict['rateIt'] = flag
     except Course.DoesNotExist:
         pass
-
     course.url = course.title.replace(' ', '_')
-
     return render_to_response('rate/course.html', context_dict, context)
 
 
@@ -218,7 +219,7 @@ def profile(request):
         list = Rate.objects.filter(student=request.user.id).order_by('course')
         context_dict = {'list': list}
         for rate in list:
-           rate.url = rate.course.title.replace(' ', '_')
+            rate.url = rate.course.title.replace(' ', '_')
         return render_to_response('rate/profile.html', context_dict, context)
     else:
         return render_to_response('rate/restricted.html')
