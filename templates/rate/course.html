@@ -1,16 +1,19 @@
 {% extends 'rate/base.html' %}
 {% block title %}{{ course_title }}{% endblock %}
-{% block path %}<li><a href="/rate/">Home</a></li><li class="active">Course</li><li class="active">{{ course_title }}</li>{% endblock %}
+{% block path %}
+    <li><a href="/rate/">Home</a></li>
+    <li class="active">Course</li>
+    <li class="active">{{ course_title }}</li>{% endblock %}
 {% block body_block %}
-    <div class="container-fluid" style="border: dotted">
-        <div class="container-fluid" style="float: left">
+    <div class="jumbotron clearfix">
+        <div class="pull-left">
             <h4>{{ course_title }}</h4>
             <h5>{{ course.university.name }}</h5>
             <h5>Year: {{ course.year }}</h5>
             <h5>Professor: {{ course.professor }}</h5>
-            <h5>Level: {% if course.level == 5 %} MSc {% else %} {{ course.level }}{% endif %}</h5>
+            <h5>Level: {% if course.level == 5 %} MSc {% else %}{{ course.level }}{% endif %}</h5>
         </div>
-        <div class="container-fluid" style="float: right">
+        <div class="pull-right">
             <h2>{{ course.stored_average_rating }}</h2>
             </br>
             {% if rateIt != "no" %}
@@ -18,11 +21,15 @@
             {% endif %}
         </div>
     </div>
-    <div class="container-fluid" style="border: dotted">
+    <div class="jumbotron">
         <h4>Comments</h4>
 
-        {% for i in rate %}
-            <div class="navbar-text"><p>{{ i.comment }}</p></div>
-        {% endfor %}
+        {% if rate %}
+            {% for i in rate %}
+                <div class="text-primary"><p>{{ i.comment }}</p></div>
+            {% endfor %}
+        {% else %}
+            <div class="text-primary"><p>No comments for this course yet.</p></div>
+        {% endif %}
     </div>
 {% endblock %}
