@@ -55,24 +55,25 @@ def contact(request):
 
 def user_login(request):
     context = RequestContext(request)
+    if not request.user.is_authenticated():
+        if request.method == 'POST':
+            username = request.POST['username']
+            password = request.POST['password']
+            user = authenticate(username=username, password=password)
 
-    if request.method == 'POST':
-        username = request.POST['username']
-        password = request.POST['password']
-        user = authenticate(username=username, password=password)
-
-        if user is not None:
-            if user.is_active:
-                login(request, user)
-                return HttpResponseRedirect('/rate/')
+            if user is not None:
+                if user.is_active:
+                    login(request, user)
+                    return HttpResponseRedirect('/rate/')
+                else:
+                    return HttpResponse("Sorry your account is not enabled. Your University's domain is not confirmed yet.")
             else:
-                return HttpResponse("Sorry your account is not enabled. Your University's domain is not confirmed yet.")
+                print "Invalid login details: {0}, {1}".format(username, password)
+                return HttpResponse("Invalid login details supplied.")
         else:
-            print "Invalid login details: {0}, {1}".format(username, password)
-            return HttpResponse("Invalid login details supplied.")
+            return render_to_response('rate/login.html', {}, context)
     else:
-        return render_to_response('rate/login.html', {}, context)
-
+        return HttpResponse('You are already signed in. Go back to <a href="/rate/">main page</a>.')
 
 @login_required
 def user_logout(request):
@@ -92,13 +93,14 @@ def register(request):
                 user.username = user.email
                 user.save()
                 registered = True
+                return HttpResponseRedirect('/rate/login')
             else:
                 print user_form.errors,
         else:
             user_form = UserForm()
         return render_to_response('rate/register.html', {'user_form': user_form, 'registered': registered}, context)
     else:
-        return HttpResponse("You are already registered and signed in.")
+        return HttpResponse('You are already registered and signed in. Go back to <a href="/rate/">main page</a>.')
 
 
 def restricted(request):
