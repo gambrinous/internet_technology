@@ -213,8 +213,13 @@ def rateIt(request, course_title_url):
     if request.method == 'POST':
         rate_f = int(request.POST['q1'])
         comment_f = (request.POST['comments'])
-
-        r = Rate.objects.get_or_create(student=request.user, course=Course.objects.get(title=course_title),rate=rate_f, comment=comment_f, date=datetime.now())
+        print '|akakakaka|'
+        print '|'+comment_f+'|'
+        if comment_f == '':
+            r = Rate.objects.get_or_create(student=request.user, course=Course.objects.get(title=course_title),rate=rate_f, date=datetime.now())
+            print 'here>>>>>>>>>'
+        else:
+            r = Rate.objects.get_or_create(student=request.user, course=Course.objects.get(title=course_title),rate=rate_f, comment=comment_f, date=datetime.now())
 
         tr = Course.objects.get(title=course_title)
         tr.times_rated += 1

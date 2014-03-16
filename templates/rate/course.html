@@ -24,7 +24,9 @@
         <h4>Comments</h4>
         {% if rate %}
             {% for i in rate %}
+                {% if i.comment != '' %}
                 <div class="text-primary" style="background-color: snow; margin: 10px"><p>{{ i.comment }}</p><div class="text-right">{{ i.date }}</div></div>
+                {% endif %}
             {% endfor %}
         {% else %}
             <div class="text-primary"><p>No comments for this course yet.</p></div>

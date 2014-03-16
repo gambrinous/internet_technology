@@ -11,8 +11,10 @@
         First Name: {{ user.first_name }}<br/>
         Last Name: {{ user.last_name }}<br/>
         Email: {{ user.email }}<br/>
+
         <div class="col-md-4">
             <h2>My rates</h2>
+
             <div class="thumbnail">
                 <ul>
                     {% if list %}
@@ -20,7 +22,7 @@
                             <li>
                                 <a href="/rate/course/{{ rate.url }}">{{ rate.course.title }}</a>, {{ rate.course.university }}, {{ rate.course.year }}
                                 <br/>
-                                {{ rate.comment }}, {{ rate.rate }}, {{ rate.date }}
+                                {% if rate.comment != '' %}{{ rate.comment }},{% endif %} {{ rate.rate }}, {{ rate.date }}
                             </li>
                         {% endfor %}
                     {% else %}
