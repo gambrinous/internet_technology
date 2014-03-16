@@ -7,11 +7,11 @@
 {% block body_block %}
     <div class="jumbotron clearfix">
         <div class="pull-left">
-            <h4>{{ course_title }}</h4>
-            <h5>{{ course.university.name }}</h5>
-            <h5>Year: {{ course.year }}</h5>
-            <h5>Professor: {{ course.professor }}</h5>
-            <h5>Level: {% if course.level == 5 %} MSc {% else %}{{ course.level }}{% endif %}</h5>
+            <h3><strong>{{ course_title }}</strong></h3>
+            <h4>{{ course.university.name }}</h4>
+            <h4>Year: {{ course.year }}</h4>
+            <h4>Professor: {{ course.professor }}</h4>
+            <h4>Level: {% if course.level == 5 %} MSc {% else %}{{ course.level }}{% endif %}</h4>
         </div>
         <div class="pull-right">
             <h2>{{ course.stored_average_rating }}</h2>
