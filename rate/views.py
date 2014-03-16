@@ -248,7 +248,7 @@ def rateIt(request, course_title_url):
 def profile(request):
     context = RequestContext(request)
     if request.user.is_authenticated():
-        list = Rate.objects.filter(student=request.user.id).order_by('course')
+        list = Rate.objects.filter(student=request.user.id)
         context_dict = {'list': list}
         for rate in list:
             rate.url = rate.course.title.replace(' ', '_')
