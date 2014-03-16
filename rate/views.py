@@ -44,8 +44,7 @@ def index(request):
 
 def about(request):
     context = RequestContext(request)
-    context_dict = {'boldmessage': "Colossus 4.0 Team"}
-    return render_to_response('rate/about.html', context_dict, context)
+    return render_to_response('rate/about.html', context)
 
 
 def contact(request):
@@ -83,22 +82,23 @@ def user_logout(request):
 
 def register(request):
     if not request.user.is_authenticated():
-        context = RequestContext(request)
-        registered = False
-        if request.method == 'POST':
-            user_form = UserForm(data=request.POST)
-            if user_form.is_valid():
-                user = user_form.save()
-                user.set_password(user.password)
-                user.username = user.email
-                user.save()
-                registered = True
-                return HttpResponseRedirect('/rate/login')
-            else:
-                print user_form.errors,
-        else:
-            user_form = UserForm()
-        return render_to_response('rate/register.html', {'user_form': user_form, 'registered': registered}, context)
+        return ()
+        # context = RequestContext(request)
+        # registered = False
+        # if request.method == 'POST':
+        #     user_form = UserForm(data=request.POST)
+        #     if user_form.is_valid():
+        #         user = user_form.save()
+        #         user.set_password(user.password)
+        #         user.username = user.email
+        #         user.save()
+        #         registered = True
+        #         return HttpResponseRedirect('/rate/login')
+        #     else:
+        #         print user_form.errors,
+        # else:
+        #     user_form = UserForm()
+        # return render_to_response('rate/register.html', {'user_form': user_form, 'registered': registered}, context)
     else:
         return HttpResponse('You are already registered and signed in. Go back to <a href="/rate/">main page</a>.')
 
@@ -188,6 +188,7 @@ def rated_courses(request, type):
 
     return render_to_response('rate/rated_courses.html', context_dict, context)
 
+
 def rateIt(request, course_title_url):
     context = RequestContext(request)
     if request.method == 'POST':
@@ -210,11 +211,14 @@ def rateIt(request, course_title_url):
         else:
             return render_to_response('rate/restricted.html')
 
-@login_required
+
 def profile(request):
     context = RequestContext(request)
     if request.user.is_authenticated():
-
-        return render_to_response('rate/rateIt.html', context_dict, context)
+        list = Rate.objects.filter(student=request.user.id).order_by('course')
+        context_dict = {'list': list}
+        for rate in list:
+           rate.url = rate.course.title.replace(' ', '_')
+        return render_to_response('rate/profile.html', context_dict, context)
     else:
         return render_to_response('rate/restricted.html')
