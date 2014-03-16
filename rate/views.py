@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 from rate.models import Rate, Course, University
 from rate.forms import UserForm
+from datetime import datetime
 
 
 def index(request):
@@ -206,9 +207,21 @@ def rated_courses(request, type):
 
 def rateIt(request, course_title_url):
     context = RequestContext(request)
+    course_title = course_title_url.replace('_', ' ')
+    print course_title
+    date = datetime.now()
     if request.method == 'POST':
+        rate_f = int(request.POST['q1'])
+        comment_f = (request.POST['comments'])
 
-        # add to db
+        r = Rate.objects.get_or_create(student=request.user, course=Course.objects.get(title=course_title),rate=rate_f, comment=comment_f, date=datetime.now())
+
+        tr = Course.objects.get(title=course_title)
+        tr.times_rated += 1
+        tr.total_rating += rate_f
+        tr.stored_average_rating = ("%0.2f" % round(float(tr.total_rating)/float(tr.times_rated), 2))
+        tr.date = date
+        tr.save()
 
         return HttpResponseRedirect('/rate/course/' + course_title_url)
     else:
