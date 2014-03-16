@@ -9,7 +9,7 @@
     width:80%;
     float:left;
     text-align: left;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .mytitle{
@@ -24,13 +24,14 @@
     width:100%;
     float:left;
     text-align: left;
-
+    padding: 5px 0px 0px 10px;
 }
 .myrate{
     width: 20%;
     float: left;
     text-align: right;
     font-size: 20px;
+    font-weight: bold;
 }
 
 
@@ -49,4 +50,67 @@ a.my_no_underline:hover
     width:40%;
     height: 300px;
     margin: 0 auto;
+}
+
+.my_container_filter_table
+{
+    width:100%;
+}
+
+.my_filter_courses_container
+{
+    width:20%;
+    float:left;
+}
+
+.my_table_courses_div
+{
+    width:80%;
+    float:left;
+}
+
+.my_filters_courses
+{
+    width: 80%;
+    height: 150px;
+    border-radius: 8px;
+    padding: 10px 10px 10px 20px;
+    background-color: #eee;
+    overflow-x:auto;
+    font-size: 11px;
+}
+
+.my_filters_buttons_div
+{
+    width:100%;
+    padding: 10px 0px 10px 20px;
+}
+
+.my_filters_button
+{
+    padding: 10px 0px 10px 0px;
+}
+
+.my_table td
+{
+    padding: 10px 10px 10px 10px;
+}
+
+.my_table tbody tr:hover
+{
+    background-color: #CECECE;
+}
+
+
+
+.my_table_header
+{
+    font-weight:bold;
+    background-color: #565856;
+    color: #fff;
+}
+
+.my_table_td_1
+{
+    background-color: #EEEEEE;
 }
