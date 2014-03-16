@@ -75,7 +75,7 @@ a.my_no_underline:hover
     height: 150px;
     border-radius: 8px;
     padding: 10px 10px 10px 20px;
-    background-color: #eee;
+    background-color: #FCFCFC;
     overflow-x:auto;
     font-size: 11px;
 }
@@ -91,19 +91,14 @@ a.my_no_underline:hover
     padding: 10px 0px 10px 0px;
 }
 
-.my_table td
-{
-    padding: 10px 10px 10px 10px;
-}
-
-.my_table tbody tr:hover
-{
-    background-color: #CECECE;
-}
-
-
-
 .my_table_header
+{
+    font-weight:bold;
+    background-color: #565856;
+    color: #fff;
+}
+
+.my_table_header:hover
 {
     font-weight:bold;
     background-color: #565856;

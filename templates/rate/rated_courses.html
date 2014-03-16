@@ -85,14 +85,12 @@
             </thead>
             {% if list %}
             {% for rate in list %}
-            {% if c == 0 %}  <tr >
-            {% else %} <tr class="my_table_tr_1">
-            {% endif %}
+            <tr class="my_table_tr">
                 <td>{{ rate.university }}</td>
-                <td>{% if rate.level == 5 %} MSc {% else %} L{{ rate.level }}{% endif %}</td>
+                <td>{% if rate.level == 5 %} MSc {% else %} {{ rate.level }}{% endif %}</td>
                 <td><a href="/rate/course/{{ rate.url }}">{{ rate.title }}</a></td>
                 <td>{{ rate.year }}</td>
-                <td>{{ rate.stored_average_rating }}/5</td>
+                <td>{{ rate.stored_average_rating }}</td>
                 <td>{{ rate.date }}</td>
             </tr>
             {% endfor %}
