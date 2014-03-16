@@ -1,0 +1,34 @@
+{% extends 'rate/base.html' %}
+{% load static %}
+{% block title %}My profile{% endblock %}
+{% block path %}
+    <li><a href="/rate/">Home</a></li>
+    <li class="active">My profile</li>{% endblock %}
+{% block body_block %}
+    <h1 style="text-align: center"><strong>My profile</strong><br/></h1>
+
+    <div class="">
+        First Name: {{ user.first_name }}<br/>
+        Last Name: {{ user.last_name }}<br/>
+        Email: {{ user.email }}<br/>
+        <div class="col-md-4">
+            <h2>My rates</h2>
+            <div class="thumbnail">
+                <ul>
+                    {% if list %}
+                        {% for rate in list %}
+                            <li>
+                                <a href="/rate/course/{{ rate.url }}">{{ rate.course.title }}</a>, {{ rate.course.university }}, {{ rate.course.year }}
+                                <br/>
+                                {{ rate.comment }}, {{ rate.rate }}, {{ rate.date }}
+                            </li>
+                        {% endfor %}
+                    {% else %}
+                        <li>nothing yer</li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
