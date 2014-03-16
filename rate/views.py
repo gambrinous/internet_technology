@@ -153,22 +153,28 @@ def rated_courses(request, type):
         if type == "top":
             list = Course.objects.filter(university=university_option, level=level_option, year=year_option).order_by('-stored_average_rating')[:20]
             title = "Top Rated Courses"
+            choose_tit = 1
         if type == "worst":
             list = Course.objects.filter(university=university_option, level=level_option, year=year_option).order_by('stored_average_rating')[:20]
             title = "Worst Rated Courses"
+            choose_tit = 2
         if type == "latest":
             list = Course.objects.filter(university=university_option, level=level_option, year=year_option).order_by('-date')[:20]
             title = "Most Recent Rated Courses"
+            choose_tit = 3
     else:
         if type == "top":
             list = Course.objects.order_by('-stored_average_rating')[:20]
             title = "Top Rated Courses"
+            choose_tit = 1
         if type == "worst":
             list = Course.objects.order_by('stored_average_rating')[:20]
             title = "Worst Rated Courses"
+            choose_tit = 2
         if type == "latest":
             list = Course.objects.order_by('-date')[:20]
             title = "Most Recent Rated Courses"
+            choose_tit = 3
 
     university_list = University.objects.order_by('name')
     course_list = Course.objects.values('title').distinct()
@@ -176,7 +182,7 @@ def rated_courses(request, type):
     rates_list = Rate.objects.values('course', 'date')[:1]
     context_dict = {'list': list, 'title': title,
                     'universitylist': university_list, 'courselist': course_list, 'yearlist': year_list,
-                    'rateslist': rates_list}
+                    'rateslist': rates_list, 'ch_title':choose_tit}
     for rate in list:
         rate.url = rate.title.replace(' ', '_')
 

@@ -62,23 +62,31 @@
     </div>
     <div class="my_table_courses_div" style="text-align: left">
         <h2>{{ title }}</h2>
-        <a class="btn btn-primary" href="/rate/rated_courses/top">Top</a>
-        <a class="btn btn-primary" href="/rate/rated_courses/worst">Worst</a>
-        <a class="btn btn-primary" href="/rate/rated_courses/latest">Most Recent</a>
+        {% if ch_title == 1 %} <a class="my_chosen_tab" href="/rate/rated_courses/top">Top</a>
+        {% else %} <a class="btn btn-primary" href="/rate/rated_courses/top">Top</a>
+        {% endif %}
+        {% if ch_title == 2 %} <a class="my_chosen_tab" href="/rate/rated_courses/worst">Worst</a>
+        {% else %} <a class="btn btn-primary" href="/rate/rated_courses/worst">Worst</a>
+        {% endif %}
+        {% if ch_title == 3 %} <a class="my_chosen_tab" href="/rate/rated_courses/latest">Most Recent</a>
+        {% else %}<a class="btn btn-primary" href="/rate/rated_courses/latest">Most Recent</a>
+        {% endif %}
         <table border="1" class="my_table">
             <thead>
             <tr class="my_table_header">
-                <td width="30%">University</td>
+                <td width="4%"> # </td>
+                <td width="28%">University</td>
                 <td width="5%">Level</td>
-                <td width="30%">Course</td>
-                <td width="10%">Year</td>
+                <td width="28%">Course</td>
+                <td width="7%">Year</td>
                 <td width="5%">Rate</td>
-                <td width="20%">Date</td>
+                <td width="30%">Date</td>
             </tr>
             </thead>
             {% if list %}
             {% for rate in list %}
             <tr>
+                <td></td>
                 <td>{{ rate.university }}</td>
                 <td>{% if rate.level == 5 %} MSc {% else %} L{{ rate.level }}{% endif %}</td>
                 <td><a href="/rate/course/{{ rate.url }}">{{ rate.title }}</a></td>
