@@ -182,6 +182,7 @@ def rated_courses(request, type):
 
     return render_to_response('rate/rated_courses.html', context_dict, context)
 
+
 def rateIt(request, course_title_url):
     context = RequestContext(request)
     if request.method == 'POST':
@@ -204,11 +205,14 @@ def rateIt(request, course_title_url):
         else:
             return render_to_response('rate/restricted.html')
 
-@login_required
+
 def profile(request):
     context = RequestContext(request)
     if request.user.is_authenticated():
-
-        return render_to_response('rate/rateIt.html', context_dict, context)
+        list = Rate.objects.filter(student=request.user.id).order_by('course')
+        context_dict = {'list': list}
+        for rate in list:
+           rate.url = rate.course.title.replace(' ', '_')
+        return render_to_response('rate/profile.html', context_dict, context)
     else:
         return render_to_response('rate/restricted.html')
