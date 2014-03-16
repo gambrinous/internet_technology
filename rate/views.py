@@ -1,11 +1,9 @@
-# Create your views here.
 from django.template import RequestContext
 from django.shortcuts import render_to_response
 from django.contrib.auth import authenticate, login
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
-from datetime import datetime
 from rate.models import Rate, Course, University
 from rate.forms import UserForm
 
@@ -110,10 +108,9 @@ def restricted(request):
         return render_to_response('rate/restricted.html')
 
 
-def underConstruction(request):
+def sitemap(request):
     context = RequestContext(request)
-    context_dict = {'boldmessage': "Under Construction"}
-    return render_to_response('rate/underConstruction.html', context_dict, context)
+    return render_to_response('rate/sitemap.html', context)
 
 
 def course(request, course_title_url):
@@ -147,16 +144,14 @@ def rated_courses(request, type):
         university_option = request.POST['university']
         level_option = request.POST['level']
         year_option = request.POST['year']
-
         if type == "top":
-            list = Course.objects.order_by('-stored_average_rating')[:20]
-            #list = Course.objects.filter(university=university_option, level=level_option, year=year_option).order_by('-stored_average_rating')[:20]
+            list = Course.objects.filter(university=university_option, level=level_option, year=year_option).order_by('-stored_average_rating')[:20]
             title = "Top Rated Courses"
         if type == "worst":
-            list = Course.objects.order_by('stored_average_rating')[:20]
+            list = Course.objects.filter(university=university_option, level=level_option, year=year_option).order_by('stored_average_rating')[:20]
             title = "Worst Rated Courses"
         if type == "latest":
-            list = Course.objects.order_by('-date')[:20]
+            list = Course.objects.filter(university=university_option, level=level_option, year=year_option).order_by('-date')[:20]
             title = "Most Recent Rated Courses"
     else:
         if type == "top":

@@ -35,7 +35,7 @@
                     <p><strong>Year</strong></p>
                     {% if yearlist %}
                         {% for item in yearlist %}
-                            <input type="checkbox" name="year" value="{{ item.id }}">{{ item.year }}<br>
+                            <input type="checkbox" name="year" value="{{ item.year }}">{{ item.year }}<br>
                         {% endfor %}
                     {% endif %}
                     <input type="submit" name="submit_button" value="Apply filters"/><br/>
