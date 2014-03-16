@@ -38,11 +38,20 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
                             {% if user.is_authenticated %}
-                                Welcome {{ user.username }}
-                                <a class="dropdown-toggle" href="/rate/logout/">
-                                    Logout
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="">
+                                    Welcome {{ user.username }}
                                     <b class="caret"></b>
+                                    </br>
                                 </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="/rate/profile/">My Profile</a>
+                                    </li>
+                                    <li>
+                                        <a href="/rate/logout/">
+                                            Logout</a>
+                                    </li>
+                                </ul>
                             {% else %}
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="">
                                     Login/Register

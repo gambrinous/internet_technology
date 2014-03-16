@@ -203,3 +203,12 @@ def rateIt(request, course_title_url):
             return render_to_response('rate/rateIt.html', context_dict, context)
         else:
             return render_to_response('rate/restricted.html')
+
+@login_required
+def profile(request):
+    context = RequestContext(request)
+    if request.user.is_authenticated():
+
+        return render_to_response('rate/rateIt.html', context_dict, context)
+    else:
+        return render_to_response('rate/restricted.html')

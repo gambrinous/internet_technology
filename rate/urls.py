@@ -16,4 +16,5 @@ urlpatterns = patterns('',
     url(r'^course/(?P<course_title_url>\w+)/rateIt/$', views.rateIt, name='rateIt'),
     url(r'^course/$', views.index, name='index'),
     url(r'^rated_courses/$', views.index, name='index'),
+    url(r'^profile/$', views.profile, name='profile'),
 )
