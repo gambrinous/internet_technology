@@ -136,3 +136,26 @@ a.my_no_underline:hover
     text-decoration: none;
     color: #fff;
 }
+
+.my_choices_sign_reg_restricted
+{
+    width:100%;
+
+}
+
+.my_sign_restricted
+{
+    width:50%;
+    float:left;
+    margin: 10px 0px 10px 0px;
+    padding: 10px 10px 10px 10px;
+
+}
+
+.my_inner_restricted_choises
+{
+    width: 80%;
+    background-color:#fff;
+    margin: 0 auto;
+    padding: 10px 10px 10px 10px;
+}
