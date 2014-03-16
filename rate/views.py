@@ -82,8 +82,11 @@ def user_logout(request):
 
 def register(request):
     if not request.user.is_authenticated():
-        return ()
-        # context = RequestContext(request)
+        context = RequestContext(request)
+        return render_to_response('rate/register.html', context)
+        if request.method == 'POST':
+            temp = request.POST['email']
+            return HttpResponse(temp)
         # registered = False
         # if request.method == 'POST':
         #     user_form = UserForm(data=request.POST)
