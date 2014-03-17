@@ -208,22 +208,17 @@ def rated_courses(request, type):
 def rateIt(request, course_title_url):
     context = RequestContext(request)
     course_title = course_title_url.replace('_', ' ')
-    print course_title
-    date = datetime.now()
     if request.method == 'POST':
+        tr = Course.objects.get(title=course_title)
+        date = datetime.now()
         rate_f = int(request.POST['q1'])
         comment_f = (request.POST['comments'])
-        if comment_f == '':
-            r = Rate.objects.get_or_create(student=request.user, course=Course.objects.get(title=course_title),rate=rate_f, date=datetime.now())
-        else:
-            r = Rate.objects.get_or_create(student=request.user, course=Course.objects.get(title=course_title),rate=rate_f, comment=comment_f, date=datetime.now())
-        tr = Course.objects.get(title=course_title)
+        Rate.objects.get_or_create(student=request.user, course=tr, rate=rate_f, comment=comment_f, date=datetime.now())
         tr.times_rated += 1
         tr.total_rating += rate_f
         tr.stored_average_rating = ("%0.2f" % round(float(tr.total_rating)/float(tr.times_rated), 2))
         tr.date = date
         tr.save()
-
         return HttpResponseRedirect('/rate/course/' + course_title_url)
     else:
         if request.user.is_authenticated():
