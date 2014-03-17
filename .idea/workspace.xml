@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="30c1a6ba-e96f-4220-ab20-1d5191afc829" name="Default" comment="ico">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/star-rating/delete.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/star-rating/star.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/star-rating/documentation.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/star-rating/jquery.MetaData.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/star-rating/jquery.form.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/star-rating/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/star-rating/jquery.rating.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/star-rating/jquery.rating.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/star-rating/jquery.rating.pack.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/RateMyCourse.iml" afterPath="$PROJECT_DIR$/.idea/RateMyCourse.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/rate/base.html" afterPath="$PROJECT_DIR$/templates/rate/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/rate/rateIt.html" afterPath="$PROJECT_DIR$/templates/rate/rateIt.html" />
+    <list default="true" id="30c1a6ba-e96f-4220-ab20-1d5191afc829" name="Default" comment="css fix">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RateMyCourse.iws" />
@@ -40,8 +28,9 @@
       <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/rate/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="135" column="4" selection-start="6634" selection-end="6634" vertical-scroll-proportion="-6.1372547" vertical-offset="1982" max-vertical-offset="2771">
+            <state line="127" column="38" selection-start="6181" selection-end="6181" vertical-scroll-proportion="-41.51923" vertical-offset="0" max-vertical-offset="2618">
               <folding>
+                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -66,46 +55,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rateIt.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/rate/rateIt.html">
+      <file leaf-file-name="bootstrap-select.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/bootstrap-select.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="70" selection-start="895" selection-end="895" vertical-scroll-proportion="0.4084084" vertical-offset="0" max-vertical-offset="666">
+            <state line="233" column="17" selection-start="10565" selection-end="10565" vertical-scroll-proportion="-14.346154" vertical-offset="3588" max-vertical-offset="16609">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="about.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/rate/about.html">
+      <file leaf-file-name="bootstrap.min.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/css/bootstrap.min.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="22" selection-start="151" selection-end="165" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="969">
+            <state line="4314" column="1" selection-start="81699" selection-end="81699" vertical-scroll-proportion="-12.384615" vertical-offset="73016" max-vertical-offset="106658">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rate/views.py">
+      <file leaf-file-name="mystyle.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/css/mystyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="36" selection-start="1827" selection-end="1827" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="4318">
+            <state line="42" column="0" selection-start="569" selection-end="569" vertical-scroll-proportion="-10.576923" vertical-offset="439" max-vertical-offset="2822">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/rate/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="69" selection-start="933" selection-end="933" vertical-scroll-proportion="-9.153846" vertical-offset="51" max-vertical-offset="2720">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rate/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
+            <state line="37" column="71" selection-start="1941" selection-end="1941" vertical-scroll-proportion="0.8733945" vertical-offset="153" max-vertical-offset="2737">
               <folding />
             </state>
           </provider>
@@ -123,7 +103,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitLogSettings">
-    <option name="myStructureFilterPaths" />
     <option name="myDateState">
       <MyDateState />
     </option>
@@ -131,28 +110,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/templates/rate/contact.html" />
-        <option value="$PROJECT_DIR$/rate/admin.py" />
         <option value="$PROJECT_DIR$/rate/models.py" />
-        <option value="$PROJECT_DIR$/templates/rate/rated_courses.html" />
-        <option value="$PROJECT_DIR$/templates/rate/sitemap.html" />
-        <option value="$PROJECT_DIR$/RateMyCourse/urls.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/populate_rate.py" />
-        <option value="$PROJECT_DIR$/rate/urls.py" />
-        <option value="$PROJECT_DIR$/templates/rate/profile.html" />
-        <option value="$PROJECT_DIR$/templates/rate/course.html" />
+        <option value="$PROJECT_DIR$/static/css/bootstrap.css.map" />
         <option value="$PROJECT_DIR$/rate/views.py" />
-        <option value="$PROJECT_DIR$/templates/rate/test.html" />
-        <option value="$PROJECT_DIR$/templates/rate/about.html" />
-        <option value="$PROJECT_DIR$/templates/rate/rateIt.html" />
+        <option value="$PROJECT_DIR$/templates/rate/rated_courses.html" />
+        <option value="$PROJECT_DIR$/templates/rate/contact.html" />
+        <option value="$PROJECT_DIR$/templates/rate/restricted.html" />
+        <option value="$PROJECT_DIR$/templates/rate/course.html" />
+        <option value="$PROJECT_DIR$/select/test.html" />
+        <option value="$PROJECT_DIR$/static/css/bootstrap-select.css" />
+        <option value="$PROJECT_DIR$/static/css/bootstrap.min.css" />
+        <option value="$PROJECT_DIR$/static/css/mystyle.css" />
         <option value="$PROJECT_DIR$/templates/rate/base.html" />
+        <option value="$PROJECT_DIR$/static/js/bootstrap-select.js" />
         <option value="$PROJECT_DIR$/templates/rate/index.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="960" />
-    <option name="height" value="1050" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1698" />
+    <option name="height" value="1034" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -168,7 +149,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -180,84 +161,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="RateMyCourse">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="RateMyCourse">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="templates/rate">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="RateMyCourse">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="static">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="RateMyCourse">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="static">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="star-rating">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="RateMyCourse">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="static">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="js">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -273,6 +177,88 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="RateMyCourse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RateMyCourse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RateMyCourse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RateMyCourse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RateMyCourse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RateMyCourse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RateMyCourse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RateMyCourse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RateMyCourse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RateMyCourse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RateMyCourse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="select" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -311,9 +297,8 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
-    <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -322,13 +307,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Dropbox\University of Glasgow - Computing Science MSc\Internet Technology\Project\RateMyCourse\templates\rate" />
+      <recent name="C:\Users\Pantelis\Documents\GitHub\RateMyCourse\static\css" />
+      <recent name="C:\Users\Pantelis\Documents\GitHub\RateMyCourse\static\js" />
       <recent name="H:\workspace\ITECH\RateMyCourse\templates\rate" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Dropbox\University of Glasgow - Computing Science MSc\Internet Technology\Project\RateMyCourse\static\images" />
-      <recent name="D:\Dropbox\University of Glasgow - Computing Science MSc\Internet Technology\Project\RateMyCourse\static\images\ico" />
-      <recent name="D:\Dropbox\University of Glasgow - Computing Science MSc\Internet Technology\Project\RateMyCourse\static" />
     </key>
   </component>
   <component name="RestoreUpdateTree">
@@ -346,8 +327,13 @@
             <option name="mySupportsDeletion" value="false" />
             <option name="myCanBeAbsent" value="false" />
             <option name="myId" value="UPDATED" />
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/static/css/bootstrap.min.css</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/rate/views.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/static/images/logo_bg.jpg</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/static/images/logo_bg2.png</PATH>
             <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/rate/base.html</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/rate/course.html</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/rate/rateIt.html</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/rate/rated_courses.html</PATH>
           </FILE-GROUP>
           <FILE-GROUP>
             <option name="myUpdateName" value="Created" />
@@ -444,27 +430,7 @@
       </UpdatedFiles>
     </UpdateInfo>
   </component>
-  <component name="RunManager" selected="Django server.RateMyCourse">
-    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="RateMyCourse" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="TARGET" value="" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
-      <method />
-    </configuration>
+  <component name="RunManager">
     <configuration default="true" type="tests" factoryName="py.test">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -529,9 +495,6 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
-      <method />
-    </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -553,29 +516,6 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="RateMyCourse" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
-      <option name="host" value="" />
-      <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
-      <option name="runTestServer" value="false" />
-      <option name="runNoReload" value="false" />
-      <option name="useCustomRunCommand" value="false" />
-      <option name="customRunCommand" value="" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -618,18 +558,11 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
-      <method />
-    </configuration>
     <configuration default="false" name="RateMyCourse" type="Python.DjangoServer" factoryName="Django server">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
-        <env name="DJANGO_SETTINGS_MODULE" value="RateMyCourse.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -646,13 +579,9 @@
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Django server.RateMyCourse" />
-    </list>
+    <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
@@ -730,95 +659,63 @@
       <created>1393711012918</created>
       <updated>1393711012918</updated>
     </task>
-    <task id="LOCAL-00014" summary="twra douleuei kai to index ;)">
-      <created>1394071763058</created>
-      <updated>1394071763058</updated>
+    <task id="LOCAL-00014" summary="populate scr&#10;&#10;many to many @ models">
+      <created>1393711653320</created>
+      <updated>1393711653320</updated>
     </task>
-    <task id="LOCAL-00015" summary="register view done!">
-      <created>1394072638583</created>
-      <updated>1394072638583</updated>
+    <task id="LOCAL-00015" summary="with the populate THIS script we can pre-fill the db">
+      <created>1393866579507</created>
+      <updated>1393866579507</updated>
     </task>
-    <task id="LOCAL-00016" summary="added a &quot;disabled&quot; label at the select boxes.. &#10;">
-      <created>1394665465433</created>
-      <updated>1394665465433</updated>
+    <task id="LOCAL-00016" summary="exclude .xml files :@@@">
+      <created>1393866735324</created>
+      <updated>1393866735324</updated>
     </task>
-    <task id="LOCAL-00017" summary="base.html &#10;welcome User blah blah">
-      <created>1394929368763</created>
-      <updated>1394929368763</updated>
+    <task id="LOCAL-00017" summary="I have fixed the populate script with valid data.">
+      <created>1393976073624</created>
+      <updated>1393976073624</updated>
     </task>
-    <task id="LOCAL-00018" summary="rated courses html&#10;path">
-      <created>1394929467760</created>
-      <updated>1394929467760</updated>
+    <task id="LOCAL-00018" summary="I have fixed the populate script with valid data. 2">
+      <created>1394022231679</created>
+      <updated>1394022231679</updated>
     </task>
-    <task id="LOCAL-00019" summary="sitemap">
-      <created>1394930889676</created>
-      <updated>1394930889676</updated>
+    <task id="LOCAL-00019" summary="fixed css on rated_courses. will continue morrow.">
+      <created>1394940289164</created>
+      <updated>1394940289164</updated>
     </task>
-    <task id="LOCAL-00020" summary="ico">
-      <created>1394969471975</created>
-      <updated>1394969471975</updated>
+    <task id="LOCAL-00020" summary="fixed path of css">
+      <created>1394940485819</created>
+      <updated>1394940485819</updated>
     </task>
-    <task id="LOCAL-00021" summary="ico">
-      <created>1394970093684</created>
-      <updated>1394970093684</updated>
+    <task id="LOCAL-00021" summary="css on table">
+      <created>1394989731869</created>
+      <updated>1394989731869</updated>
     </task>
-    <task id="LOCAL-00022" summary="ico">
-      <created>1394970291790</created>
-      <updated>1394970291790</updated>
+    <task id="LOCAL-00022" summary="css fix">
+      <created>1394993329821</created>
+      <updated>1394993329821</updated>
     </task>
-    <task id="LOCAL-00023" summary="ico">
-      <created>1394971017384</created>
-      <updated>1394971017384</updated>
+    <task id="LOCAL-00023" summary="css fix">
+      <created>1394998011053</created>
+      <updated>1394998011053</updated>
     </task>
-    <task id="LOCAL-00024" summary="ico">
-      <created>1394971373870</created>
-      <updated>1394971373870</updated>
+    <task id="LOCAL-00024" summary="drop down menu with search">
+      <created>1395081627116</created>
+      <updated>1395081627116</updated>
     </task>
-    <task id="LOCAL-00025" summary="ico">
-      <created>1394971759860</created>
-      <updated>1394971759860</updated>
+    <task id="LOCAL-00025" summary="css fix width">
+      <created>1395082119420</created>
+      <updated>1395082119420</updated>
     </task>
-    <task id="LOCAL-00026" summary="ico">
-      <created>1394971977396</created>
-      <updated>1394971977396</updated>
+    <task id="LOCAL-00026" summary="css fix">
+      <created>1395085107908</created>
+      <updated>1395085107908</updated>
     </task>
-    <task id="LOCAL-00027" summary="ico">
-      <created>1394972067823</created>
-      <updated>1394972067823</updated>
+    <task id="LOCAL-00027" summary="css fix">
+      <created>1395088839395</created>
+      <updated>1395088839395</updated>
     </task>
-    <task id="LOCAL-00028" summary="sitemap">
-      <created>1394974280633</created>
-      <updated>1394974280633</updated>
-    </task>
-    <task id="LOCAL-00029" summary="base logo &#10;now is seems better">
-      <created>1394975478335</created>
-      <updated>1394975478335</updated>
-    </task>
-    <task id="LOCAL-00030" summary="login &#10;register &#10;logical errors">
-      <created>1394976650043</created>
-      <updated>1394976650043</updated>
-    </task>
-    <task id="LOCAL-00031" summary="urls ico">
-      <created>1394979834526</created>
-      <updated>1394979834526</updated>
-    </task>
-    <task id="LOCAL-00032" summary="rate/course&#10;rate/rated_courses&#10;redirect to the main page ;)">
-      <created>1394980334347</created>
-      <updated>1394980334347</updated>
-    </task>
-    <task id="LOCAL-00033" summary="my profile">
-      <created>1394981210852</created>
-      <updated>1394981210852</updated>
-    </task>
-    <task id="LOCAL-00034" summary="profile">
-      <created>1394983443032</created>
-      <updated>1394983443032</updated>
-    </task>
-    <task id="LOCAL-00035" summary="course rate button access">
-      <created>1394985537486</created>
-      <updated>1394985537486</updated>
-    </task>
-    <option name="localTasksCounter" value="36" />
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -842,28 +739,28 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="960" height="1050" extended-state="0" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1698" height="1034" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32646593" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20457019" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290938" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988507" sideWeight="0.49969825" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26056337" sideWeight="0.4983957" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988507" sideWeight="0.49969825" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23503326" sideWeight="0.7971474" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17622209" sideWeight="0.7183908" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32750398" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33068362" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33475935" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2816092" sideWeight="0.5003018" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2816092" sideWeight="0.49969825" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32873562" sideWeight="0.49909475" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -875,244 +772,128 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
     <MESSAGE value="urls" />
     <MESSAGE value="populate scr" />
     <MESSAGE value="populate scr&#10;&#10;many to many @ models" />
-    <MESSAGE value="twra douleuei kai to index ;)" />
-    <MESSAGE value="register view done!" />
-    <MESSAGE value="added a &quot;disabled&quot; label at the select boxes.. &#10;" />
-    <MESSAGE value="base.html &#10;welcome User blah blah" />
-    <MESSAGE value="rated courses html&#10;path" />
-    <MESSAGE value="ico" />
-    <MESSAGE value="sitemap" />
-    <MESSAGE value="base logo &#10;now is seems better" />
-    <MESSAGE value="login &#10;register &#10;logical errors" />
-    <MESSAGE value="urls ico" />
-    <MESSAGE value="rate/course&#10;rate/rated_courses&#10;redirect to the main page ;)" />
-    <MESSAGE value="my profile" />
-    <MESSAGE value="profile" />
-    <MESSAGE value="course rate button access" />
-    <option name="LAST_COMMIT_MESSAGE" value="course rate button access" />
+    <MESSAGE value="with the populate THIS script we can pre-fill the db" />
+    <MESSAGE value="exclude .xml files :@@@" />
+    <MESSAGE value="I have fixed the populate script with valid data." />
+    <MESSAGE value="I have fixed the populate script with valid data. 2" />
+    <MESSAGE value="fixed css on rated_courses. will continue morrow." />
+    <MESSAGE value="fixed path of css" />
+    <MESSAGE value="css on table" />
+    <MESSAGE value="drop down menu with search" />
+    <MESSAGE value="css fix width" />
+    <MESSAGE value="css fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="css fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/rate/base.html">
+    <entry file="file://$PROJECT_DIR$/templates/rate/rated_courses.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="796" selection-end="796" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2669">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ol#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
+        <state line="83" column="17" selection-start="3389" selection-end="3389" vertical-scroll-proportion="0.40035275" vertical-offset="1184" max-vertical-offset="1853" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/rate/about.html">
+    <entry file="file://$PROJECT_DIR$/templates/rate/contact.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="17" selection-start="1687" selection-end="1687" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969">
+        <state line="8" column="20" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="782" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/select/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="16" selection-end="16" vertical-scroll-proportion="0.02866779" vertical-offset="0" max-vertical-offset="1156">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rate/views.py">
+    <entry file="file://$PROJECT_DIR$/templates/rate/restricted.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="36" selection-start="1827" selection-end="1827" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="4318">
+        <state line="18" column="100" selection-start="821" selection-end="821" vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="765">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/rate/index.html">
+    <entry file="file://$PROJECT_DIR$/static/css/bootstrap-select.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="153" column="0" selection-start="6682" selection-end="6696" vertical-scroll-proportion="0.0" vertical-offset="1866" max-vertical-offset="2720">
+        <state line="4" column="34" selection-start="119" selection-end="119" vertical-scroll-proportion="0.11221122" vertical-offset="0" max-vertical-offset="606">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rate/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/rate/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="796" selection-end="796" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2414">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ol#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rate/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="6" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="4403">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rate/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/rate/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="796" selection-end="796" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2414">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ol#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rate/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4403">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rate/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/rate/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="38" selection-start="365" selection-end="383" vertical-scroll-proportion="0.41648108" vertical-offset="0" max-vertical-offset="697" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/rate/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="30" selection-start="203" selection-end="217" vertical-scroll-proportion="0.18930958" vertical-offset="0" max-vertical-offset="493" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RateMyCourse/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="475" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rate/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="1" selection-start="946" selection-end="946" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/rate/sitemap.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="21" selection-start="1171" selection-end="1493" vertical-scroll-proportion="-13.730769" vertical-offset="170" max-vertical-offset="748" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/populate_rate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="2499" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/rate/profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="0" selection-start="1214" selection-end="1214" vertical-scroll-proportion="-12.846154" vertical-offset="244" max-vertical-offset="680" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/mystyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2584" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/rate/course.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="17" selection-start="1187" selection-end="1187" vertical-scroll-proportion="-10.730769" vertical-offset="214" max-vertical-offset="663" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/rate/rated_courses.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="17" selection-start="2357" selection-end="2357" vertical-scroll-proportion="0.54565704" vertical-offset="843" max-vertical-offset="1887" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rate/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
+        <state line="26" column="112" selection-start="1169" selection-end="1169" vertical-scroll-proportion="0.7453626" vertical-offset="0" max-vertical-offset="646">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rate/views.py">
+    <entry file="file://$PROJECT_DIR$/static/css/bootstrap-select.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="36" selection-start="1827" selection-end="1827" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="4318">
+        <state line="39" column="1" selection-start="917" selection-end="917" vertical-scroll-proportion="0.2732049" vertical-offset="507" max-vertical-offset="5338">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/rate/about.html">
+    <entry file="file://$PROJECT_DIR$/static/js/bootstrap-select.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="22" selection-start="151" selection-end="165" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="969">
+        <state line="7" column="36" selection-start="194" selection-end="194" vertical-scroll-proportion="0.20376712" vertical-offset="0" max-vertical-offset="584">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/jquery-2.1.0.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5650" column="18" selection-start="154202" selection-end="154212" vertical-scroll-proportion="-7.3076925" vertical-offset="95860" max-vertical-offset="154989">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="5" selection-start="1187" selection-end="1188" vertical-scroll-proportion="0.33274958" vertical-offset="371" max-vertical-offset="33269">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/bootstrap.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="315" selection-start="482" selection-end="484" vertical-scroll-proportion="0.15232974" vertical-offset="0" max-vertical-offset="558">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4314" column="1" selection-start="81699" selection-end="81699" vertical-scroll-proportion="-12.384615" vertical-offset="73016" max-vertical-offset="106658">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/mystyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="0" selection-start="569" selection-end="569" vertical-scroll-proportion="-10.576923" vertical-offset="439" max-vertical-offset="2822">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/bootstrap-select.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="233" column="17" selection-start="10565" selection-end="10565" vertical-scroll-proportion="-14.346154" vertical-offset="3588" max-vertical-offset="16609">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/rate/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="4" selection-start="6634" selection-end="6634" vertical-scroll-proportion="-6.1372547" vertical-offset="1982" max-vertical-offset="2771">
+        <state line="127" column="38" selection-start="6181" selection-end="6181" vertical-scroll-proportion="-41.51923" vertical-offset="0" max-vertical-offset="2618">
           <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1138,21 +919,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/rate/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="69" selection-start="933" selection-end="933" vertical-scroll-proportion="-9.153846" vertical-offset="51" max-vertical-offset="2720">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../tango_with_django_project/templates/rango/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="12" selection-start="30" selection-end="30" vertical-scroll-proportion="0.026356589" vertical-offset="0" max-vertical-offset="833">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/rate/rateIt.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="70" selection-start="895" selection-end="895" vertical-scroll-proportion="0.4084084" vertical-offset="0" max-vertical-offset="666">
+        <state line="37" column="71" selection-start="1941" selection-end="1941" vertical-scroll-proportion="0.8733945" vertical-offset="153" max-vertical-offset="2737">
           <folding />
         </state>
       </provider>
