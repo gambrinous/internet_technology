@@ -216,7 +216,7 @@ def rateIt(request, course_title_url):
         Rate.objects.get_or_create(student=request.user, course=tr, rate=rate_f, comment=comment_f, date=datetime.now())
         tr.times_rated += 1
         tr.total_rating += rate_f
-        tr.stored_average_rating = ("%0.2f" % round(float(tr.total_rating)/float(tr.times_rated), 2))
+        tr.stored_average_rating = ("%0.2f" % round(float(tr.total_rating)/float(tr.times_rated), 2))#
         tr.date = date
         tr.save()
         return HttpResponseRedirect('/rate/course/' + course_title_url)
