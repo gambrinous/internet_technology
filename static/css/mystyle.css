@@ -159,3 +159,9 @@ a.my_no_underline:hover
     margin: 0 auto;
     padding: 10px 10px 10px 10px;
 }
+
+.my_extra_space
+{
+    width:100px;
+    height: 200px;
+}
