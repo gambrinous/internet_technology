@@ -90,10 +90,14 @@ def register(request):
         context = RequestContext(request)
         registered = False
         if request.method == 'POST':
-            temp = request.POST['email']
-            domain_list = University.objects.order_by('domain')
-            for i in domain_list:
-                if i.domain in temp:
+            temp_domain = request.POST['email'].split("@",1)[1]
+            print temp_domain
+            uni_domain_list = University.objects.order_by('domain')
+            print uni_domain_list
+            flag = 'no'
+            for i in uni_domain_list:
+                print i.domain
+                if i.domain == temp_domain:
                     user_form = UserForm(data=request.POST)
                     if user_form.is_valid():
                         user = user_form.save()
@@ -101,11 +105,12 @@ def register(request):
                         user.username = user.email
                         user.save()
                         registered = True
+                        flag = 'yes'
                         return HttpResponseRedirect('/rate/login')
                     else:
                         print user_form.errors,
-                else:
-                    return HttpResponse('This university is not in our database yet. Please <a href="/rate/contact/">contact</a> the administrator to request it, or go back to <a href="/rate/">main page</a>.')
+            if flag != 'no':
+                return HttpResponse('This university is not in our database yet. Please <a href="/rate/contact/">contact</a> the administrator to request it, or go back to <a href="/rate/">main page</a>.')
         else:
             user_form = UserForm()
         return render_to_response('rate/register.html', {'user_form': user_form, 'registered': registered}, context)
