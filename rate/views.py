@@ -16,7 +16,9 @@ def index(request):
         course_option = request.POST['course_options']
         level_option = request.POST['level_options']
         year_option = request.POST['year_options']
-
+        if university_option == '' or course_option == '' or level_option == '' or year_option == '':
+            return HttpResponse(
+                'Every field is required. Go back to <a href="/rate/">main page</a>.')
         the_course = Course.objects.filter(university=university_option).filter(title=course_option).filter(
             level=level_option).filter(year=year_option)
         if the_course:
