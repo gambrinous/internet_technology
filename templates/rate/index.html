@@ -4,8 +4,8 @@
         <form class="navbar-form" method="post">
             {% csrf_token %}
             <div class="btn-group">
-                <select class="form-control" name="university_options">
-                    <option selected value="" disabled>Choose University</option>
+                <select id="id_select" class="selectpicker bla bla bli" multiple data-live-search="true" name="university_options">
+                    <option selected value="" >Choose University</option>
                     {% if universitylist %}
                         {% for item in universitylist %}
                             <option value="{{ item.id }}">{{ item.name }}</option>
@@ -14,8 +14,8 @@
                 </select>
             </div>
             <div class="btn-group">
-                <select class="form-control" name="course_options">
-                    <option selected value="" disabled>Choose Course</option>
+                <select id="id_select" class="selectpicker bla bla bli" multiple data-live-search="true" name="course_options">
+                    <option selected value="" >Choose Course</option>
                     {% if courselist %}
                         {% for item in courselist %}
                             <option value="{{ item.title }}">{{ item.title }}</option>
@@ -24,8 +24,8 @@
                 </select>
             </div>
             <div class="btn-group">
-                <select class="form-control" name="level_options">
-                    <option selected value="" disabled>Choose Level</option>
+                <select id="id_select" class="selectpicker bla bla bli" multiple data-live-search="true" name="level_options">
+                    <option selected value="" >Choose Level</option>
                     <option value="1">Level 1</option>
                     <option value="2">Level 2</option>
                     <option value="3">Level 3</option>
@@ -34,8 +34,8 @@
                 </select>
             </div>
             <div class="btn-group">
-                <select class="form-control" name="year_options">
-                    <option selected value="" disabled>Choose Year</option>
+                <select id="id_select" class="selectpicker bla bla bli" multiple data-live-search="true" name="year_options">
+                    <option selected value="" >Choose Year</option>
                     {% if yearlist %}
                         {% for item in yearlist %}
                             <option value="{{ item.year }}">{{ item.year }}</option>
