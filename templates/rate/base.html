@@ -9,14 +9,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <!-- Bootstrap -->
+     <!-- Bootstrap -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <!-- Optional theme -->
-    <link href="../../../static/css/mystyle.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}css/mystyle.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css"> -->
-    <link href="../../../static/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="../../../static/css/bootstrap-select.min.css" rel="stylesheet" media="screen">
-    <link href="../../../static/css/bootstrap-select.css" rel="stylesheet" media="screen">
+    <link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="{{ STATIC_URL }}css/bootstrap-select.min.css" rel="stylesheet" media="screen">
+    <link href="{{ STATIC_URL }}css/bootstrap-select.css" rel="stylesheet" media="screen">
+        <!-- Star Rating stuff -->
+    <link href="{{ STATIC_URL }}star-rating/jquery.rating.css" rel="stylesheet">
 
 </head>
 <body style="background-image: url({% static 'images/background2.png' %}); background-size: cover;">
@@ -115,10 +117,10 @@ padding: 0;" class="breadcrumb">
 
 
                 <ol class="list-unstyled">
-                    <li><a href="#">Contact us</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Site Map</a></li>
-                    <li><a href="#">© Colossus 4.0</a></li>
+                    <li><a href="/rate/contact">Contact us</a></li>
+                    <li><a href="/rate/about">About</a></li>
+                    <li><a href="/rate/sitemap">Site Map</a></li>
+                    <li>© Colossus 4.0</li>
                 </ol>
             </div>
         </div>
@@ -130,6 +132,13 @@ padding: 0;" class="breadcrumb">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"/>
     <script src="{% static 'js/bootstrap-select.min.js' %}"></script>
     <script src="{% static 'js/bootstrap-select.js' %}"></script>
+
+    <!-- Star Rating stuff -->
+    <script src="{% static 'star-rating/jquery.form.js' %}"></script>
+    <script src="{% static 'star-rating/jquery.js' %}"></script>
+    <script src="{% static 'star-rating/jquery.MetaData.js' %}"></script>
+    <script src="{% static 'star-rating/jquery.rating.js' %}"></script>
+    <script src="{% static 'star-rating/jquery.rating.pack.js' %}"></script>
 
     <script type="text/javascript">
             $(window).on('load', function () {
