@@ -2,104 +2,110 @@
 
 {% block title %}{{ title }}{% endblock %}
 {% block path %}
-<li><a href="/rate/">Home</a></li>
-<li class="active">Rated Courses</li>
-<li class="active">{{ title }}</li>{% endblock %}
+    <li><a href="/rate/">Home</a></li>
+    <li class="active">Rated Courses</li>
+    <li class="active">{{ title }}</li>{% endblock %}
 {% block body_block %}
 
-<div class="my_container_filter_table">
-    <div class="my_filter_courses_container">
-        <div class="span4" style="text-align: left">
-            <h3>Filters</h3>
+    <div class="my_container_filter_table">
+        <div class="my_filter_courses_container">
+            <div class="span4" style="text-align: left">
+                <h3>Filters</h3>
 
-            <form method="post">
-                {% csrf_token %}
-                <br/>
+                <form method="post">
+                    {% csrf_token %}
+                    <br/>
 
-                <p><strong>University</strong></p>
+                    <p><strong>University</strong></p>
 
-                <div class="my_filters_courses">
-                    {% if universitylist %}
-                    {% for item in universitylist %}
-                    <input type="checkbox" name="university" value="{{ item.id }}"> {{ item.name }}<br>
-                    {% endfor %}
-                    {% endif %}
-                </div>
-                <br/>
-
-                <p><strong>Level</strong></p>
-
-                <div class="my_filters_courses">
-                    <input type="checkbox" name="level" value="1"> Level 1<br>
-                    <input type="checkbox" name="level" value="2"> Level 2<br>
-                    <input type="checkbox" name="level" value="3"> Level 3<br>
-                    <input type="checkbox" name="level" value="4"> Level 4<br>
-                    <input type="checkbox" name="level" value="5"> Level M<br>
-                </div>
-                <br/>
-
-                <p><strong>Year</strong></p>
-
-                <div class="my_filters_courses">
-
-                    {% if yearlist %}
-                    {% for item in yearlist %}
-                    <input type="checkbox" name="year" value="{{ item.year }}"> {{ item.year }}<br>
-                    {% endfor %}
-                    {% endif %}
-                </div>
-
-                <div class="my_filters_buttons_div">
-                    <div class="my_filters_button">
-                        <input type="submit" name="submit_button" value="Apply filters"/>
+                    <div class="my_filters_courses">
+                        {% if universitylist %}
+                            {% for item in universitylist %}
+                                <input type="checkbox" name="university" value="{{ item.id }}"> {{ item.name }}<br>
+                            {% endfor %}
+                        {% endif %}
                     </div>
-                    <div class="my_filters_button">
-                        <input type="reset" name="reset_button" value="Clear filters"/>
+                    <br/>
+
+                    <p><strong>Level</strong></p>
+
+                    <div class="my_filters_courses">
+                        <input type="checkbox" name="level" value="1"> Level 1<br>
+                        <input type="checkbox" name="level" value="2"> Level 2<br>
+                        <input type="checkbox" name="level" value="3"> Level 3<br>
+                        <input type="checkbox" name="level" value="4"> Level 4<br>
+                        <input type="checkbox" name="level" value="5"> Level M<br>
                     </div>
-                </div>
-            </form>
+                    <br/>
+
+                    <p><strong>Year</strong></p>
+
+                    <div class="my_filters_courses">
+
+                        {% if yearlist %}
+                            {% for item in yearlist %}
+                                <input type="checkbox" name="year" value="{{ item.year }}"> {{ item.year }}<br>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+
+                    <div class="my_filters_buttons_div">
+                        <div class="my_filters_button">
+                            <input type="submit" name="submit_button" value="Apply filters"/>
+                        </div>
+                        <div class="my_filters_button">
+                            <input type="reset" name="reset_button" value="Clear filters"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="my_table_courses_div" style="text-align: left">
+
+            <h2>{{ title }}</h2>
+            {% if ch_title == 1 %} <a class="my_chosen_tab" href="/rate/rated_courses/top">Top</a>
+            {% else %} <a class="btn btn-primary" href="/rate/rated_courses/top">Top</a>
+            {% endif %}
+            {% if ch_title == 2 %} <a class="my_chosen_tab" href="/rate/rated_courses/worst">Worst</a>
+            {% else %} <a class="btn btn-primary" href="/rate/rated_courses/worst">Worst</a>
+            {% endif %}
+            {% if ch_title == 3 %} <a class="my_chosen_tab" href="/rate/rated_courses/latest">Most Recent</a>
+                {% else %}<a class="btn btn-primary" href="/rate/rated_courses/latest">Most Recent</a>
+            {% endif %}
+            <table border="0" class="table table-striped">
+                <thead>
+                <tr class="my_table_header">
+                    <td width="28%">University</td>
+                    <td width="5%">Level</td>
+                    <td width="28%">Course</td>
+                    <td width="7%">Year</td>
+                    <td width="5%">Rate</td>
+                    <td width="30%">Date</td>
+                </tr>
+                </thead>
+                {% if list %}
+                    {% for rate in list %}
+                        <tr class="my_table_tr">
+                            <td>{{ rate.university }}</td>
+                            <td>{% if rate.level == 5 %} MSc {% else %} {{ rate.level }}{% endif %}</td>
+                            <td><a href="/rate/course/{{ rate.url }}">{{ rate.title }}</a></td>
+                            <td>{{ rate.year }}</td>
+                            <td>{{ rate.stored_average_rating }}</td>
+                            <td>{{ rate.date }}</td>
+                        </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr class="my_table_tr">
+                        <td></td>
+                        <td></td>
+                        <td><strong>There are no {{ title }} yet.</strong></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                {% endif %}
+            </table>
         </div>
     </div>
-    <div class="my_table_courses_div" style="text-align: left">
-        <h2>{{ title }}</h2>
-        {% if ch_title == 1 %} <a class="my_chosen_tab" href="/rate/rated_courses/top">Top</a>
-        {% else %} <a class="btn btn-primary" href="/rate/rated_courses/top">Top</a>
-        {% endif %}
-        {% if ch_title == 2 %} <a class="my_chosen_tab" href="/rate/rated_courses/worst">Worst</a>
-        {% else %} <a class="btn btn-primary" href="/rate/rated_courses/worst">Worst</a>
-        {% endif %}
-        {% if ch_title == 3 %} <a class="my_chosen_tab" href="/rate/rated_courses/latest">Most Recent</a>
-        {% else %}<a class="btn btn-primary" href="/rate/rated_courses/latest">Most Recent</a>
-        {% endif %}
-        <table border="1" class="my_table">
-            <thead>
-            <tr class="my_table_header">
-                <td width="4%"> # </td>
-                <td width="28%">University</td>
-                <td width="5%">Level</td>
-                <td width="28%">Course</td>
-                <td width="7%">Year</td>
-                <td width="5%">Rate</td>
-                <td width="30%">Date</td>
-            </tr>
-            </thead>
-            {% if list %}
-            {% for rate in list %}
-            <tr>
-                <td></td>
-                <td>{{ rate.university }}</td>
-                <td>{% if rate.level == 5 %} MSc {% else %} L{{ rate.level }}{% endif %}</td>
-                <td><a href="/rate/course/{{ rate.url }}">{{ rate.title }}</a></td>
-                <td>{{ rate.year }}</td>
-                <td>{{ rate.stored_average_rating }}/5</td>
-                <td>{{ rate.date }}</td>
-            </tr>
-            {% endfor %}
-            {% else %}
-            <strong>There are no top yet.</strong>
-            {% endif %}
-        </table>
-    </div>
-</div>
 
 {% endblock %}

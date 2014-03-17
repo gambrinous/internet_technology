@@ -75,7 +75,7 @@ a.my_no_underline:hover
     height: 150px;
     border-radius: 8px;
     padding: 10px 10px 10px 20px;
-    background-color: #eee;
+    background-color: #FCFCFC;
     overflow-x:auto;
     font-size: 11px;
 }
@@ -91,18 +91,6 @@ a.my_no_underline:hover
     padding: 10px 0px 10px 0px;
 }
 
-.my_table td
-{
-    padding: 10px 10px 10px 10px;
-}
-
-.my_table tbody tr:hover
-{
-    background-color: #CECECE;
-}
-
-
-
 .my_table_header
 {
     font-weight:bold;
@@ -110,10 +98,13 @@ a.my_no_underline:hover
     color: #fff;
 }
 
-.my_table_td_1
+.my_table_header:hover
 {
-    background-color: #EEEEEE;
+    font-weight:bold;
+    background-color: #565856;
+    color: #fff;
 }
+
 
 .my_chosen_tab
 {
@@ -144,4 +135,27 @@ a.my_no_underline:hover
 {
     text-decoration: none;
     color: #fff;
+}
+
+.my_choices_sign_reg_restricted
+{
+    width:100%;
+
+}
+
+.my_sign_restricted
+{
+    width:50%;
+    float:left;
+    margin: 10px 0px 10px 0px;
+    padding: 10px 10px 10px 10px;
+
+}
+
+.my_inner_restricted_choises
+{
+    width: 80%;
+    background-color:#fff;
+    margin: 0 auto;
+    padding: 10px 10px 10px 10px;
 }
