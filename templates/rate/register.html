@@ -9,31 +9,45 @@
         <h4>You have already an account.</h4>
         <a href="/rate/">Return to the homepage.</a><br/>
     {% else %}
-        <br><br>
         <div class="my_login_container">
             <div class="col-md-4">
-                <div class="thumbnail" style="padding: 4px 18px 24px 18px;">
+                <div class="thumbnail">
                     <h1>New to Rate my Course?</h1>
 
-                    <h2>Register here!</h2><br>
+                    <h2>Register here!</h2>
 
                     <form class="form-horizontal" id="user_form" method="post" action="/rate/register/"
                           enctype="multipart/form-data">
                         {% csrf_token %}
-                        <label>Email address</label>
-                        <input class="form-control" type="text" name="email"/></br>
-                        <label>Password</label>
-                        <input class="form-control" type="password" name="password"/></br>
-                        <label>First Name</label>
-                        <input class="form-control" type="text" name="first_name"/></br>
-                        <label>Last Name</label>
-                        <input class="form-control" type="text" name="last_name"/></br><br>
-                        <input class="btn btn-primary" type="submit" name="submit" style="margin:10px 80px 10px 0px;" value="Register"/>
-                        <a class="btn btn-primary" style="width:100px; " href="/rate/"> Cancel</a>
+                        <p>
+                            <label class="control-label" for="first_name">First Name</label>
+                            <input class="form-control" id="first_name" name="first_name" required=""/>
+                        </p>
+
+                        <p>
+                            <label class="control-label" for="last_name">Last Name</label>
+                            <input class="form-control" id="last_name" name="last_name" required=""/>
+                        </p>
+
+                        <p>
+                            <label class="control-label" for="email">Email address</label>
+                            <input class="form-control" type="email" id="email" name="email" required=""/>
+                        </p>
+
+                        <p>
+                            <label class="control-label" for="password">Password</label>
+                            <input class="form-control" type="password" id="password" name="password" required=""/>
+                        </p>
+
+                        <label class="control-label" for="confirmpass">Confirm Password</label>
+                        <input class="form-control" type="password" id="confirmpass" name="confirmpass"
+                               onchange="checkPassword"/></br>
+                        <p class="text-muted" id="divCheck"></p>
+
+                        <input class="btn btn-default" type="submit" name="submit" value="Register"/>
                     </form>
                 </div>
             </div>
         </div>
-        <div class="my_extra_space" style="height:150px;"></div>
     {% endif %}
 {% endblock %}
