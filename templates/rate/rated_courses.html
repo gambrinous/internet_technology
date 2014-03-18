@@ -7,6 +7,7 @@
     <li class="active">{{ title }}</li>{% endblock %}
 {% block body_block %}
 
+
     <div class="my_container_filter_table">
         <div class="my_filter_courses_container">
             <div class="span4" style="text-align: left">
@@ -21,7 +22,8 @@
                     <div class="my_filters_courses">
                         {% if universitylist %}
                             {% for item in universitylist %}
-                                <input type="checkbox" name="university" value="{{ item.id }}"> {{ item.name }}<br>
+                                <input id="uniBox" type="checkbox" name="university" value="{{ item.name }}">
+                                {{ item.name }}<br>
                             {% endfor %}
                         {% endif %}
                     </div>
@@ -30,11 +32,13 @@
                     <p><strong>Level</strong></p>
 
                     <div class="my_filters_courses">
+
                         <input type="checkbox" name="level" value="1"> Level 1<br>
                         <input type="checkbox" name="level" value="2"> Level 2<br>
                         <input type="checkbox" name="level" value="3"> Level 3<br>
                         <input type="checkbox" name="level" value="4"> Level 4<br>
                         <input type="checkbox" name="level" value="5"> Level M<br>
+
                     </div>
                     <br/>
 
@@ -49,12 +53,9 @@
                         {% endif %}
                     </div>
 
-                    <div class="my_filters_buttons_div">
-                        <div class="my_filters_button">
-                            <input type="submit" name="submit_button" value="Apply filters"/>
-                        </div>
-                        <div class="my_filters_button">
-                            <input type="reset" name="reset_button" value="Clear filters"/>
+                    <div class="my_filters_buttons_div " >
+                        <div class="my_filters_button" >
+                           <button type="button" class="btn btn-primary btn-sm" id="resetfilder" >reset filters</button>
                         </div>
                     </div>
                 </form>
@@ -62,7 +63,7 @@
         </div>
         <div class="my_table_courses_div" style="text-align: left">
 
-            <h2>{{ title }}</h2><br><br>
+            <h2>{{ title }}</h2>
             {% if ch_title == 1 %} <a class="my_chosen_tab" href="/rate/rated_courses/top">Top</a>
             {% else %} <a class="btn btn-primary" href="/rate/rated_courses/top">Top</a>
             {% endif %}
@@ -72,7 +73,7 @@
             {% if ch_title == 3 %} <a class="my_chosen_tab" href="/rate/rated_courses/latest">Most Recent</a>
                 {% else %}<a class="btn btn-primary" href="/rate/rated_courses/latest">Most Recent</a>
             {% endif %}
-            <table border="0" class="table table-striped">
+            <table border="0" class="table table-striped" id="unitable">
                 <thead>
                 <tr class="my_table_header">
                     <td width="28%">University</td>
@@ -106,7 +107,77 @@
                 {% endif %}
             </table>
         </div>
-        <div class="my_extra_space"></div>
     </div>
-<div class="my_extra_space"></div>
+
+{% endblock %}
+{% block filderJScript %}
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('.my_filters_courses :checkbox').click(function () {
+                var yearlist = [];
+                var unilist = []
+                var levlist = []
+                $('.my_filters_courses :checked').each(function () {
+                    {#                    allVals.push($(this).val());#}
+                    sort($(this).val(), levlist, unilist, yearlist);
+
+                });
+                $('#unitable').empty()
+                $('#unitable').append('<thead> <tr class="my_table_header"><td width="28%">University</td><td width="5%">Level</td><td width="28%">Course</td><td width="7%">Year</td><td width="5%">Rate</td><td width="30%">Date</td></tr></thead>')
+                {% for rate in list %}
+                    var startRow = '<tr class="my_table_tr">'
+                    var endRow = '</tr>'
+                    var university, level, year
+                    var found
+                    {#checking checkbox list to see if empty and then checking varibale if exists in list otherwise its null #}
+                    if (unilist.length > 0)  university = find("{{rate.university}}", unilist)
+                    else university = "{{rate.university}}"
+
+
+                    if (levlist.length > 0)level = find("{{rate.level}}", levlist)
+                    else level = "{{rate.level}}"
+
+                    if (yearlist.length > 0) year = find("{{rate.year}}", yearlist)
+                    else year = "{{rate.year}}"
+                    {# staring to create parts of the row to appent                   #}
+                    var columnUni = '<td>' + university + '</td>'
+                    var columnLevel = '<td>' + level + '</td>'
+                    var columnRate = '<td>' + '{{ rate.stored_average_rating }}' + '</td>'
+                    var columnCourse = '<td>' + '{{ rate.title}}' + '</td>'
+                    var columnDate = '<td>' + '{{ rate.date}}' + '</td>'
+                    var columnYear = '<td>' + year + '</td>'
+
+                    var fullRow = startRow + columnUni + columnLevel + columnCourse + columnYear + columnRate + columnDate + endRow
+                    if (university.length > 0 && level.length > 0 && year.length > 0) {
+                        $('#unitable').append(fullRow);
+                        found = true
+                    }
+                {% endfor %}
+                //check if filtered search was found
+                if (!found) {
+                    $('#unitable').append(startRow + '<td>No results</td>' + endRow)
+                    $('#unitable').empty()
+                }
+
+            });
+            function find(value, list) {
+                for (var i = 0; i < list.length; i++) {
+                    if (value == list[i])return value
+
+                }
+                return ""
+            }
+
+            function sort(value, level, uni, date) {
+                if (value.length == 1)level.push(value)
+                else if (value.length == 4)date.push(value)
+                else uni.push(value)
+            }
+      $("#resetfilder").click(function(){
+        location.reload();
+    });
+
+        });
+    </script>
 {% endblock %}
