@@ -5,7 +5,9 @@
     <li class="active">Course</li>
     <li class="active">{{ course_title }}</li>{% endblock %}
 {% block body_block %}
+        <br>
     <div class="jumbotron clearfix">
+
         <div class="pull-left">
             <h3><strong>{{ course_title }}</strong></h3>
             <h4>{{ course.university.name }}</h4>
@@ -16,10 +18,11 @@
         <div class="pull-right" style="text-align: center">
             <h2>{{ course.stored_average_rating }}</h2></br>
             {% if rateIt != "no" %}
-                <a class="btn btn-primary" href="/rate/course/{{ course.url }}/rateIt">RATE</a>
+                <a class="btn btn-primary" style="height:80px;" href="/rate/course/{{ course.url }}/rateIt"><br>RATE</a>
             {% endif %}
         </div>
     </div>
+        <br><br>
     <div class="jumbotron">
         <h4>Comments</h4>
         {% if rate %}
@@ -32,4 +35,5 @@
             <div class="text-primary"><p>No comments for this course yet.</p></div>
         {% endif %}
     </div>
+        <div class="my_extra_space" style="height:100px;"></div>
 {% endblock %}

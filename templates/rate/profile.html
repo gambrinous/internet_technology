@@ -5,7 +5,7 @@
     <li><a href="/rate/">Home</a></li>
     <li class="active">My profile</li>{% endblock %}
 {% block body_block %}
-    <h1 class="text-center"><strong>My profile</strong><br/></h1>
+    <h1 class="text-center" style="height:150px;"><strong>My profile</strong><br/></h1>
 
     <div class="jumbotron clearfix">
         <h4><strong>First Name:</strong> {{ user.first_name }}</h4>
@@ -30,5 +30,6 @@
             <div class="text-justify"><p>No ratings yet.</p></div>
         {% endif %}
     </div>
+        <div class="my_extra_space"></div>
 {% endblock %}
 
