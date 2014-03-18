@@ -53,9 +53,9 @@
                         {% endif %}
                     </div>
 
-                    <div class="my_filters_buttons_div " >
-                        <div class="my_filters_button" >
-                           <button type="button" class="btn btn-primary btn-sm" id="resetfilder" >reset filters</button>
+                    <div class="my_filters_buttons_div ">
+                        <div class="my_filters_button">
+                            <button type="button" class="btn btn-primary btn-sm" id="resetfilder">reset filters</button>
                         </div>
                     </div>
                 </form>
@@ -118,6 +118,7 @@
                 var yearlist = [];
                 var unilist = []
                 var levlist = []
+                var found = false
                 $('.my_filters_courses :checked').each(function () {
                     {#                    allVals.push($(this).val());#}
                     sort($(this).val(), levlist, unilist, yearlist);
@@ -129,7 +130,7 @@
                     var startRow = '<tr class="my_table_tr">'
                     var endRow = '</tr>'
                     var university, level, year
-                    var found
+
                     {#checking checkbox list to see if empty and then checking varibale if exists in list otherwise its null #}
                     if (unilist.length > 0)  university = find("{{rate.university}}", unilist)
                     else university = "{{rate.university}}"
@@ -144,7 +145,8 @@
                     var columnUni = '<td>' + university + '</td>'
                     var columnLevel = '<td>' + level + '</td>'
                     var columnRate = '<td>' + '{{ rate.stored_average_rating }}' + '</td>'
-                    var columnCourse = '<td>' + '{{ rate.title}}' + '</td>'
+                    var url = "{{ rate.url }}"
+                    var columnCourse = '<td><a href="/rate/course/' + url + '">' + '{{ rate.title}}' + '</td>'
                     var columnDate = '<td>' + '{{ rate.date}}' + '</td>'
                     var columnYear = '<td>' + year + '</td>'
 
@@ -156,8 +158,9 @@
                 {% endfor %}
                 //check if filtered search was found
                 if (!found) {
-                    $('#unitable').append(startRow + '<td>No results</td>' + endRow)
                     $('#unitable').empty()
+                    $('#unitable').append(startRow + '<td>No results</td>' + endRow)
+
                 }
 
             });
@@ -174,9 +177,11 @@
                 else if (value.length == 4)date.push(value)
                 else uni.push(value)
             }
-      $("#resetfilder").click(function(){
-        location.reload();
-    });
+
+            $("#resetfilder").click(function () {
+                $('.my_filters_courses :checkbox').attr('checked', false);
+                                location.reload();
+            });
 
         });
     </script>
