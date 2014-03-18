@@ -5,6 +5,7 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 from rate.models import Rate, Course, University
+from django.contrib.auth.models import User
 from rate.forms import UserForm
 from datetime import datetime
 
@@ -92,7 +93,7 @@ def register(request):
         context = RequestContext(request)
         registered = False
         if request.method == 'POST':
-            temp_domain = request.POST['email'].split("@",1)[1]
+            temp_domain = request.POST['email'].split("@", 1)[1]
             # print temp_domain
             uni_domain_list = University.objects.order_by('domain')
             # print uni_domain_list
@@ -100,6 +101,11 @@ def register(request):
             for i in uni_domain_list:
                 # print i.domain
                 if i.domain == temp_domain:
+                    user_list = User.objects.all()
+                    for us in user_list:
+                        if us.email == request.POST['email']:
+                            return HttpResponse(
+                                'There is already an account with this email. Please <a href="/rate/contact/">contact</a> the administrator to request it, or go back to <a href="/rate/">main page</a>.')
                     user_form = UserForm(data=request.POST)
                     if user_form.is_valid():
                         user = user_form.save()
@@ -112,12 +118,13 @@ def register(request):
                     else:
                         print user_form.errors,
             if flag == 'no':
-                return HttpResponse('This university is not in our database yet. Please <a href="/rate/contact/">contact</a> the administrator to request it, or go back to <a href="/rate/">main page</a>.')
+                return HttpResponse(
+                    'This university is not in our database yet. Please <a href="/rate/contact/">contact</a> the administrator to request it, or go back to <a href="/rate/">main page</a>.')
         else:
             user_form = UserForm()
         return render_to_response('rate/register.html', {'user_form': user_form, 'registered': registered}, context)
     else:
-        return HttpResponse('You are already registered and signed in. Go back to <a href="/rate/">main page</a>.')#
+        return HttpResponse('You are already registered and signed in. Go back to <a href="/rate/">main page</a>.')  #
 
 
 def restricted(request):
@@ -154,7 +161,7 @@ def course(request, course_title_url):
                 else:
                     if r.student.email == request.user.email:
                         flag = "no"
-                    domain = request.user.email.split("@",1)[1]
+                    domain = request.user.email.split("@", 1)[1]
                     if course.university.domain != domain:
                         flag = "no"
         context_dict['rateIt'] = flag
@@ -223,7 +230,7 @@ def rateIt(request, course_title_url):
         Rate.objects.get_or_create(student=request.user, course=tr, rate=rate_f, comment=comment_f, date=datetime.now())
         tr.times_rated += 1
         tr.total_rating += rate_f
-        tr.stored_average_rating = ("%0.2f" % round(float(tr.total_rating)/float(tr.times_rated), 2))#
+        tr.stored_average_rating = ("%0.2f" % round(float(tr.total_rating) / float(tr.times_rated), 2))  #
         tr.date = date
         tr.save()
         return HttpResponseRedirect('/rate/course/' + course_title_url)
