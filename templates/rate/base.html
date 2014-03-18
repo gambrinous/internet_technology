@@ -56,7 +56,7 @@
                                     </li>
                                 </ul>
                             {% else %}
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="">
+                                <a class="dropdown dropdown-menu" data-toggle="dropdown"  href="">
                                     Login/Register
                                     <b class="caret"></b>
                                     </br>
@@ -81,9 +81,9 @@
                             <a href="/rate/"><img src="{% static 'images/home.png' %}"
                                                   style=" width: 19px; height: 17px"/></a>
                         </li>
-                        <li>
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="" style=" color:#000;"> Rated
-                                Courses</a>
+                        <li class="dropdown">
+                            <a class="dropdown" data-toggle="dropdown" href="" style=" color:#000;"> Rated
+                                Courses<b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li>
                                     <a href="/rate/rated_courses/top">Top Rated</a>

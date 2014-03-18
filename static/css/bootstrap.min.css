@@ -3273,6 +3273,11 @@ input[type=submit].btn-block, input[type=reset].btn-block, input[type=button].bt
     outline: 0
 }
 
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+ }
 .dropdown-menu {
     position: absolute;
     top: 100%;
