@@ -93,12 +93,12 @@ def register(request):
         registered = False
         if request.method == 'POST':
             temp_domain = request.POST['email'].split("@",1)[1]
-            print temp_domain
+            # print temp_domain
             uni_domain_list = University.objects.order_by('domain')
-            print uni_domain_list
+            # print uni_domain_list
             flag = 'no'
             for i in uni_domain_list:
-                print i.domain
+                # print i.domain
                 if i.domain == temp_domain:
                     user_form = UserForm(data=request.POST)
                     if user_form.is_valid():
