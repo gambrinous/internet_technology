@@ -111,7 +111,7 @@ def register(request):
                         return HttpResponseRedirect('/rate/login')
                     else:
                         print user_form.errors,
-            if flag != 'no':
+            if flag == 'no':
                 return HttpResponse('This university is not in our database yet. Please <a href="/rate/contact/">contact</a> the administrator to request it, or go back to <a href="/rate/">main page</a>.')
         else:
             user_form = UserForm()
