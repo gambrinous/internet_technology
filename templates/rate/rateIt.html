@@ -2,7 +2,7 @@
 {% block title %}{{ course_title }}{% endblock %}
 {% block path %} <li><a href="/rate/">Home</a></li><li class="active">Course</li><li><a href="/rate/course/{{course_url}}">{{ course_title }}</a></li><li class="active">Rate</li>{% endblock %}
 {% block body_block %}
-    <div class="container-fluid" style="border: dotted">
+    <div class="container-fluid">
         <div class="container-fluid" style="float: left">
             <h1>{{ course_title }}</h1>
             <h3>{{ course.university.name }}</h3>
@@ -14,12 +14,14 @@
 
             <form method="post">
                 {% csrf_token %}
+                <div class="star-background-color" >
                 <input name="q1" type="radio" class="star" value="1"/>
                 <input name="q1" type="radio" class="star" value="2"/>
                 <input name="q1" type="radio" class="star" value="3"/>
                 <input name="q1" type="radio" class="star" value="4"/>
                 <input name="q1" type="radio" class="star" value="5"/>
-                <br/><br>
+
+                <br/></div><br>
                 <h5>Write any comments for {{ course_title }} course: (optional)</h5>
                 <textarea name="comments" cols="80" rows="5" style="max-width: 1000px; max-height: 200px;" wrap="soft|hard"></textarea><br><br>
                 <input type="submit" class="btn btn-primary" style="height:80px; margin:10px 80px 10px 0px;" value="Submit"/>
