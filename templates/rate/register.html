@@ -9,12 +9,13 @@
         <h4>You have already an account.</h4>
         <a href="/rate/">Return to the homepage.</a><br/>
     {% else %}
+        <br><br>
         <div class="my_login_container">
             <div class="col-md-4">
-                <div class="thumbnail">
+                <div class="thumbnail" style="padding: 4px 18px 24px 18px;">
                     <h1>New to Rate my Course?</h1>
 
-                    <h2>Register here!</h2>
+                    <h2>Register here!</h2><br>
 
                     <form class="form-horizontal" id="user_form" method="post" action="/rate/register/"
                           enctype="multipart/form-data">
@@ -26,11 +27,12 @@
                         <label>First Name</label>
                         <input class="form-control" type="text" name="first_name"/></br>
                         <label>Last Name</label>
-                        <input class="form-control" type="text" name="last_name"/></br>
-                        <input class="btn btn-default" type="submit" name="submit" value="Register"/>
+                        <input class="form-control" type="text" name="last_name"/></br><br>
+                        <input class="btn btn-primary" style="width:150px;" type="submit" name="submit" value="Register"/>
                     </form>
                 </div>
             </div>
         </div>
+        <div class="my_extra_space" style="height:150px;"></div>
     {% endif %}
 {% endblock %}
