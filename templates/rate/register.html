@@ -22,31 +22,40 @@
                         {% csrf_token %}
                         <p>
                             <label class="control-label" for="first_name">First Name</label>
+                            <div style="color:#FF0000;">
                             <input class="form-control" id="first_name" name="first_name" required=""/>
+                            </div>
                         </p>
 
                         <p>
                             <label class="control-label" for="last_name">Last Name</label>
+                            <div style="color:#FF0000;">
                             <input class="form-control" id="last_name" name="last_name" required=""/>
+                            </div>
                         </p>
 
                         <p>
                             <label class="control-label" for="email">Email address</label>
+                            <div style="color:#FF0000;">
                             <input class="form-control" type="email" id="email" name="email" required=""/>
+                        </div>
                         </p>
 
                         <p>
                             <label class="control-label" for="password">Password</label>
-                            <input class="form-control" type="password" id="password" name="password" required=""/>
+                            <div style="color:#FF0000;">
+                            <input class="form-control" type="password" id="password" name="password" required="">
+                        </div>
                         </p>
 
                         <label class="control-label" for="confirmpass">Confirm Password</label>
+                        <div style="color:#FF0000;">
                         <input class="form-control" type="password" id="confirmpass" name="confirmpass"
-                               onchange="checkPassword"/></br>
+                               onchange="checkPassword"/></div></br>
                         <p class="text-muted" id="divCheck"></p>
 
                         <input class="btn btn-primary" type="submit" name="submit" style="margin:10px 80px 10px 0px;" value="Register"/>
-                        <a class="btn btn-primary" style="width:100px; " href="/rate/"> Cancel</a>
+                        <a class="btn btn-primary" style="width:100px; height:30px;" href="/rate/"> Cancel</a>
                     </form>
                 </div>
             </div>
