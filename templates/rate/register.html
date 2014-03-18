@@ -9,9 +9,10 @@
         <h4>You have already an account.</h4>
         <a href="/rate/">Return to the homepage.</a><br/>
     {% else %}
+        <br><br>
         <div class="my_login_container">
             <div class="col-md-4">
-                <div class="thumbnail">
+                <div class="thumbnail" style="padding: 4px 18px 24px 18px;">
                     <h1>New to Rate my Course?</h1>
 
                     <h2>Register here!</h2>
@@ -44,10 +45,12 @@
                                onchange="checkPassword"/></br>
                         <p class="text-muted" id="divCheck"></p>
 
-                        <input class="btn btn-default" type="submit" name="submit" value="Register"/>
+                        <input class="btn btn-primary" type="submit" name="submit" style="margin:10px 80px 10px 0px;" value="Register"/>
+                        <a class="btn btn-primary" style="width:100px; " href="/rate/"> Cancel</a>
                     </form>
                 </div>
             </div>
         </div>
+        <div class="my_extra_space" style="height:150px;"></div>
     {% endif %}
 {% endblock %}
