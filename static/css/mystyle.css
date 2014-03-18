@@ -141,7 +141,7 @@ a.my_no_underline:hover
 .my_choices_sign_reg_restricted
 {
     width:100%;
-
+    min-height:250px;
 }
 
 .my_sign_restricted
