@@ -2,7 +2,7 @@
 
 {% block title %}Register{% endblock %}
 {% block path %}
-    <li><a href="/rate/">Home</a></li>
+<li xmlns="http://www.w3.org/1999/html"><a href="/rate/">Home</a></li>
     <li class="active">Register</li>{% endblock %}
 {% block body_block %}
     {% if registered %}
@@ -50,12 +50,14 @@
 
                         <label class="control-label" for="confirmpass">Confirm Password</label>
                         <div style="color:#FF0000;">
-                        <input class="form-control" type="password" id="confirmpass" name="confirmpass"
-                               onchange="checkPassword"/></div></br>
-                        <p class="text-muted" id="divCheck"></p>
-
+                        <input onkeydown="check(this);" onkeyup="check(this);" class="form-control" type="password" id="confirmpass" name="confirmpass"
+                               onchange="checkPassword"/></br>
+                        <strong><p class="" id="divCheck"></p></strong></div>
+                        <br>
                         <input class="btn btn-primary" type="submit" name="submit" style="margin:10px 80px 10px 0px;" value="Register"/>
-                        <a class="btn btn-primary" style="width:100px; height:30px;" href="/rate/"> Cancel</a>
+
+
+
                     </form>
                 </div>
             </div>

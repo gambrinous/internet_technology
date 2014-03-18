@@ -135,7 +135,7 @@ padding: 0;" class="breadcrumb">
                     <li><a href="/rate/about"><strong>About</strong></a></li>
                     <li><a href="/rate/sitemap"><strong>Site Map</strong></a></li>
                     <li><a href="#"><strong>Terms of Use</strong></a></li>
-                    <li>© Colossus 4.0</li>
+                    <li>© 2014 Colossus 4.0</li>
                 </ol>
             </div>
         </div>
@@ -188,10 +188,17 @@ padding: 0;" class="breadcrumb">
         var confirmpass = $("#confirmpass").val();
 
         if (password != confirmpass)
+        {
             $("#divCheck").html("Passwords do not match.");
+            document.getElementById("divCheck").style.color="red";
+            }
         else
+        {
             $("#divCheck").html("Passwords match.");
+            document.getElementById("divCheck").style.color="green";
+            }
     }
+
 </script>
 
 </body>
