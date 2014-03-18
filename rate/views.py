@@ -117,7 +117,7 @@ def register(request):
             user_form = UserForm()
         return render_to_response('rate/register.html', {'user_form': user_form, 'registered': registered}, context)
     else:
-        return HttpResponse('You are already registered and signed in. Go back to <a href="/rate/">main page</a>.')
+        return HttpResponse('You are already registered and signed in. Go back to <a href="/rate/">main page</a>.')#
 
 
 def restricted(request):
