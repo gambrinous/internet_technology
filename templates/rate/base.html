@@ -117,21 +117,24 @@ padding: 0;" class="breadcrumb">
 <div class="container">
     {% block body_block %}{% endblock %}</div>
 
-<footer style="background-image: url({% static 'images/footer2.png' %}); background-repeat: no-repeat; background-size: cover; height: 150px">
+<footer style="background-image: url({% static 'images/footer2.png' %}); background-repeat: no-repeat; background-size: cover; height: 200px">
     <div class="container">
 
-        <div class="container-fluid">
-            <div class="col-sm-4" style="text-align: left">
-                <a class="navbar-brand" href="/rate/"><img src="/static/images/logo2.png"
-                                                           style=" width: 200px; height: 120px; margin-top: 20px;"/></a>
+        <div class="container-fluid" style="padding-top:30px; ">
+            <div class="col-sm-4" style="text-align: left; float:left; width:20%;">
+                <a class="navbar-brand" href="/rate/" style="width:100%;">
+                    <img src="/static/images/logo2.png" style=" width: 160px; height: 100px; margin: 20px 10px 10px 0px;"/>
+                </a>
             </div>
-            <div class="col-sm-4" style="text-align: center; padding-top: 10px"></div>
-            <div class="col-sm-4" style="text-align: right;margin-top: 50px;">
-
+            <div class="col-sm-4" style="text-align: left; padding-top: 100px; float:left; width:60%; color:#fff;">
+                Give feedback and rate your classes
+            </div>
+            <div class="col-sm-4" style="text-align: right;margin-top: 50px; float:left; width:20%;">
                 <ol class="list-unstyled">
-                    <li><a href="/rate/contact">Contact us</a></li>
-                    <li><a href="/rate/about">About</a></li>
-                    <li><a href="/rate/sitemap">Site Map</a></li>
+                    <li><a href="/rate/contact"><strong>Contact us</strong></a></li>
+                    <li><a href="/rate/about"><strong>About</strong></a></li>
+                    <li><a href="/rate/sitemap"><strong>Site Map</strong></a></li>
+                    <li><a href="#"><strong>Terms of Use</strong></a></li>
                     <li>© Colossus 4.0</li>
                 </ol>
             </div>
