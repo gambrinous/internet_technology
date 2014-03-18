@@ -567,7 +567,20 @@ ul ul, ol ul, ul ol, ol ol {
 
 .list-unstyled {
     padding-left: 0;
-    list-style: none
+    list-style: none;
+    color: #ddd;
+}
+
+.list-unstyled > li > a{
+    padding-left: 0;
+    list-style: none;
+    color: #ddd;
+}
+
+.list-unstyled > li > a:hover
+{
+    text-decoration: none;
+    padding: 10px 10px 10px 10px;
 }
 
 .list-inline {
