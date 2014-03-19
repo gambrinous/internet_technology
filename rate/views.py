@@ -122,7 +122,7 @@ def register(request):
                     'This university is not in our database yet. Please <a href="/rate/contact/">contact</a> the administrator to request it, or go back to <a href="/rate/">main page</a>.')
         else:
             user_form = UserForm()
-        return render_to_response('rate/register.html', {'user_form': user_form, 'registered': registered}, context)
+            return render_to_response('rate/register.html', {'user_form': user_form, 'registered': registered}, context)
     else:
         return HttpResponse('You are already registered and signed in. Go back to <a href="/rate/">main page</a>.')  #
 
