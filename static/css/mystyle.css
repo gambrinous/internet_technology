@@ -85,7 +85,7 @@ a.my_no_underline:hover
 .my_filters_buttons_div
 {
     width:100%;
-    padding: 10px 0px 10px 20px;
+    padding: 10px 0px 10px 0px;
 }
 
 .my_filters_button
