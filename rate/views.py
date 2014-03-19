@@ -149,7 +149,7 @@ def course(request, course_title_url):
     context_dict = {'course_title': course_title}
     try:
         course = Course.objects.get(title=course_title)
-        rate = Rate.objects.filter(course=course)
+        rate = Rate.objects.filter(course=course).order_by('-date')
         context_dict['course'] = course
         context_dict['rate'] = rate
 
@@ -253,7 +253,7 @@ def rateIt(request, course_title_url):
 def profile(request):
     context = RequestContext(request)
     if request.user.is_authenticated():
-        list = Rate.objects.filter(student=request.user.id)
+        list = Rate.objects.filter(student=request.user.id).order_by('-date')
         context_dict = {'list': list}
         for rate in list:
             rate.url = rate.course.title.replace(' ', '_')
