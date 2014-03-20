@@ -2,7 +2,7 @@
 import os
 SETTINGS_DIR = os.path.dirname(__file__)
 
-DEBUG = false
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 PROJECT_PATH = os.path.join(SETTINGS_DIR, os.pardir)
 PROJECT_PATH = os.path.abspath(PROJECT_PATH)
